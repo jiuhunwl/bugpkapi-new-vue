@@ -1,0 +1,59 @@
+{
+  "title": "Agreement Templates",
+  "description": "Maintain payment, privacy, and terms templates for public-welfare and paid commercial operation separately. Legal pages and the payment dialog follow the active mode and visitor language; missing or disabled templates fall back to built-in copy.",
+  "modeTitle": "Operation Mode",
+  "modeHint": "Saving changes which agreement set is served publicly. Existing orders and payment flows are not affected.",
+  "modes": {
+    "welfare": "Public Welfare Mode",
+    "commercial": "Paid Commercial Mode"
+  },
+  "modeDescriptions": {
+    "welfare": "Free public service with payments treated as voluntary sponsorship",
+    "commercial": "Paid packages and commercial service offerings"
+  },
+  "currentMode": "Active mode: {0}",
+  "saveMode": "Save Active Mode",
+  "modeSaved": "Operation mode updated",
+  "language": "Template Language",
+  "langs": {
+    "zh-CN": "简体中文",
+    "en-US": "English"
+  },
+  "editMode": "Editing Template",
+  "docs": {
+    "payment": "Payment Agreement",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "fields": {
+    "title": "Title",
+    "summary": "Summary",
+    "version": "Version",
+    "effectiveDate": "Effective Date",
+    "status": "Template Enabled",
+    "content": "Content (HTML)"
+  },
+  "placeholders": {
+    "title": "e.g. Public Welfare Payment and Sponsorship Agreement",
+    "summary": "Shown on the legal page hero and payment dialog; keep it concise",
+    "version": "e.g. v1.0",
+    "effectiveDate": "YYYY-MM-DD; leave empty to hide",
+    "content": "<h2>1. Parties and Scope</h2><p>Body text…</p>"
+  },
+  "statusEnabled": "Enabled",
+  "statusDisabled": "Disabled",
+  "contentHint": "Basic tags such as h2/h3, p, ul/ol, table, strong, and a are supported; scripts, styles, and event attributes are stripped by the server.",
+  "contentBytes": "{0} / 1 MiB",
+  "contentTooLarge": "Agreement content cannot exceed 1 MiB",
+  "preview": "Preview Content",
+  "hidePreview": "Hide Preview",
+  "viewPublic": "Open Public Page",
+  "save": "Save Template",
+  "saved": "Agreement template saved",
+  "loadFailed": "Failed to load agreement templates",
+  "saveFailed": "Failed to save agreement template",
+  "missingTitle": "Please enter a title",
+  "missingContent": "Please enter the agreement content",
+  "empty": "No template is configured for this mode and language yet; the built-in copy will be used.",
+  "updatedAt": "Last updated: {0}"
+}

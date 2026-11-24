@@ -1,0 +1,149 @@
+{
+  "applyNotice": {
+    "description": "该内容会展示在公开友链申请窗口中，便于申请人复制本站信息并了解交换要求。",
+    "placeholder": "例如：请先添加本站名称、地址、Logo 和描述，确认可访问后再提交申请。",
+    "title": "公开申请说明"
+  },
+  "approve": {
+    "action": "通过申请",
+    "description": "确认通过后，友链会立即加入公开列表；可填写审核说明并选择是否发送通知邮件。",
+    "placeholder": "可选：填写通过说明",
+    "reasonLabel": "通过说明",
+    "title": "确认通过友链申请？"
+  },
+  "disabled": "关闭",
+  "enabled": "允许",
+  "messages": {
+    "alreadyReviewed": "该申请已审核，无需重复处理",
+    "approved": "友链申请已通过",
+    "configFailed": "友链申请配置保存失败",
+    "configSaved": "友链申请配置已保存",
+    "disabled": "已关闭友链申请",
+    "enabled": "已允许友链申请",
+    "reasonRequired": "请填写驳回原因",
+    "rejected": "友链申请已驳回"
+  },
+  "notProvided": "未填写",
+  "hub": {
+    "title": "友链中心",
+    "description": "集中处理友链申请审核，并维护公开申请入口与交换说明。",
+    "publicPage": "查看前台友链页",
+    "applyEnabled": "申请开放中",
+    "applyDisabled": "申请已关闭",
+    "tabs": {
+      "applications": "申请审核",
+      "config": "友链配置",
+      "links": "友链列表"
+    },
+    "filters": {
+      "all": "全部申请",
+      "allHint": "累计提交",
+      "pending": "待审核",
+      "pendingHint": "等待处理",
+      "approved": "已通过",
+      "approvedHint": "已展示在站点",
+      "rejected": "已驳回",
+      "rejectedHint": "未通过审核",
+      "withdrawn": "已撤回",
+      "withdrawnHint": "申请人自行撤销"
+    },
+    "tableTitle": "申请记录",
+    "searchPlaceholder": "搜索网站、联系人或邮箱",
+    "actions": {
+      "approve": "通过",
+      "reject": "驳回",
+      "detail": "详情",
+      "close": "关闭",
+      "search": "查询"
+    },
+    "empty": {
+      "title": "暂无申请记录"
+    },
+    "detail": {
+      "title": "申请详情",
+      "applicant": "申请账号",
+      "appliedAt": "申请时间",
+      "reviewedAt": "审核时间",
+      "reviewedBy": "审核人",
+      "reviewInfo": "审核结果",
+      "reason": "审核说明",
+      "sendEmail": "已发送结果邮件通知",
+      "pendingTip": "该申请尚未审核，可直接通过或驳回。"
+    },
+    "config": {
+      "title": "公开申请设置",
+      "description": "控制前台是否接受新的友链申请，并维护申请窗口中的交换说明。",
+      "switchLabel": "允许提交友链申请",
+      "switchHint": "关闭后前台申请入口将隐藏，用户无法提交新的友链申请。",
+      "noticeLabel": "公开申请说明",
+      "noticeHint": "支持富文本，会展示在前台友链页的申请窗口中。",
+      "previewTitle": "前台预览",
+      "previewHeading": "申请友链",
+      "previewHint": "申请人打开申请窗口时将看到以下内容。",
+      "previewEmpty": "尚未填写申请说明，前台只展示申请按钮。",
+      "previewStatusOn": "申请入口已开放",
+      "previewStatusOff": "申请入口已关闭",
+      "updatedAt": "上次更新：{0}",
+      "notSaved": "尚未保存过配置",
+      "saved": "申请配置已保存"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文"
+  },
+  "pendingCount": "待审核 {0} 条",
+  "reasonTemplate": "通用原因模板",
+  "reasonTemplatePlaceholder": "选择模板可一键填入，也可直接自定义",
+  "reviewModal": {
+    "applicantAccount": "申请账号：",
+    "contactInfo": "联系方式",
+    "qq": "QQ"
+  },
+  "reject": {
+    "action": "确认驳回",
+    "description": "驳回原因会写入审核记录，并在勾选邮件通知时发送给申请人。",
+    "placeholder": "填写具体驳回原因",
+    "reasonLabel": "驳回原因",
+    "title": "驳回友链申请"
+  },
+  "save": "保存配置",
+  "sendEmail": "发送审核结果邮件（默认勾选）",
+  "sendEmailDescription": "系统会根据申请时保存的网页语言自动选择中文或英文邮件模板。",
+  "status": {
+    "approved": "已通过",
+    "pending": "待审核",
+    "rejected": "已驳回",
+    "withdrawn": "已撤回"
+  },
+  "statusUnknown": "状态未知",
+  "switchDescription": "关闭后用户将无法提交新的友情链接申请。",
+  "switchTitle": "申请开关与交换信息",
+  "templates": {
+    "approved": {
+      "label": "符合友链交换条件",
+      "reason": "网站信息完整且符合本站友情链接交换条件，申请已通过。"
+    },
+    "backlinkMissing": {
+      "label": "未检测到本站反链",
+      "reason": "暂未在您填写的页面检测到本站友情链接，请添加后重新提交申请。"
+    },
+    "contentMismatch": {
+      "label": "网站内容不符合要求",
+      "reason": "当前网站内容或定位暂不符合本站友情链接交换要求。"
+    },
+    "custom": {
+      "label": "自定义内容"
+    },
+    "informationIncomplete": {
+      "label": "申请信息不完整",
+      "reason": "申请信息不完整，请补充可访问的网站地址、联系方式及网站说明后重新提交。"
+    },
+    "siteUnreachable": {
+      "label": "网站暂时无法访问",
+      "reason": "当前无法正常访问申请网站，请确认网站可公开访问后重新提交。"
+    }
+  },
+  "title": "友链申请",
+  "updatedAt": "上次更新：{0}"
+}

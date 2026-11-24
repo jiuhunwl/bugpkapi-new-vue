@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <!-- ===== SEO 基础 ===== -->
+    <!-- 由 vite 注入 VITE_APP_TITLE / VITE_APP_DESCRIPTION / VITE_APP_KEYWORDS 变量（.env 内配置） -->
+    <title>%VITE_APP_TITLE%</title>
+    <meta name="description" content="%VITE_APP_DESCRIPTION%" />
+    <meta name="keywords" content="%VITE_APP_KEYWORDS%" />
+    <meta name="author" content="BugPk-Api" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="%VITE_APP_SITE_URL%/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <!-- ===== Open Graph（社交分享） ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="%VITE_APP_TITLE%" />
+    <meta property="og:title" content="%VITE_APP_TITLE%" />
+    <meta property="og:description" content="%VITE_APP_DESCRIPTION%" />
+    <meta property="og:url" content="%VITE_APP_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_APP_OG_IMAGE%" />
+    <meta property="og:locale" content="zh_CN" />
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%VITE_APP_TITLE%" />
+    <meta name="twitter:description" content="%VITE_APP_DESCRIPTION%" />
+    <meta name="twitter:image" content="%VITE_APP_OG_IMAGE%" />
+    <!-- ===== 结构化数据 JSON-LD ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "%VITE_APP_TITLE%",
+        "url": "%VITE_APP_SITE_URL%/",
+        "description": "%VITE_APP_DESCRIPTION%",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "%VITE_APP_SITE_URL%/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "%VITE_APP_TITLE%",
+        "url": "%VITE_APP_SITE_URL%/",
+        "logo": "%VITE_APP_OG_IMAGE%"
+      }
+    </script>
+    <link
+      rel="icon"
+      href="/brand-options/bugpk-icon.png"
+      type="image/png"
+    />
+    <style id="public-prepaint">
+      :root {
+        --public-prepaint-background: #f5f7fc;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --public-prepaint-background: #070b16;
+        }
+      }
+
+      html,
+      body,
+      #app {
+        min-height: 100%;
+        background: var(--public-prepaint-background);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- 无 JS 时的降级内容（爬虫可读） -->
+    <noscript>
+      <h1>%VITE_APP_TITLE%</h1>
+      <p>%VITE_APP_DESCRIPTION%</p>
+    </noscript>
+    <script>
+      (() => {
+        const dark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
+        const background = dark ? '#070b16' : '#f5f7fc';
+        const root = document.documentElement;
+        root.style.setProperty('--public-prepaint-background', background);
+        root.style.backgroundColor = background;
+        document.body.style.backgroundColor = background;
+        document.getElementById('app')?.style.setProperty(
+          'background-color',
+          background,
+        );
+      })();
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

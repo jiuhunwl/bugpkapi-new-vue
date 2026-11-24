@@ -1,0 +1,76 @@
+{
+  "title": "我的友链",
+  "description": "在这里申请友情链接，并管理已经上线的友链。任何修改都会先提交给管理员审核，通过后才会公开显示。",
+  "apply": {
+    "button": "申请新友链",
+    "dialogTitle": "申请友情链接",
+    "editTitle": "申请修改友链"
+  },
+  "links": {
+    "actions": "操作",
+    "edit": "申请修改",
+    "empty": "你还没有已上线的友链，先提交一次申请吧。",
+    "offline": "已下架",
+    "online": "已上架",
+    "remove": "申请撤下",
+    "reviewPending": "变更待审核",
+    "site": "网站",
+    "status": "状态",
+    "title": "已上线的友链",
+    "updateTime": "最近更新"
+  },
+  "requests": {
+    "actions": "操作",
+    "empty": "还没有提交过申请。",
+    "kind": "类型",
+    "kindEdit": "修改申请",
+    "kindNew": "新申请",
+    "kindRemove": "撤下申请",
+    "reason": "审核说明",
+    "reviewTime": "审核时间",
+    "status": "状态",
+    "statusApproved": "已通过",
+    "statusPending": "待审核",
+    "statusRejected": "已驳回",
+    "statusUnknown": "状态未知",
+    "statusWithdrawn": "已撤回",
+    "submitTime": "提交时间",
+    "title": "我的申请记录",
+    "withdraw": "撤回",
+    "withdrawConfirmContent": "撤回后这条申请立即失效，你可以马上重新提交新的内容。",
+    "withdrawConfirmTitle": "撤回这次申请？"
+  },
+  "form": {
+    "backlinkUrl": "回链地址",
+    "contactEmail": "联系邮箱",
+    "contactName": "联系人",
+    "contactQq": "联系 QQ",
+    "description": "网站简介",
+    "logoUrl": "Logo 地址",
+    "siteName": "网站名称",
+    "siteUrl": "网站地址"
+  },
+  "notice": {
+    "closed": "管理员已暂停友情链接申请，请稍后再来。",
+    "editHint": "修改内容先进入审核，公开列表在你被通过前保持原样。",
+    "pendingExists": "你有 1 条申请正在审核中，等这次审核结束后才能提交新的。",
+    "removeHint": "撤下申请通过后，你的友链会从公开列表隐藏；管理员也可以在后台重新上架。"
+  },
+  "messages": {
+    "captchaRequired": "请先完成人机验证",
+    "changeSubmitted": "修改已提交，审核通过后生效",
+    "contactEmailInvalid": "联系邮箱格式不正确",
+    "contactEmailRequired": "请填写联系邮箱",
+    "loadFailed": "友链数据加载失败，请稍后重试",
+    "removalSubmitted": "撤下申请已提交，审核通过后生效",
+    "siteNameRequired": "请填写网站名称",
+    "siteUrlRequired": "请填写网站地址",
+    "submitted": "申请已提交，等待管理员审核",
+    "withdrawn": "已撤回这次申请"
+  },
+  "captcha": {
+    "loadFailed": "验证信息加载失败，点击重试",
+    "retry": "重新获取",
+    "verifyFailed": "验证未通过，请重试"
+  }
+}

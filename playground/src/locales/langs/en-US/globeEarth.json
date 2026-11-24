@@ -1,0 +1,16 @@
+{
+  "scanning": "Scanning IP",
+  "standby": "Awaiting location",
+  "precisionCoordinates": "Coordinate-level location",
+  "precisionCity": "City-level location",
+  "precisionProvince": "Province-level location",
+  "precisionCountry": "Country-level location",
+  "accessibleWithLocation": "Interactive 3D globe. Current IP location: {0}, {1}",
+  "accessibleNoLocation": "Interactive 3D globe. Drag to rotate and scroll to zoom even when IP location is unavailable",
+  "webglFallback": "WebGL unavailable; switched to compatibility view",
+  "hint": "Drag to rotate · scroll to zoom",
+  "visitLocation": "Visited location",
+  "coordinates": "Coordinates {0}",
+  "callsCount": "{0} calls",
+  "riskHitsCount": "{0} risk hits"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "协议模板",
+  "description": "为公益运营和付费商业化运营分别维护支付协议、隐私政策与服务协议。前台法务页和支付弹窗按当前生效模式与访客语言读取对应模板；未配置或已停用的模板继续使用内置文案。",
+  "modeTitle": "运营模式",
+  "modeHint": "保存后立即影响前台展示的协议模板，不影响已有订单与支付功能。",
+  "modes": {
+    "welfare": "公益运营模式",
+    "commercial": "付费商业化运营模式"
+  },
+  "modeDescriptions": {
+    "welfare": "以公益免费服务为主，支付定性为自愿赞助",
+    "commercial": "以付费套餐与商业化服务为主"
+  },
+  "currentMode": "当前生效：{0}",
+  "saveMode": "保存生效模式",
+  "modeSaved": "运营模式已更新",
+  "language": "模板语言",
+  "langs": {
+    "zh-CN": "简体中文",
+    "en-US": "English"
+  },
+  "editMode": "编辑模板",
+  "docs": {
+    "payment": "支付协议",
+    "privacy": "隐私政策",
+    "terms": "服务协议"
+  },
+  "fields": {
+    "title": "协议标题",
+    "summary": "协议摘要",
+    "version": "版本号",
+    "effectiveDate": "生效日期",
+    "status": "启用模板",
+    "content": "协议正文（HTML）"
+  },
+  "placeholders": {
+    "title": "例如：公益运营模式支付与赞助协议",
+    "summary": "用于法务页首屏与支付弹窗摘要，建议 120 字以内",
+    "version": "例如：v1.0",
+    "effectiveDate": "YYYY-MM-DD，留空表示不展示",
+    "content": "<h2>一、协议主体与适用范围</h2><p>正文内容…</p>"
+  },
+  "statusEnabled": "已启用",
+  "statusDisabled": "已停用",
+  "contentHint": "支持 h2/h3、p、ul/ol、table、strong、a 等基础标签；脚本、样式和事件属性会被后端过滤。",
+  "contentBytes": "{0} / 1 MiB",
+  "contentTooLarge": "协议正文不能超过 1 MiB",
+  "preview": "预览正文",
+  "hidePreview": "收起预览",
+  "viewPublic": "查看前台页面",
+  "save": "保存模板",
+  "saved": "协议模板已保存",
+  "loadFailed": "协议模板加载失败",
+  "saveFailed": "协议模板保存失败",
+  "missingTitle": "请填写协议标题",
+  "missingContent": "请填写协议正文",
+  "empty": "该模式与语言下尚未配置模板，前台将使用内置文案。",
+  "updatedAt": "最后更新：{0}"
+}

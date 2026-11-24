@@ -1,0 +1,76 @@
+{
+  "actions": {
+    "approve": "通过",
+    "delete": "删除",
+    "edit": "编辑",
+    "reject": "驳回",
+    "toggleStatus": "切换状态"
+  },
+  "applicationName": "友链申请",
+  "applicationSearchPlaceholder": "搜索网站、联系人、邮箱或申请账号",
+  "create": "新增友链",
+  "delete": {
+    "action": "确认删除",
+    "description": "删除后友链将从公开列表移除。请填写原因，系统会保存操作审计。",
+    "reasonLabel": "删除原因",
+    "reasonPlaceholder": "填写本次删除友链的具体原因",
+    "reasonRequired": "请填写删除原因",
+    "reasonTemplate": "通用原因模板",
+    "reasonTemplatePlaceholder": "选择模板可一键填入，也可直接自定义",
+    "sendEmail": "向原申请邮箱发送删除通知（默认勾选）",
+    "sendEmailDescription": "仅来源于用户申请且保留联系邮箱的友链会收到通知；邮件语言跟随申请语言快照。",
+    "templates": {
+      "backlinkRemoved": {
+        "label": "对方已移除本站反链",
+        "reason": "检测到贵站已移除本站友情链接，因此本次同步移除对应友链。"
+      },
+      "contentChanged": {
+        "label": "网站内容或定位已变更",
+        "reason": "网站内容或定位发生较大变化，当前已不符合本站友情链接交换要求。"
+      },
+      "custom": {
+        "label": "自定义内容"
+      },
+      "inactive": {
+        "label": "网站长期未维护",
+        "reason": "网站长期无法稳定访问或缺少维护，本次清理对应友情链接。"
+      },
+      "siteUnreachable": {
+        "label": "网站无法访问",
+        "reason": "目标网站当前无法正常访问，本次移除对应友情链接。"
+      }
+    },
+    "title": "删除友链"
+  },
+  "editor": {
+    "create": "新增友链",
+    "edit": "编辑友链"
+  },
+  "entityName": "友链",
+  "fields": {
+    "actions": "操作",
+    "applicant": "申请账号",
+    "applyTime": "申请时间",
+    "backlink": "反链页面",
+    "contact": "联系人",
+    "description": "描述",
+    "email": "联系邮箱",
+    "keyword": "关键词",
+    "logo": "网站 Logo",
+    "reviewTime": "审核时间",
+    "siteName": "网站名称",
+    "siteUrl": "网站地址",
+    "sort": "排序",
+    "status": "状态",
+    "updateTime": "更新时间"
+  },
+  "hidden": "隐藏",
+  "messages": {
+    "deleted": "友链“{0}”已删除",
+    "hidden": "友链已隐藏",
+    "visible": "友链已展示"
+  },
+  "searchPlaceholder": "搜索网站名称、地址或描述",
+  "title": "友链列表",
+  "visible": "展示"
+}

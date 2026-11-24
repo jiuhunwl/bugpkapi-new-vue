@@ -1,0 +1,15 @@
+{
+  "user": {
+    "interfaceServices": "接口服务",
+    "packagesAssets": "套餐与资产",
+    "serviceSupport": "服务支持"
+  },
+  "admin": {
+    "interfaceGateway": "接口服务",
+    "userPermissions": "用户与权限",
+    "packagesTransactions": "套餐与账单",
+    "payment": "支付",
+    "riskMonitoring": "数据与风控",
+    "ticketsSupport": "工单与支持"
+  }
+}

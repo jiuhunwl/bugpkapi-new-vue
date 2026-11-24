@@ -1,0 +1,149 @@
+{
+  "applyNotice": {
+    "description": "This content is shown in the public application dialog so applicants can copy your site details and understand the exchange requirements.",
+    "placeholder": "For example: add our name, URL, logo, and description before submitting the application.",
+    "title": "Public application instructions"
+  },
+  "approve": {
+    "action": "Approve",
+    "description": "The link will be published immediately after approval. You may add a note and choose whether to email the applicant.",
+    "placeholder": "Optional approval note",
+    "reasonLabel": "Approval note",
+    "title": "Approve this friend-link application?"
+  },
+  "disabled": "Off",
+  "enabled": "Allow",
+  "messages": {
+    "alreadyReviewed": "This application has already been reviewed",
+    "approved": "Friend-link application approved",
+    "configFailed": "Failed to save the application settings",
+    "configSaved": "Friend-link application settings saved",
+    "disabled": "Friend-link applications disabled",
+    "enabled": "Friend-link applications enabled",
+    "reasonRequired": "Enter a rejection reason",
+    "rejected": "Friend-link application rejected"
+  },
+  "notProvided": "Not provided",
+  "hub": {
+    "title": "Friend Link Hub",
+    "description": "Review friend-link applications and maintain the public application entry and exchange instructions in one place.",
+    "publicPage": "View public page",
+    "applyEnabled": "Applications open",
+    "applyDisabled": "Applications closed",
+    "tabs": {
+      "applications": "Applications",
+      "config": "Settings",
+      "links": "Links"
+    },
+    "filters": {
+      "all": "All applications",
+      "allHint": "Total received",
+      "pending": "Pending",
+      "pendingHint": "Awaiting review",
+      "approved": "Approved",
+      "approvedHint": "Published on site",
+      "rejected": "Rejected",
+      "rejectedHint": "Not approved",
+      "withdrawn": "Withdrawn",
+      "withdrawnHint": "Canceled by applicant"
+    },
+    "tableTitle": "Application records",
+    "searchPlaceholder": "Search site, contact, or email",
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "detail": "Details",
+      "close": "Close",
+      "search": "Search"
+    },
+    "empty": {
+      "title": "No applications yet"
+    },
+    "detail": {
+      "title": "Application details",
+      "applicant": "Applicant",
+      "appliedAt": "Applied at",
+      "reviewedAt": "Reviewed at",
+      "reviewedBy": "Reviewer",
+      "reviewInfo": "Review result",
+      "reason": "Review note",
+      "sendEmail": "Result email was requested",
+      "pendingTip": "This application is pending. You can approve or reject it directly."
+    },
+    "config": {
+      "title": "Public application settings",
+      "description": "Control whether new friend-link applications are accepted, and maintain the instructions shown in the public application dialog.",
+      "switchLabel": "Allow friend-link applications",
+      "switchHint": "When disabled, the public application entry is hidden and new applications cannot be submitted.",
+      "noticeLabel": "Public application instructions",
+      "noticeHint": "Rich text is supported and shown in the application dialog on the public friend-link page.",
+      "previewTitle": "Public preview",
+      "previewHeading": "Apply for a friend link",
+      "previewHint": "This is what applicants see when they open the application dialog.",
+      "previewEmpty": "No instructions provided yet. The public page only shows the apply button.",
+      "previewStatusOn": "Application entry is open",
+      "previewStatusOff": "Application entry is closed",
+      "updatedAt": "Last updated: {0}",
+      "notSaved": "Not saved yet",
+      "saved": "Application settings saved"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文"
+  },
+  "pendingCount": "{0} pending",
+  "reasonTemplate": "Common reason template",
+  "reasonTemplatePlaceholder": "Choose a template or enter custom text",
+  "reviewModal": {
+    "applicantAccount": "Account: ",
+    "contactInfo": "Contact",
+    "qq": "QQ"
+  },
+  "reject": {
+    "action": "Reject",
+    "description": "The reason is stored in the audit record and emailed to the applicant when email notification is enabled.",
+    "placeholder": "Enter the rejection reason",
+    "reasonLabel": "Rejection reason",
+    "title": "Reject friend-link application"
+  },
+  "save": "Save settings",
+  "sendEmail": "Email the review result (selected by default)",
+  "sendEmailDescription": "The system automatically chooses a Chinese or English template from the language saved with the application.",
+  "status": {
+    "approved": "Approved",
+    "pending": "Pending",
+    "rejected": "Rejected",
+    "withdrawn": "Withdrawn"
+  },
+  "statusUnknown": "Unknown status",
+  "switchDescription": "When disabled, users cannot submit new friend-link applications.",
+  "switchTitle": "Application switch and exchange details",
+  "templates": {
+    "approved": {
+      "label": "Meets exchange requirements",
+      "reason": "The site information is complete and meets our friend-link exchange requirements. The application has been approved."
+    },
+    "backlinkMissing": {
+      "label": "Backlink not detected",
+      "reason": "We could not find our link on the provided page. Please add it and submit a new application."
+    },
+    "contentMismatch": {
+      "label": "Site content does not qualify",
+      "reason": "The current site content or positioning does not meet our friend-link exchange requirements."
+    },
+    "custom": {
+      "label": "Custom text"
+    },
+    "informationIncomplete": {
+      "label": "Incomplete application",
+      "reason": "The application is incomplete. Please provide an accessible site URL, contact details, and a site description before applying again."
+    },
+    "siteUnreachable": {
+      "label": "Site is unreachable",
+      "reason": "The submitted site is currently unreachable. Please make it publicly accessible and submit a new application."
+    }
+  },
+  "title": "Friend-link Applications",
+  "updatedAt": "Last updated: {0}"
+}

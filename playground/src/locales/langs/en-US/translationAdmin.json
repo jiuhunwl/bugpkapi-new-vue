@@ -1,0 +1,116 @@
+{
+  "title": "Translation Dictionary",
+  "description": "Maintain translations for backend business data. Missing fields fall back to the default language.",
+  "resourceType": "Resource type",
+  "resourceTypePlaceholder": "Select a resource type",
+  "searchPlaceholder": "Search resource name or ID",
+  "refresh": "Refresh",
+  "empty": "No resources",
+  "columns": {
+    "resource": "Resource",
+    "key": "Resource key",
+    "baseValue": "Default language",
+    "completeness": "Translation coverage",
+    "actions": "Actions"
+  },
+  "actions": {
+    "translate": "Translate"
+  },
+  "completeness": {
+    "label": "{0}/{1}",
+    "none": "Untranslated"
+  },
+  "editor": {
+    "title": "Translate - {0}",
+    "baseValue": "Default language source",
+    "translation": "Translation",
+    "copyDefault": "Fill from default language",
+    "clear": "Clear current language",
+    "stale": "Source changed; translation may be stale",
+    "save": "Save translations",
+    "cancel": "Cancel",
+    "noTargetLocale": "No target language is available"
+  },
+  "messages": {
+    "saved": "Translations saved",
+    "noUpdatePermission": "You do not have permission to edit translations",
+    "loadFailed": "Failed to load translation resources"
+  },
+  "permissions": {
+    "update": "Save translations"
+  },
+  "resources": {
+    "site": "Site configuration",
+    "interface": "API",
+    "packageGlobal": "Global package",
+    "packageInterface": "API package",
+    "packageInterfaceSpec": "API package spec",
+    "packagePoint": "Point package",
+    "notice": "Notice",
+    "advertisement": "Advertisement",
+    "donation": "Donation configuration",
+    "rechargePreset": "Recharge preset",
+    "friendLink": "Friend link",
+    "redeemType": "Redeem code type",
+    "role": "User Group"
+  },
+  "fields": {
+    "site": {
+      "siteName": "Site name",
+      "slogan": "Slogan",
+      "description": "Description",
+      "seoTitle": "SEO title",
+      "seoKeywords": "SEO keywords"
+    },
+    "interface": {
+      "name": "API name",
+      "remark": "Description",
+      "docSummary": "Document summary",
+      "docNotice": "Document notice"
+    },
+    "packageGlobal": {
+      "name": "Package name",
+      "remark": "Package remark"
+    },
+    "packageInterface": {
+      "name": "Package name",
+      "remark": "Package remark"
+    },
+    "packageInterfaceSpec": {
+      "specName": "Spec name"
+    },
+    "packagePoint": {
+      "name": "Package name",
+      "remark": "Package remark"
+    },
+    "notice": {
+      "title": "Notice title",
+      "summary": "Notice summary",
+      "contentHtml": "Notice content"
+    },
+    "advertisement": {
+      "title": "Advertisement title",
+      "description": "Advertisement description"
+    },
+    "donation": {
+      "eyebrow": "Eyebrow",
+      "title": "Title",
+      "description": "Description",
+      "scanTitle": "Scan title",
+      "scanDescription": "Scan description",
+      "thanks": "Thanks text"
+    },
+    "rechargePreset": {
+      "name": "Preset name"
+    },
+    "friendLink": {
+      "description": "Friend link description"
+    },
+    "redeemType": {
+      "name": "Type name"
+    },
+    "role": {
+      "roleName": "Role Name"
+    }
+  }
+}

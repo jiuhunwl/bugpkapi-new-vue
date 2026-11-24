@@ -1,0 +1,14 @@
+{
+  "expired": "Verification expired. Please try again.",
+  "geeTestButton": "Complete security verification",
+  "geeTestFailed": "GeeTest verification failed. Please try again.",
+  "geeTestIncomplete": "GeeTest returned an incomplete response. Please try again.",
+  "geeTestInitFailed": "GeeTest could not initialize. Please try again.",
+  "loadFailed": "The verification widget failed to load. Please try again.",
+  "loading": "Loading the verification widget…",
+  "notCompleted": "Verification was not completed. Please try again.",
+  "preparing": "Preparing security verification…",
+  "retry": "Retry",
+  "timeout": "Verification timed out. Please try again.",
+  "turnstileFailed": "Turnstile verification failed. Please try again."
+}

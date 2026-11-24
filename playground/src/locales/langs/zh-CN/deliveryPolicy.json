@@ -1,0 +1,77 @@
+{
+  "ad": {
+    "auto": "自动选择当前有效广告",
+    "enabled": "注入接口广告",
+    "field": "JSON 字段名",
+    "fieldHelp": "只支持字母、数字、下划线和短横线，且不能以数字开头。原响应已有同名字段时不会覆盖。",
+    "fixedDescription": "始终使用选定广告；如果该广告已停用或不在投放时段内，本次响应不会注入广告。",
+    "fixedPlaceholder": "请选择一条接口响应广告",
+    "fixedSelect": "固定广告",
+    "fixedTitle": "固定投放指定广告",
+    "loadFailed": "广告候选项加载失败，仍可使用自动选择模式。",
+    "randomDescription": "每次响应都从已启用且处于投放时段内的接口广告中随机选择一条。",
+    "randomTitle": "当前有效广告随机投放",
+    "select": "指定接口广告",
+    "strategy": "广告选择方式",
+    "title": "JSON 广告投放"
+  },
+  "cache": {
+    "defaultTtl": "默认缓存时间",
+    "defaultTtlHelp": "规则未命中时使用，0 表示不缓存。最大 86400 秒。",
+    "enabled": "启用响应缓存",
+    "failOpen": "Redis 读取或写入失败时会自动直连上游，不会中断接口调用。缓存不会保存 API Key，接口广告会在缓存命中后动态注入。",
+    "seconds": "秒",
+    "title": "开放网关响应缓存"
+  },
+  "timeout": {
+    "effective": "最终生效：{0} 毫秒",
+    "help": "整个接口调用（包括所有轮询节点）共享此请求预算。单接口显式超时优先，可高于全局值；单接口为 0 时继承全局。",
+    "inheritedHelp": "当前接口继承全局超时时间，最终生效值为 {0} 毫秒。",
+    "milliseconds": "毫秒（100–120000）",
+    "title": "上游请求超时",
+    "value": "超时时间",
+    "interfaceMilliseconds": "毫秒（0 继承全局，或 100–120000）"
+  },
+  "description": "按接口配置开放网关缓存条件和 JSON 广告注入。后台接口调试始终直连上游。",
+  "globalAction": "全局投放策略",
+  "globalDescription": "配置未启用单接口覆盖时统一继承的响应缓存、请求超时与 JSON 广告策略。",
+  "globalName": "全局默认策略",
+  "globalTitle": "全局接口投放与缓存策略",
+  "inheritance": {
+    "adOverride": "覆盖全局广告策略",
+    "cacheOverride": "覆盖全局缓存策略",
+    "description": "当前接口可以分别决定缓存、请求超时与广告是否覆盖全局配置。",
+    "inheritedHelp": "关闭覆盖的部分会继承最新全局策略；本地配置会保留，重新启用覆盖后继续生效。",
+    "priority": "单接口 > 全局 > 系统默认",
+    "timeoutOverride": "覆盖全局请求超时",
+    "title": "策略优先级"
+  },
+  "messages": {
+    "fixedAdRequired": "请选择要固定投放的接口广告",
+    "invalidField": "广告 JSON 字段名不合法",
+    "invalidRule": "请完整配置第 {0} 条缓存规则",
+    "invalidTimeout": "请求超时必须在 100 到 120000 毫秒之间",
+    "saved": "投放与缓存策略已保存",
+    "invalidInterfaceTimeout": "请求超时须为 0（继承全局），或 100 到 120000 毫秒"
+  },
+  "rules": {
+    "add": "添加条件",
+    "empty": "暂无条件规则，将仅使用默认缓存时间。",
+    "expected": "期望值",
+    "field": "JSON 字段路径",
+    "fieldPlaceholder": "例如 data.status",
+    "name": "规则名称",
+    "namePlaceholder": "例如业务成功响应",
+    "operator": "运算符",
+    "remove": "删除条件 {0}",
+    "status": "HTTP 状态码",
+    "title": "条件缓存规则",
+    "ttl": "缓存秒数"
+  },
+  "status": {
+    "disabled": "未启用",
+    "enabled": "已启用"
+  },
+  "title": "投放与缓存策略",
+  "titleWithName": "{0} · 投放与缓存策略"
+}

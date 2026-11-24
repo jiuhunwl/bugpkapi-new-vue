@@ -1,0 +1,19 @@
+{
+  "title": "支付与赞助服务协议",
+  "dialogTitle": "支付与赞助服务协议",
+  "dialogSubtitle": "请完整阅读全部条款后再决定是否提供赞助",
+  "noticeTitle": "重要提示",
+  "ackTitle": "赞助确认",
+  "metaVersion": "版本 {0}",
+  "metaEffective": "生效日期 {0}",
+  "consentPrefix": "我已阅读并同意",
+  "consentLink": "《支付与赞助服务协议》",
+  "consentSuffix": "，理解支付属于自愿赞助支持、不属于交易",
+  "consentRequired": "请先勾选同意《支付与赞助服务协议》，再获取支付二维码",
+  "qrcodeLocked": "勾选协议后显示二维码",
+  "qrcodeLockedHint": "点击阅读协议",
+  "scrollHint": "上下滚动可阅读完整条款",
+  "actionsClose": "关闭",
+  "actionsAgree": "已阅读并同意",
+  "sponsorNatureHint": "本次支付属于对本站的自愿赞助支持，不属于交易；对应服务额度为感谢性质的回馈。"
+}

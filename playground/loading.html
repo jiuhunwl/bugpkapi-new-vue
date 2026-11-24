@@ -1,0 +1,802 @@
+<style data-app-loading="inject-css">
+  html {
+    line-height: 1.15;
+  }
+
+  .loading {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    color: #0f172a;
+    background: #f8fafc;
+    contain: strict;
+    opacity: 1;
+    transition: opacity 180ms ease-out;
+    will-change: opacity;
+  }
+
+  .dark .loading {
+    color: #f8fafc;
+    background: #07111f;
+  }
+
+  .loading.hidden {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity 180ms ease-out,
+      visibility 0s linear 180ms;
+  }
+
+  .loading__grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgb(14 165 233 / 5%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(14 165 233 / 5%) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: radial-gradient(circle at center, #000 0%, transparent 68%);
+  }
+
+  .dark .loading__grid {
+    background-image:
+      linear-gradient(rgb(56 189 248 / 6%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(56 189 248 / 6%) 1px, transparent 1px);
+  }
+
+  .loading__content {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(88vw, 420px);
+    text-align: center;
+  }
+
+  .loading__signal {
+    position: relative;
+    width: 236px;
+    height: 92px;
+  }
+
+  .loading__preset {
+    display: none;
+  }
+
+  .loading[data-preset='gateway'] .loading__preset--gateway,
+  .loading[data-preset='orbit'] .loading__preset--orbit,
+  .loading[data-preset='pulse'] .loading__preset--pulse,
+  .loading[data-preset='bars'] .loading__preset--bars,
+  .loading[data-preset='forge'] .loading__preset--forge,
+  .loading[data-preset='scan'] .loading__preset--scan,
+  .loading[data-preset='rail'] .loading__preset--rail,
+  .loading[data-preset='dots'] .loading__preset--dots {
+    display: grid;
+  }
+
+  /* ===== forge 徽标成型 ===== */
+  .loading__forge {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 148px;
+    height: 92px;
+  }
+
+  .loading__forge-mark {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    font-family: inherit;
+    background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+    border-radius: 22px;
+    animation: loading-forge-in 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+
+  .loading__forge-mark::after {
+    position: absolute;
+    inset: -8px;
+    content: '';
+    border: 1.5px solid rgb(91 140 255 / 50%);
+    border-radius: 29px;
+    animation: loading-forge-ring 1.7s ease-out infinite;
+  }
+
+  /* ===== scan 安全扫描 ===== */
+  .loading__scan {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 148px;
+    height: 92px;
+  }
+
+  .loading__scan-box {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+    background: #082f49;
+    border: 1px solid rgb(56 189 248 / 42%);
+    border-radius: 20px;
+  }
+
+  .loading__scan-box b {
+    font-size: 21px;
+    font-weight: 800;
+    color: #7dd3fc;
+  }
+
+  .loading__scan-box::before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 34%;
+    content: '';
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgb(56 189 248 / 30%),
+      transparent
+    );
+    animation: loading-scan 1.6s ease-in-out infinite;
+  }
+
+  /* ===== rail 进度轨（有明确完成度） ===== */
+  .loading__rail {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    width: 196px;
+  }
+
+  .loading__rail-mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+    border-radius: 13px;
+  }
+
+  .loading__rail-track {
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    background: rgb(148 163 184 / 22%);
+    border-radius: 99px;
+  }
+
+  .loading__rail-track i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+    border-radius: 99px;
+    animation: loading-rail 2.1s cubic-bezier(0.5, 0.05, 0.2, 1) infinite;
+  }
+
+  /* ===== dots 极简三点（弱网友好） ===== */
+  .loading__dots {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    place-items: center;
+    width: 148px;
+    height: 92px;
+  }
+
+  .loading__dots i {
+    width: 11px;
+    height: 11px;
+    background: #38bdf8;
+    border-radius: 50%;
+    animation: loading-dots 1.1s ease-in-out infinite;
+  }
+
+  .loading__dots i:nth-of-type(2) {
+    animation-delay: 0.16s;
+  }
+
+  .loading__dots i:nth-of-type(3) {
+    animation-delay: 0.32s;
+  }
+
+  @keyframes loading-forge-in {
+    from {
+      opacity: 0;
+      transform: scale(0.62) rotate(-9deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes loading-forge-ring {
+    from {
+      opacity: 0.7;
+      transform: scale(0.86);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(1.38);
+    }
+  }
+
+  @keyframes loading-scan {
+    0% {
+      top: -34%;
+    }
+
+    100% {
+      top: 100%;
+    }
+  }
+
+  @keyframes loading-rail {
+    0% {
+      width: 4%;
+    }
+
+    30% {
+      width: 42%;
+    }
+
+    55% {
+      width: 58%;
+    }
+
+    82% {
+      width: 88%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes loading-dots {
+    0%,
+    100% {
+      opacity: 0.28;
+      transform: translateY(0) scale(0.82);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(-7px) scale(1);
+    }
+  }
+
+  .loading__orbit,
+  .loading__pulse,
+  .loading__bars {
+    position: relative;
+    place-items: center;
+    width: 148px;
+    height: 92px;
+  }
+
+  .loading__orbit-core,
+  .loading__pulse-core {
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    color: #f8fafc;
+    font: 800 13px/1 system-ui, sans-serif;
+    background: #082f49;
+    border: 1px solid rgb(20 184 166 / 64%);
+    border-radius: 50%;
+    box-shadow: 0 0 28px rgb(20 184 166 / 22%);
+  }
+
+  .loading__orbit i {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: #0ea5e9;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgb(14 165 233 / 72%);
+    animation: app-loading-orbit 1.5s linear infinite;
+  }
+
+  .loading__orbit i:nth-of-type(2) {
+    animation-delay: -0.5s;
+  }
+
+  .loading__orbit i:nth-of-type(3) {
+    animation-delay: -1s;
+  }
+
+  .loading__pulse i {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    border: 1px solid rgb(14 165 233 / 62%);
+    border-radius: 50%;
+    animation: app-loading-ring 1.8s ease-out infinite;
+  }
+
+  .loading__pulse i:nth-of-type(2) {
+    animation-delay: 0.55s;
+  }
+
+  .loading__pulse i:nth-of-type(3) {
+    animation-delay: 1.1s;
+  }
+
+  .loading__bars {
+    grid-template-columns: repeat(5, 9px);
+    gap: 8px;
+    align-content: center;
+  }
+
+  .loading__bars span {
+    width: 9px;
+    height: 46px;
+    background: #0ea5e9;
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgb(14 165 233 / 34%);
+    animation: app-loading-bars 1s ease-in-out infinite;
+  }
+
+  .loading__bars span:nth-child(2),
+  .loading__bars span:nth-child(4) {
+    animation-delay: 0.15s;
+  }
+
+  .loading__bars span:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .loading__bars b {
+    position: absolute;
+    bottom: 0;
+    color: #0284c7;
+    font: 800 10px/1 system-ui, sans-serif;
+  }
+
+  .loading__signal::before,
+  .loading__signal::after {
+    position: absolute;
+    top: 45px;
+    height: 2px;
+    content: '';
+    background: rgb(14 165 233 / 26%);
+  }
+
+  .loading__signal::before {
+    right: 134px;
+    left: 0;
+  }
+
+  .loading__signal::after {
+    right: 0;
+    left: 134px;
+  }
+
+  /* ===== gateway 网关直通（默认，链路感最强） ===== */
+  .loading__gateway {
+    position: absolute;
+    top: 13px;
+    left: 86px;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    color: #f8fafc;
+    background: #082f49;
+    border: 1px solid rgb(14 165 233 / 68%);
+    border-radius: 18px;
+    box-shadow:
+      0 0 0 8px rgb(14 165 233 / 7%),
+      0 18px 42px rgb(2 132 199 / 18%);
+  }
+
+  .dark .loading__gateway {
+    background: #0b1b2f;
+  }
+
+  .loading__gateway::before {
+    position: absolute;
+    inset: 8px;
+    content: '';
+    border: 1px solid rgb(45 212 191 / 42%);
+    border-radius: 12px;
+    animation: app-loading-gateway 1.35s ease-in-out infinite;
+  }
+
+  .loading__gateway b {
+    position: relative;
+    z-index: 1;
+    font:
+      800 14px/1 system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+    letter-spacing: 0.14em;
+  }
+
+  .loading__packet {
+    position: absolute;
+    top: 42px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background: #0ea5e9;
+    border-radius: 3px;
+    box-shadow: 0 0 14px rgb(14 165 233 / 75%);
+    animation: app-loading-route 1.25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .loading__packet--two {
+    animation-delay: 0.34s;
+  }
+
+  .loading__packet--three {
+    animation-delay: 0.68s;
+  }
+
+  .loading__verified {
+    position: absolute;
+    top: 37px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #14b8a6;
+    border-radius: 999px;
+    box-shadow: 0 0 18px rgb(20 184 166 / 42%);
+  }
+
+  .loading__verified::after {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    content: '';
+    border-right: 2px solid #14b8a6;
+    border-bottom: 2px solid #14b8a6;
+    transform: rotate(45deg);
+  }
+
+  .loading__title {
+    margin: 7px 0 0;
+    font:
+      800 23px/1.2 system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  .loading__status {
+    margin-top: 10px;
+    font:
+      700 11px/1.4 system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+    color: #0284c7;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .dark .loading__status {
+    color: #7dd3fc;
+  }
+
+  .loading__retry {
+    min-width: 112px;
+    min-height: 42px;
+    padding: 0 20px;
+    margin-top: 18px;
+    font:
+      700 14px/1 system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+    color: #f8fafc;
+    cursor: pointer;
+    background: #0284c7;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgb(2 132 199 / 24%);
+  }
+
+  .loading__retry:hover {
+    background: #0369a1;
+  }
+
+  .loading__retry:focus-visible {
+    outline: 3px solid rgb(14 165 233 / 32%);
+    outline-offset: 3px;
+  }
+
+  .loading__retry[hidden] {
+    display: none;
+  }
+
+  .loading.is-error .loading__gateway::before,
+  .loading.is-error .loading__packet {
+    animation-play-state: paused;
+  }
+
+  .loading__custom {
+    display: none;
+    place-items: center;
+    width: min(86vw, 560px);
+    height: min(68vh, 440px);
+  }
+
+  .loading__custom img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .loading.is-custom .loading__content,
+  .loading.is-custom .loading__grid {
+    display: none;
+  }
+
+  .loading.is-custom .loading__custom {
+    display: grid;
+  }
+
+  @keyframes app-loading-route {
+    0% {
+      opacity: 0;
+      transform: translateX(0) scale(0.7);
+    }
+
+    16% {
+      opacity: 1;
+    }
+
+    72% {
+      opacity: 1;
+      transform: translateX(197px) scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(216px) scale(0.45);
+    }
+  }
+
+  @keyframes app-loading-gateway {
+    50% {
+      opacity: 0.45;
+      transform: scale(0.92);
+    }
+  }
+
+  @keyframes app-loading-orbit {
+    from {
+      transform: rotate(0deg) translateX(52px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(52px) rotate(-360deg);
+    }
+  }
+
+  @keyframes app-loading-ring {
+    from {
+      opacity: 0.76;
+      transform: scale(0.72);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(1.76);
+    }
+  }
+
+  @keyframes app-loading-bars {
+    50% {
+      height: 17px;
+      opacity: 0.55;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .loading,
+    .loading.hidden {
+      transition-duration: 1ms;
+    }
+
+    .loading__gateway::before,
+    .loading__packet,
+    .loading__orbit i,
+    .loading__pulse i,
+    .loading__bars span {
+      animation: none;
+    }
+  }
+</style>
+
+<div class="loading" id="__app-loading__" data-preset="gateway">
+  <div class="loading__grid"></div>
+  <div class="loading__content">
+    <div class="loading__preset loading__preset--gateway" aria-hidden="true">
+      <div class="loading__signal">
+        <span class="loading__packet loading__packet--one"></span>
+        <span class="loading__packet loading__packet--two"></span>
+        <span class="loading__packet loading__packet--three"></span>
+        <span class="loading__gateway"><b>API</b></span>
+        <span class="loading__verified"></span>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--orbit" aria-hidden="true">
+      <div class="loading__orbit">
+        <span class="loading__orbit-core">API</span>
+        <i></i><i></i><i></i>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--pulse" aria-hidden="true">
+      <div class="loading__pulse">
+        <i></i><i></i><i></i>
+        <span class="loading__pulse-core">API</span>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--bars" aria-hidden="true">
+      <div class="loading__bars">
+        <span></span><span></span><span></span><span></span><span></span>
+        <b>API</b>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--forge" aria-hidden="true">
+      <div class="loading__forge">
+        <span class="loading__forge-mark">BP</span>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--scan" aria-hidden="true">
+      <div class="loading__scan">
+        <span class="loading__scan-box"><b>BP</b></span>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--rail" aria-hidden="true">
+      <div class="loading__rail">
+        <span class="loading__rail-mark">BP</span>
+        <span class="loading__rail-track"><i></i></span>
+      </div>
+    </div>
+    <div class="loading__preset loading__preset--dots" aria-hidden="true">
+      <div class="loading__dots"><i></i><i></i><i></i></div>
+    </div>
+    <div class="loading__title" id="__app-loading-title__">
+      %VITE_APP_TITLE%
+    </div>
+    <div class="loading__status" id="__app-loading-status__">
+      Secure API channel
+    </div>
+    <button
+      class="loading__retry"
+      id="__app-loading-retry__"
+      type="button"
+      hidden
+    >
+      重新加载
+    </button>
+  </div>
+  <div class="loading__custom">
+    <img id="__app-loading-image__" alt="" referrerpolicy="no-referrer" />
+  </div>
+</div>
+
+<script data-app-loading="inject-config">
+  (function () {
+    var root = document.getElementById('__app-loading__');
+    var title = document.getElementById('__app-loading-title__');
+    var image = document.getElementById('__app-loading-image__');
+    var cacheKey = 'bugpk-api-loading-animation-v1';
+
+    if (!root || !image) return;
+
+    function applyConfig(config) {
+      if (!config || !root.isConnected) return;
+      var siteName = String(config.siteName || '').trim();
+      var url = String(config.loadingAnimationUrl || '').trim();
+      var enabled = Number(config.loadingAnimationEnabled) === 1 && !!url;
+      var preset = String(config.loadingAnimationPreset || 'gateway')
+        .trim()
+        .toLowerCase();
+      // 6 套内置预设；旧值 pulse/bars 仍兼容，未知值回落 gateway
+      if (
+        [
+          'forge',
+          'gateway',
+          'orbit',
+          'scan',
+          'rail',
+          'dots',
+          'pulse',
+          'bars',
+        ].indexOf(preset) < 0
+      ) {
+        preset = 'gateway';
+      }
+
+      if (siteName && title) title.textContent = siteName;
+      root.setAttribute('data-preset', preset);
+      if (!enabled) {
+        root.classList.remove('is-custom');
+        image.removeAttribute('src');
+        return;
+      }
+
+      image.onload = function () {
+        if (root.isConnected) root.classList.add('is-custom');
+      };
+      image.onerror = function () {
+        root.classList.remove('is-custom');
+        image.removeAttribute('src');
+      };
+      image.src = url;
+    }
+
+    try {
+      applyConfig(JSON.parse(localStorage.getItem(cacheKey) || 'null'));
+    } catch (_) {
+      localStorage.removeItem(cacheKey);
+    }
+
+    var apiBase = '%VITE_GLOB_API_URL%';
+    if (!apiBase || apiBase.indexOf('%VITE_') === 0) apiBase = '/system-api';
+
+    fetch(apiBase.replace(/\/$/, '') + '/site/config', {
+      cache: 'no-store',
+      credentials: 'same-origin',
+      headers: { Accept: 'application/json' },
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('site config unavailable');
+        return response.json();
+      })
+      .then(function (body) {
+        var config = body && body.data ? body.data : body;
+        if (!config) return;
+        try {
+          localStorage.setItem(
+            cacheKey,
+            JSON.stringify({
+              loadingAnimationEnabled:
+                Number(config.loadingAnimationEnabled) === 1 ? 1 : 0,
+              loadingAnimationPreset: String(
+                config.loadingAnimationPreset || 'gateway',
+              ),
+              loadingAnimationUrl: String(config.loadingAnimationUrl || ''),
+              siteName: String(config.siteName || ''),
+            }),
+          );
+        } catch (_) {}
+        applyConfig(config);
+      })
+      .catch(function () {});
+  })();
+</script>

@@ -1,0 +1,15 @@
+{
+  "user": {
+    "interfaceServices": "API services",
+    "packagesAssets": "Plans and assets",
+    "serviceSupport": "Service support"
+  },
+  "admin": {
+    "interfaceGateway": "API services",
+    "userPermissions": "Users and access",
+    "packagesTransactions": "Plans and billing",
+    "payment": "Payment",
+    "riskMonitoring": "Data and risk",
+    "ticketsSupport": "Tickets and support"
+  }
+}

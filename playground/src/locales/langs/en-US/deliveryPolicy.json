@@ -1,0 +1,77 @@
+{
+  "ad": {
+    "auto": "Automatically select an active advertisement",
+    "enabled": "Inject API advertisement",
+    "field": "JSON field name",
+    "fieldHelp": "Letters, numbers, underscores, and hyphens only; it cannot start with a number. Existing fields are never overwritten.",
+    "fixedDescription": "Always use the selected advertisement. If it is disabled or outside its delivery window, no advertisement is injected.",
+    "fixedPlaceholder": "Select an API response advertisement",
+    "fixedSelect": "Fixed advertisement",
+    "fixedTitle": "Deliver one specified advertisement",
+    "loadFailed": "Advertisement options failed to load. Automatic selection remains available.",
+    "randomDescription": "Each response randomly selects one enabled API advertisement that is currently within its delivery window.",
+    "randomTitle": "Random current advertisement",
+    "select": "API advertisement",
+    "strategy": "Advertisement selection",
+    "title": "JSON advertisement delivery"
+  },
+  "cache": {
+    "defaultTtl": "Default cache duration",
+    "defaultTtlHelp": "Used when no rule matches. Set to 0 to skip caching. Maximum 86400 seconds.",
+    "enabled": "Enable response cache",
+    "failOpen": "Redis read or write failures fall back to the upstream service without interrupting the request. API keys are excluded and advertisements are injected after cache lookup.",
+    "seconds": "seconds",
+    "title": "Open gateway response cache"
+  },
+  "timeout": {
+    "effective": "Effective: {0} ms",
+    "help": "The entire interface call, including all polling nodes, shares this request budget. An explicit interface timeout takes priority and may exceed the global value; 0 inherits the global timeout.",
+    "inheritedHelp": "This interface inherits the global timeout. The effective value is {0} ms.",
+    "milliseconds": "milliseconds (100–120000)",
+    "title": "Upstream request timeout",
+    "value": "Timeout",
+    "interfaceMilliseconds": "ms (0 to inherit, or 100–120000)"
+  },
+  "description": "Configure response cache conditions, upstream timeout, and JSON advertisement injection per API. Admin-side API debugging always connects directly to the upstream service.",
+  "globalAction": "Global delivery policy",
+  "globalDescription": "Configure the default response cache, request timeout, and JSON advertisement strategy inherited by APIs without a matching interface override.",
+  "globalName": "Global default",
+  "globalTitle": "Global interface delivery policy",
+  "inheritance": {
+    "adOverride": "Override global advertisement strategy",
+    "cacheOverride": "Override global cache strategy",
+    "description": "Cache, request timeout, and advertisement inheritance are controlled independently for this API.",
+    "inheritedHelp": "Disabled override sections inherit the latest global strategy. Local values are retained and become effective again when the override is enabled.",
+    "priority": "Interface > Global > Default",
+    "timeoutOverride": "Override global request timeout",
+    "title": "Policy priority"
+  },
+  "messages": {
+    "fixedAdRequired": "Select the API advertisement to deliver",
+    "invalidField": "The advertisement JSON field name is invalid",
+    "invalidRule": "Complete cache rule {0}",
+    "invalidTimeout": "Request timeout must be between 100 and 120000 milliseconds",
+    "saved": "Delivery and cache policy saved",
+    "invalidInterfaceTimeout": "Request timeout must be 0 (inherit global), or 100 to 120000 milliseconds"
+  },
+  "rules": {
+    "add": "Add condition",
+    "empty": "No condition rules. Only the default cache duration will be used.",
+    "expected": "Expected value",
+    "field": "JSON field path",
+    "fieldPlaceholder": "For example, data.status",
+    "name": "Rule name",
+    "namePlaceholder": "For example, successful business response",
+    "operator": "Operator",
+    "remove": "Remove condition {0}",
+    "status": "HTTP status",
+    "title": "Conditional cache rules",
+    "ttl": "Cache seconds"
+  },
+  "status": {
+    "disabled": "Disabled",
+    "enabled": "Enabled"
+  },
+  "title": "Delivery and cache policy",
+  "titleWithName": "{0} · Delivery and cache policy"
+}

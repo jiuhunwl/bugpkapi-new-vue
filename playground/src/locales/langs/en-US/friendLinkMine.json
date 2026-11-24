@@ -1,0 +1,76 @@
+{
+  "title": "My Links",
+  "description": "Apply for a friend link here and manage the links already live. Every change goes to an administrator first and only shows publicly once it is approved.",
+  "apply": {
+    "button": "Apply for a link",
+    "dialogTitle": "Apply for a friend link",
+    "editTitle": "Request a link change"
+  },
+  "links": {
+    "actions": "Actions",
+    "edit": "Request change",
+    "empty": "You have no live friend link yet — submit an application first.",
+    "offline": "Unlisted",
+    "online": "Listed",
+    "remove": "Request removal",
+    "reviewPending": "Change pending review",
+    "site": "Site",
+    "status": "Status",
+    "title": "Live links",
+    "updateTime": "Last updated"
+  },
+  "requests": {
+    "actions": "Actions",
+    "empty": "No application submitted yet.",
+    "kind": "Type",
+    "kindEdit": "Change",
+    "kindNew": "Application",
+    "kindRemove": "Removal",
+    "reason": "Review note",
+    "reviewTime": "Reviewed",
+    "status": "Status",
+    "statusApproved": "Approved",
+    "statusPending": "Pending",
+    "statusRejected": "Rejected",
+    "statusUnknown": "Unknown status",
+    "statusWithdrawn": "Withdrawn",
+    "submitTime": "Submitted",
+    "title": "My applications",
+    "withdraw": "Withdraw",
+    "withdrawConfirmContent": "Withdrawing cancels this application at once, and you can submit a new one immediately.",
+    "withdrawConfirmTitle": "Withdraw this application?"
+  },
+  "form": {
+    "backlinkUrl": "Backlink URL",
+    "contactEmail": "Contact email",
+    "contactName": "Contact person",
+    "contactQq": "Contact QQ",
+    "description": "Site description",
+    "logoUrl": "Logo URL",
+    "siteName": "Site name",
+    "siteUrl": "Site URL"
+  },
+  "notice": {
+    "closed": "Administrators have paused friend link applications. Please try again later.",
+    "editHint": "Your change enters review first; the public list keeps showing the current values until it is approved.",
+    "pendingExists": "One of your applications is still under review. You can submit another one after it is decided.",
+    "removeHint": "Once approved, your link disappears from the public list; administrators can list it again later."
+  },
+  "messages": {
+    "captchaRequired": "Please complete the captcha first",
+    "changeSubmitted": "Change submitted, effective after approval",
+    "contactEmailInvalid": "The contact email format is invalid",
+    "contactEmailRequired": "Please provide a contact email",
+    "loadFailed": "Failed to load friend link data, please retry later",
+    "removalSubmitted": "Removal request submitted, effective after approval",
+    "siteNameRequired": "Please provide the site name",
+    "siteUrlRequired": "Please provide the site URL",
+    "submitted": "Application submitted, waiting for review",
+    "withdrawn": "Application withdrawn"
+  },
+  "captcha": {
+    "loadFailed": "Failed to load the captcha, click to retry",
+    "retry": "Reload captcha",
+    "verifyFailed": "Captcha verification failed, please retry"
+  }
+}

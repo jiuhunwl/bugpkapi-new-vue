@@ -1,0 +1,92 @@
+/**
+ * 工单状态 chip 体系（ListPanel / TicketDetail 共享）
+ *
+ * 设计原则：
+ *   - 低饱和底 + 圆点语义，替代高饱和 Ant Tag（避免多色混杂）
+ *   - 状态色语义：OPEN=琥珀（待处理）、PROCESSING=紫（处理中）、
+ *     WAITING_USER=青（等待用户）、RESOLVED=绿、CLOSED=灰
+ *   - 优先级：HIGH=橙、URGENT=玫红、LOW=灰（NORMAL 不展示，由卡片 rail 表达）
+ *   - t-plain 中性 chip：分类 / 自定义标签 / 溢出计数
+ */
+.tchip {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  max-width: 100%;
+  padding: 2px 9px;
+  overflow: hidden;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 17px;
+  color: hsl(var(--muted-foreground));
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: hsl(var(--muted) / 60%);
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+}
+
+.tchip i {
+  flex: none;
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 999px;
+}
+
+.tchip.t-plain {
+  color: hsl(var(--muted-foreground));
+}
+
+.tchip.t-open {
+  color: #f59e0b;
+  background: rgb(245 158 11 / 9%);
+  border-color: rgb(245 158 11 / 28%);
+}
+
+.tchip.t-processing {
+  color: #a78bfa;
+  background: rgb(139 92 246 / 10%);
+  border-color: rgb(139 92 246 / 30%);
+}
+
+.tchip.t-waiting_user {
+  color: #22d3ee;
+  background: rgb(34 211 238 / 9%);
+  border-color: rgb(34 211 238 / 28%);
+}
+
+.tchip.t-resolved {
+  color: #34d399;
+  background: rgb(52 211 153 / 9%);
+  border-color: rgb(52 211 153 / 28%);
+}
+
+.tchip.t-closed {
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 60%);
+}
+
+.tchip.t-high {
+  color: #fb923c;
+  background: rgb(251 146 60 / 9%);
+  border-color: rgb(251 146 60 / 28%);
+}
+
+.tchip.t-urgent {
+  color: #fb7185;
+  background: rgb(251 113 133 / 10%);
+  border-color: rgb(251 113 133 / 32%);
+}
+
+.tchip.t-low {
+  color: #64748b;
+  background: rgb(100 116 139 / 8%);
+  border-color: rgb(100 116 139 / 22%);
+}
+
+.tchip.t-overdue {
+  color: #f87171;
+  background: rgb(239 68 68 / 8%);
+  border-color: rgb(239 68 68 / 26%);
+}

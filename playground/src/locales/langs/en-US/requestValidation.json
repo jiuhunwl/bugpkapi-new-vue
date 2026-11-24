@@ -1,0 +1,98 @@
+{
+  "action": "Request validation",
+  "conditions": {
+    "add": "Add condition",
+    "domainPlaceholder": "Comma-separated domains, for example douyin.com, iesdouyin.com",
+    "expectedPlaceholder": "Enter the comparison value",
+    "fieldPlaceholder": "Parameter or body path, for example url or payload.url",
+    "regexPlaceholder": "Enter a Go RE2-compatible regular expression",
+    "remove": "Remove condition {0}"
+  },
+  "description": "Validation runs after gateway authentication and interface matching, but before billing, caching, and upstream requests. Rejected requests are not charged or forwarded. Rules run in order and the first matched result wins.",
+  "logic": {
+    "all": "Match all (AND)",
+    "any": "Match any (OR)"
+  },
+  "messages": {
+    "invalidRule": "Complete request validation rule {0}",
+    "parameterRequired": "Enter the share-link parameter first",
+    "presetApplied": "Request validation preset loaded; adjust it as needed",
+    "saved": "Request validation policy saved",
+    "tooManyRules": "Request validation supports at most 20 rules"
+  },
+  "operators": {
+    "contains": "Contains",
+    "domainIn": "Domain belongs to platform",
+    "domainNotIn": "Domain does not belong to platform",
+    "empty": "Is empty",
+    "endsWith": "Ends with",
+    "eq": "Equals",
+    "exists": "Parameter exists",
+    "hasDomain": "Contains a valid domain",
+    "isUrl": "Is an absolute HTTP/HTTPS URL",
+    "ne": "Does not equal",
+    "notContains": "Does not contain",
+    "notEmpty": "Is not empty",
+    "notExists": "Parameter is missing",
+    "notHasDomain": "Does not contain a valid domain",
+    "notRegex": "Does not match regex",
+    "notUrl": "Is not an absolute HTTP/HTTPS URL",
+    "regex": "Matches regex",
+    "startsWith": "Starts with"
+  },
+  "preset": {
+    "apply": "Apply preset",
+    "badge": "One-click setup",
+    "description": "Presets generate missing, empty, domain, and platform matching rules. Every generated condition remains editable.",
+    "domains": "Platform domains",
+    "invalidRule": "Share-link parameter is invalid",
+    "options": {
+      "bilibili": "Bilibili share link",
+      "custom": "Custom platform domains",
+      "douyin": "Douyin share link",
+      "generic": "Generic share link (domain only)",
+      "kuaishou": "Kuaishou share link",
+      "tiktok": "TikTok share link",
+      "xiaohongshu": "Xiaohongshu share link",
+      "youtube": "YouTube share link"
+    },
+    "parameter": "Share-link parameter",
+    "parameterPlaceholder": "For example url, link, or shareUrl",
+    "passRule": "Share-link platform matches; continue parsing",
+    "platform": "Validation preset",
+    "replaceAction": "Replace current rules",
+    "replaceDescription": "Applying a preset replaces every current rule and the default result. Continue?",
+    "replaceTitle": "Apply request validation preset",
+    "title": "Share-link quick presets"
+  },
+  "results": {
+    "invalidParams": "Invalid parameters",
+    "pass": "Continue parsing",
+    "platformMismatch": "Platform mismatch"
+  },
+  "rules": {
+    "add": "Add rule",
+    "conditionCount": "{0}/{1} conditions",
+    "description": "Each rule can combine conditions with AND/OR. Rules execute from top to bottom; drag sorting is not currently enabled.",
+    "empty": "No rules yet. Load a share-link preset or add the first rule manually.",
+    "namePlaceholder": "Rule name, for example Share link has no domain",
+    "remove": "Remove rule {0}",
+    "title": "Conditions and preset results"
+  },
+  "settings": {
+    "defaultResult": "When no rule matches",
+    "defaultResultHelp": "Rules run from top to bottom. If none match, this fixed result is used. Disabling validation always continues parsing.",
+    "description": "Rules can be prepared and saved before the main switch is enabled.",
+    "enabled": "Enable request validation",
+    "title": "Validation policy"
+  },
+  "sources": {
+    "auto": "Auto (Query first)"
+  },
+  "status": {
+    "disabled": "Disabled",
+    "enabled": "Enabled"
+  },
+  "title": "Request validation",
+  "titleWithName": "{0} · Request validation"
+}

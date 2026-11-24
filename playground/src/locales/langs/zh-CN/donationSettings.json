@@ -1,0 +1,152 @@
+{
+  "actions": {
+    "addMethod": "新增赞赏渠道",
+    "moveDown": "下移",
+    "moveUp": "上移",
+    "reload": "重新加载",
+    "remove": "删除渠道",
+    "save": "保存设置",
+    "uploadQrCode": "上传收款码"
+  },
+  "copy": {
+    "description": "配置公开赞赏页展示的标题、说明和感谢文案。",
+    "title": "页面文案与发布"
+  },
+  "description": "统一管理公开赞赏页、收款渠道、二维码素材和展示顺序。",
+  "fields": {
+    "color": "渠道颜色",
+    "description": "页面说明",
+    "enabled": "公开状态",
+    "eyebrow": "短标题",
+    "icon": "渠道图标",
+    "methodKey": "渠道标识",
+    "methodName": "渠道名称",
+    "qrCodeUrl": "收款码地址",
+    "scanDescription": "扫码区说明",
+    "scanTitle": "扫码区标题",
+    "thanks": "感谢文案",
+    "tip": "扫码提示",
+    "title": "页面标题"
+  },
+  "iconPicker": {
+    "title": "常用赞赏图标",
+    "description": "选择后同步品牌图标和推荐颜色，也可在下方填写自定义 Iconify 图标",
+    "presets": {
+      "wechat": "微信",
+      "alipay": "支付宝",
+      "qq": "QQ",
+      "paypal": "PayPal",
+      "coffee": "请喝咖啡",
+      "heart": "爱心赞赏"
+    }
+  },
+  "lastUpdated": "最近更新：{0}",
+  "loadError": {
+    "description": "请检查服务状态或权限后重新加载。",
+    "title": "赞赏设置加载失败"
+  },
+  "messages": {
+    "imageTooLarge": "图片不能超过 2MB",
+    "invalidImage": "仅支持 PNG、JPG、WebP 或 GIF 图片",
+    "saved": "赞赏设置保存成功",
+    "uploaded": "收款码上传成功"
+  },
+  "methods": {
+    "channel": "渠道 {0}",
+    "description": "最多配置 8 个渠道；公开页仅展示已启用且配置了收款码的渠道。",
+    "emptyDescription": "新增渠道后填写名称、图标、颜色和收款码。",
+    "emptyTitle": "暂未配置赞赏渠道",
+    "title": "赞赏渠道"
+  },
+  "never": "暂无",
+  "placeholders": {
+    "customIcon": "自定义图标，例如 lucide:heart",
+    "qrCodeUrl": "上传图片，或填写 http/https 图片地址"
+  },
+  "preview": {
+    "description": "预览会随左侧设置实时更新。",
+    "descriptionFallback": "页面说明将显示在这里。",
+    "empty": "启用渠道后将在这里显示",
+    "eyebrowFallback": "赞赏",
+    "qrAlt": "{0}收款码预览",
+    "scanFallback": "扫码赞赏",
+    "title": "公开页预览",
+    "titleFallback": "赞赏支持"
+  },
+  "readOnly": {
+    "description": "当前账号可以查看配置，但没有保存权限。",
+    "title": "只读模式"
+  },
+  "status": {
+    "published": "已发布",
+    "unpublished": "未发布"
+  },
+  "supporters": {
+    "actions": {
+      "add": "新增赞赏人",
+      "cancel": "取消",
+      "reload": "刷新名单",
+      "submit": "确认添加"
+    },
+    "description": "查看公开赞赏记录，并由管理员手动补充赞赏人信息。",
+    "fields": {
+      "amount": "赞赏金额",
+      "avatarUrl": "头像地址",
+      "donatedAt": "赞赏时间",
+      "message": "留言",
+      "nickname": "昵称"
+    },
+    "formTitle": "新增赞赏人",
+    "loadErrorDescription": "请检查服务状态或权限后重新加载。",
+    "loadErrorTitle": "赞赏人名单加载失败",
+    "messages": {
+      "created": "赞赏人添加成功"
+    },
+    "placeholders": {
+      "amount": "例如 12.50",
+      "avatarUrl": "可选，填写 http/https 图片地址",
+      "message": "可选，填写公开展示的感谢或留言",
+      "nickname": "填写公开展示的昵称"
+    },
+    "previewName": "赞赏人昵称",
+    "readOnly": "当前账号可以查看赞赏人名单，但没有新增权限。",
+    "table": {
+      "amount": "金额",
+      "creator": "添加人",
+      "donatedAt": "赞赏时间",
+      "empty": "暂无赞赏人记录",
+      "message": "留言",
+      "supporter": "赞赏人",
+      "total": "共 {0} 条"
+    },
+    "title": "赞赏人管理",
+    "validation": {
+      "supporterAmountInvalid": "赞赏金额必须大于 0，且最多保留两位小数",
+      "supporterAvatarInvalid": "头像必须是安全的 http/https 图片地址",
+      "supporterDonatedAtInvalid": "赞赏时间格式不正确",
+      "supporterMessageTooLong": "留言不能超过 255 个字符",
+      "supporterNicknameRequired": "昵称不能为空",
+      "supporterNicknameTooLong": "昵称不能超过 64 个字符"
+    }
+  },
+  "title": "赞赏设置",
+  "validation": {
+    "descriptionTooLong": "页面说明不能超过 500 个字符",
+    "duplicateKey": "渠道 {0} 的标识与其他渠道重复",
+    "enabledMethodRequiresQrCode": "渠道 {0} 已启用，请先配置收款码",
+    "eyebrowRequired": "短标题不能为空",
+    "eyebrowTooLong": "短标题不能超过 64 个字符",
+    "invalidColor": "渠道 {0} 的颜色必须是六位十六进制色值",
+    "invalidIcon": "渠道 {0} 的图标格式不正确",
+    "invalidKey": "渠道 {0} 的标识只能使用小写字母、数字、下划线和短横线",
+    "methodNameRequired": "渠道 {0} 的名称不能为空",
+    "publishedMethodRequired": "发布赞赏页前，至少启用一个已配置收款码的渠道",
+    "scanDescriptionTooLong": "扫码区说明不能超过 255 个字符",
+    "scanTitleRequired": "扫码区标题不能为空",
+    "scanTitleTooLong": "扫码区标题不能超过 120 个字符",
+    "thanksTooLong": "感谢文案不能超过 255 个字符",
+    "titleRequired": "页面标题不能为空",
+    "titleTooLong": "页面标题不能超过 120 个字符",
+    "tooManyMethods": "最多只能配置 8 个赞赏渠道"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "actions": {
+    "bind": "绑定",
+    "cancel": "取消",
+    "change": "修改",
+    "save": "保存",
+    "sendCode": "发送验证码",
+    "verifyBind": "验证并绑定"
+  },
+  "defaultUser": "用户",
+  "fields": {
+    "email": "绑定邮箱",
+    "mobile": "绑定手机号",
+    "realName": "姓名",
+    "roles": "角色",
+    "username": "用户名"
+  },
+  "messages": {
+    "codeRequired": "请输入验证码",
+    "codeSent": "验证码已发送",
+    "emailBound": "邮箱绑定成功",
+    "emailRequired": "请输入要绑定的邮箱",
+    "mobileBound": "手机号绑定成功",
+    "mobileRequired": "请输入要绑定的手机号",
+    "nameRequired": "请输入姓名",
+    "saved": "个人资料已保存"
+  },
+  "placeholders": {
+    "code": "验证码",
+    "email": "请输入新邮箱",
+    "mobile": "请输入新手机号",
+    "realName": "请输入姓名"
+  },
+  "roles": {
+    "admin": "管理员",
+    "user": "普通用户",
+    "user_pro": "高级用户",
+    "vip": "VIP 用户",
+    "svip": "SVIP 用户",
+    "ssvip": "SSVIP 用户",
+    "sssvip": "SSSVIP 用户"
+  },
+  "security": {
+    "available": "可绑定",
+    "bindQq": "绑定 QQ",
+    "bound": "已绑定",
+    "boundFailed": "QQ 绑定失败，请重新绑定",
+    "boundSuccess": "QQ 绑定成功",
+    "confirmUnbind": "确认解绑",
+    "disabled": "未启用",
+    "email": "安全邮箱",
+    "emailBound": "已绑定邮箱：{0}",
+    "emailUnbound": "未绑定邮箱，可在“基本设置”中绑定",
+    "mobile": "安全手机",
+    "mobileBound": "已绑定手机：{0}",
+    "mobileUnbound": "短信服务待接入，当前暂不支持绑定手机号",
+    "password": "账户密码",
+    "passwordDescription": "已设置登录密码",
+    "qqAvailableDescription": "尚未绑定 QQ，绑定后可使用快捷登录",
+    "qqBindingDetail": "绑定账号：{0}，绑定时间：{1}",
+    "qqBindingHint": "绑定后，下次登录可直接使用 QQ 授权进入系统。",
+    "qqBoundDescription": "已绑定 QQ：{0}",
+    "qqDisabledDescription": "管理员尚未启用 QQ 快捷登录",
+    "qqEnableHint": "管理员启用 QQ 快捷登录后，可在此绑定 QQ。",
+    "qqLogin": "QQ 快捷登录",
+    "qqUnavailable": "QQ 绑定暂不可用",
+    "qqUser": "QQ 用户",
+    "rebind": "重新绑定",
+    "unbind": "解绑",
+    "unbindConfirm": "解绑后将无法通过 QQ 快捷登录当前账号，确认继续吗？",
+    "unbindQq": "解绑 QQ",
+    "unboundSuccess": "QQ 已解绑"
+  },
+  "password": {
+    "captchaDescription": "请完成滑块验证，以确认本次密码修改",
+    "captchaLoadFailed": "验证码加载失败，请重试",
+    "captchaTitle": "安全验证",
+    "confirm": "确认密码",
+    "confirmAction": "确定",
+    "confirmPlaceholder": "请再次输入新密码",
+    "confirmRequired": "请再次输入新密码",
+    "current": "当前密码",
+    "currentPlaceholder": "请输入当前密码",
+    "minimum": "新密码至少 6 位",
+    "mismatch": "两次输入的密码不一致",
+    "maximum": "新密码不能超过 64 个字符",
+    "new": "新密码",
+    "newPlaceholder": "请输入新密码，至少 8 个字符",
+    "policy": "新密码必须为 8 到 64 个字符，且不能超过 72 字节",
+    "setDescription": "该账号通过第三方自动注册创建，尚未设置站内密码。设置后可使用账号密码登录，也能安全解绑第三方账号。",
+    "setSuccess": "初始密码设置成功",
+    "successDescription": "请使用新密码重新登录",
+    "successTitle": "密码修改成功"
+  },
+  "status": {
+    "mobilePending": "短信验证码尚未接入官方服务，当前手机号仅供查看。",
+    "unbound": "未绑定"
+  },
+  "tabs": {
+    "basic": "基本设置",
+    "password": "修改密码",
+    "passwordSetup": "设置初始密码",
+    "security": "安全设置"
+  },
+  "title": "个人中心"
+}

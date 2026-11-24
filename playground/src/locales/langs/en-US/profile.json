@@ -1,0 +1,106 @@
+{
+  "actions": {
+    "bind": "Bind",
+    "cancel": "Cancel",
+    "change": "Change",
+    "save": "Save",
+    "sendCode": "Send code",
+    "verifyBind": "Verify and bind"
+  },
+  "defaultUser": "User",
+  "fields": {
+    "email": "Email",
+    "mobile": "Mobile number",
+    "realName": "Name",
+    "roles": "Roles",
+    "username": "Username"
+  },
+  "messages": {
+    "codeRequired": "Enter the verification code",
+    "codeSent": "Verification code sent",
+    "emailBound": "Email bound successfully",
+    "emailRequired": "Enter the email to bind",
+    "mobileBound": "Mobile number bound successfully",
+    "mobileRequired": "Enter the mobile number to bind",
+    "nameRequired": "Enter your name",
+    "saved": "Profile saved"
+  },
+  "placeholders": {
+    "code": "Verification code",
+    "email": "Enter a new email",
+    "mobile": "Enter a new mobile number",
+    "realName": "Enter your name"
+  },
+  "roles": {
+    "admin": "Administrator",
+    "user": "User",
+    "user_pro": "Advanced user",
+    "vip": "VIP",
+    "svip": "SVIP",
+    "ssvip": "SSVIP",
+    "sssvip": "SSSVIP"
+  },
+  "security": {
+    "available": "Available",
+    "bindQq": "Bind QQ",
+    "bound": "Bound",
+    "boundFailed": "QQ binding failed. Please try again.",
+    "boundSuccess": "QQ bound successfully",
+    "confirmUnbind": "Confirm unbind",
+    "disabled": "Disabled",
+    "email": "Security email",
+    "emailBound": "Bound email: {0}",
+    "emailUnbound": "No email bound. Bind one in Basic Settings.",
+    "mobile": "Security mobile",
+    "mobileBound": "Bound mobile: {0}",
+    "mobileUnbound": "SMS integration is pending, so mobile binding is currently unavailable.",
+    "password": "Account password",
+    "passwordDescription": "A sign-in password is configured",
+    "qqAvailableDescription": "QQ is not bound. Bind it to enable quick sign-in.",
+    "qqBindingDetail": "Account: {0}, bound at: {1}",
+    "qqBindingHint": "Once bound, you can sign in through QQ authorization.",
+    "qqBoundDescription": "QQ account bound: {0}",
+    "qqDisabledDescription": "QQ quick sign-in is not enabled by the administrator",
+    "qqEnableHint": "You can bind QQ here after an administrator enables QQ quick sign-in.",
+    "qqLogin": "QQ quick sign-in",
+    "qqUnavailable": "QQ binding is currently unavailable",
+    "qqUser": "QQ user",
+    "rebind": "Rebind",
+    "unbind": "Unbind",
+    "unbindConfirm": "After unbinding, this account can no longer use QQ quick sign-in. Continue?",
+    "unbindQq": "Unbind QQ",
+    "unboundSuccess": "QQ unbound"
+  },
+  "password": {
+    "captchaDescription": "Complete the slider verification to confirm this password change",
+    "captchaLoadFailed": "Failed to load verification. Please retry.",
+    "captchaTitle": "Security Verification",
+    "confirm": "Confirm password",
+    "confirmAction": "OK",
+    "confirmPlaceholder": "Enter the new password again",
+    "confirmRequired": "Enter the new password again",
+    "current": "Current password",
+    "currentPlaceholder": "Enter your current password",
+    "minimum": "The new password must be at least 6 characters",
+    "mismatch": "The passwords do not match",
+    "maximum": "The new password must not exceed 64 characters",
+    "new": "New password",
+    "newPlaceholder": "Enter a new password of at least 8 characters",
+    "policy": "The new password must be 8 to 64 characters and no more than 72 bytes",
+    "setDescription": "This account was created by automatic third-party registration and has no local password. Setting one lets you sign in with a password and safely unbind providers.",
+    "setSuccess": "Initial password set",
+    "successDescription": "Sign in again with your new password",
+    "successTitle": "Password changed"
+  },
+  "status": {
+    "mobilePending": "SMS verification has not been integrated with an official provider. The current mobile number is read-only.",
+    "unbound": "Not bound"
+  },
+  "tabs": {
+    "basic": "Basic Settings",
+    "password": "Change Password",
+    "passwordSetup": "Set Password",
+    "security": "Security Settings"
+  },
+  "title": "Profile"
+}

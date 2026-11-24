@@ -1,0 +1,116 @@
+{
+  "title": "翻译字典",
+  "description": "维护后端业务数据的多语言译文；未翻译字段自动回退默认语言。",
+  "resourceType": "资源类型",
+  "resourceTypePlaceholder": "请选择资源类型",
+  "searchPlaceholder": "搜索资源名称或 ID",
+  "refresh": "刷新",
+  "empty": "暂无资源",
+  "columns": {
+    "resource": "资源",
+    "key": "资源标识",
+    "baseValue": "默认语言",
+    "completeness": "翻译完成度",
+    "actions": "操作"
+  },
+  "actions": {
+    "translate": "翻译"
+  },
+  "completeness": {
+    "label": "{0}/{1}",
+    "none": "未翻译"
+  },
+  "editor": {
+    "title": "翻译 - {0}",
+    "baseValue": "默认语言原文",
+    "translation": "译文",
+    "copyDefault": "从默认语言填充",
+    "clear": "清空当前语言",
+    "stale": "原文已更新，译文可能过期",
+    "save": "保存译文",
+    "cancel": "取消",
+    "noTargetLocale": "当前没有可用的目标语言"
+  },
+  "messages": {
+    "saved": "译文已保存",
+    "noUpdatePermission": "当前账号没有编辑翻译的权限",
+    "loadFailed": "加载翻译资源失败"
+  },
+  "permissions": {
+    "update": "保存翻译"
+  },
+  "resources": {
+    "site": "站点配置",
+    "interface": "接口",
+    "packageGlobal": "全站套餐",
+    "packageInterface": "接口套餐",
+    "packageInterfaceSpec": "接口套餐规格",
+    "packagePoint": "点数套餐",
+    "notice": "公告",
+    "advertisement": "广告",
+    "donation": "赞赏配置",
+    "rechargePreset": "充值档位",
+    "friendLink": "友情链接",
+    "redeemType": "兑换码类型",
+    "role": "用户组"
+  },
+  "fields": {
+    "site": {
+      "siteName": "站点名称",
+      "slogan": "站点标语",
+      "description": "站点描述",
+      "seoTitle": "SEO 标题",
+      "seoKeywords": "SEO 关键词"
+    },
+    "interface": {
+      "name": "接口名称",
+      "remark": "接口描述",
+      "docSummary": "文档摘要",
+      "docNotice": "文档提示"
+    },
+    "packageGlobal": {
+      "name": "套餐名称",
+      "remark": "套餐备注"
+    },
+    "packageInterface": {
+      "name": "套餐名称",
+      "remark": "套餐备注"
+    },
+    "packageInterfaceSpec": {
+      "specName": "规格名称"
+    },
+    "packagePoint": {
+      "name": "套餐名称",
+      "remark": "套餐备注"
+    },
+    "notice": {
+      "title": "公告标题",
+      "summary": "公告摘要",
+      "contentHtml": "公告正文"
+    },
+    "advertisement": {
+      "title": "广告标题",
+      "description": "广告说明"
+    },
+    "donation": {
+      "eyebrow": "页眉文案",
+      "title": "标题",
+      "description": "说明",
+      "scanTitle": "扫码标题",
+      "scanDescription": "扫码说明",
+      "thanks": "致谢文案"
+    },
+    "rechargePreset": {
+      "name": "档位名称"
+    },
+    "friendLink": {
+      "description": "友链描述"
+    },
+    "redeemType": {
+      "name": "类型名称"
+    },
+    "role": {
+      "roleName": "用户组名称"
+    }
+  }
+}

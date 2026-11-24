@@ -1,0 +1,23 @@
+{
+  "cssTagHelp": "Enter complete <style>...</style> tags; multiple style tags are supported.",
+  "cssHelp": "Enter CSS only. Do not include <style> tags.",
+  "cssTitle": "Custom CSS",
+  "description": "Load custom styles and analytics scripts across the site. Only administrators with the dedicated permission can maintain this code.",
+  "disabledHint": "The configuration is saved but disabled, so visitor pages will not load it.",
+  "enabled": "Enable on visitor pages",
+  "jsHelp": "Enter JavaScript only. Do not include <script> tags. The script runs after the application is mounted.",
+  "jsTagHelp": "Enter complete <script>...</script> tags; tag attributes such as src, type, and async are preserved.",
+  "jsTitle": "Custom JavaScript",
+  "messages": {
+    "cssTagsRequired": "CSS must be wrapped in complete <style>...</style> tags",
+    "jsTagsRequired": "JavaScript must be wrapped in complete <script>...</script> tags",
+    "saved": "Custom code saved",
+    "tooLarge": "CSS or JavaScript cannot exceed 256 KiB each"
+  },
+  "refresh": "Reload",
+  "save": "Save configuration",
+  "size": "Current size: {0}",
+  "title": "Custom code",
+  "updatedAt": "Last updated: {0}",
+  "warning": "Enabled JavaScript runs in every visitor's browser with the same privileges as the site frontend. Paste only reviewed, trusted code and never collect secrets, tokens, or private user data."
+}

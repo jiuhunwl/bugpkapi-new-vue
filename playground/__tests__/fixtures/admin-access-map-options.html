@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin access ECharts options smoke test</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0;
+        padding: 12px;
+        background: #020817;
+      }
+
+      .chart {
+        width: 420px;
+        height: 320px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="china-2d" class="chart"></div>
+    <div id="world-2d" class="chart"></div>
+    <div id="globe-3d" class="chart"></div>
+    <script type="module">
+      const locations = [
+        {
+          averageElapsedMs: 18,
+          callCount: 100,
+          city: '北京市',
+          country: '中国',
+          failedCalls: 4,
+          latitude: 39.9042,
+          longitude: 116.4074,
+          province: '北京市',
+          region: '中国 北京市',
+          riskHits: 1,
+          successCalls: 96,
+          uniqueIps: 21,
+        },
+        {
+          averageElapsedMs: 23,
+          callCount: 25,
+          city: '台北市',
+          country: '中国',
+          failedCalls: 12,
+          latitude: 25.033,
+          longitude: 121.5654,
+          province: '台湾省',
+          region: '中国 台湾省 台北市',
+          riskHits: 2,
+          successCalls: 13,
+          uniqueIps: 8,
+        },
+      ];
+
+      window.__adminAccessEChartsSmoke = {
+        error: '',
+        ready: false,
+        results: {},
+      };
+
+      try {
+        const { createAdminAccessECharts } = await import(
+          '/src/components/admin-access/map-echarts-runtime.ts'
+        );
+        const modes = ['china-2d', 'world-2d', 'globe-3d'];
+        const charts = [];
+        for (const mode of modes) {
+          const container = document.querySelector(`#${mode}`);
+          const chart = await createAdminAccessECharts(container, {
+            locations,
+            metric: 'calls',
+            mode,
+          });
+          charts.push(chart);
+          const option = chart.getOption();
+          window.__adminAccessEChartsSmoke.results[mode] = {
+            seriesIds: (option.series || []).map((series) => series.id),
+          };
+        }
+        window.__adminAccessEChartsSmoke.charts = charts;
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        window.__adminAccessEChartsSmoke.ready = true;
+      } catch (error) {
+        window.__adminAccessEChartsSmoke.error = String(
+          error?.stack || error?.message || error,
+        );
+        window.__adminAccessEChartsSmoke.ready = true;
+      }
+    </script>
+  </body>
+</html>

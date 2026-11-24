@@ -1,0 +1,8 @@
+{
+  "created": "{0} created successfully",
+  "updated": "{0} saved successfully",
+  "entities": {
+    "interface": "API",
+    "user": "User"
+  }
+}

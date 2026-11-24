@@ -1,0 +1,142 @@
+{
+  "actions": {
+    "delete": "删除",
+    "edit": "编辑"
+  },
+  "create": "新增广告",
+  "delete": {
+    "action": "删除广告",
+    "description": "确认删除广告“{0}”吗？已绑定该广告的接口会自动切换为未指定广告。",
+    "title": "删除广告"
+  },
+  "editor": {
+    "basicDescription": "设置后台识别名称、排序和启停状态。",
+    "basicStep": "基础设置",
+    "basicTitle": "广告基本信息",
+    "contentStep": "投放内容",
+    "create": "新增广告",
+    "edit": "编辑广告",
+    "placementDescription": "先选择广告出现的位置，下面会自动切换为该位置需要填写的设置。",
+    "placementStep": "投放位置",
+    "placementTitle": "这条广告投放到哪里",
+    "scheduleDescription": "留空表示长期有效，也可以设置精确的开始和结束时间。",
+    "scheduleStep": "生效时间",
+    "scheduleTitle": "安排投放时段"
+  },
+  "editorFields": {
+    "descriptionPlaceholder": "简要说明广告内容和用户可以获得的信息",
+    "namePlaceholder": "仅后台可见，例如：首页暑期活动",
+    "providerName": "服务商名称",
+    "providerNamePlaceholder": "例如：示例云",
+    "providerUrl": "服务商官网",
+    "responseTitle": "广告名称",
+    "statusHelp": "停用后不会在页面或接口响应中投放。",
+    "titlePlaceholder": "填写用户最终看到的广告标题"
+  },
+  "entityName": "广告",
+  "fields": {
+    "actions": "操作",
+    "description": "展示说明",
+    "endTime": "结束时间",
+    "imageUrl": "图片地址",
+    "keyword": "关键词",
+    "linkTarget": "打开方式",
+    "linkUrl": "跳转地址",
+    "name": "后台名称",
+    "payload": "扩展 JSON",
+    "placement": "投放位置",
+    "schedule": "投放时间",
+    "sortNo": "排序",
+    "startTime": "开始时间",
+    "status": "状态",
+    "title": "展示标题",
+    "updateTime": "更新时间"
+  },
+  "messages": {
+    "created": "广告已创建",
+    "deleted": "广告“{0}”已删除",
+    "invalidPayload": "扩展 JSON 必须是合法的 JSON 对象",
+    "nameRequired": "请填写后台名称",
+    "parameterDuplicate": "参数名“{0}”重复，请修改后再保存",
+    "parameterNameRequired": "请填写第 {0} 个参数的名称",
+    "parameterNameTooLong": "第 {0} 个参数名称不能超过 128 个字符",
+    "parameterNumberInvalid": "第 {0} 个参数必须填写有效数字",
+    "payloadTooLarge": "扩展 JSON 不能超过 16 KiB",
+    "scheduleInvalid": "结束时间必须晚于开始时间",
+    "sortInvalid": "排序必须是 -100000 到 100000 之间的整数",
+    "titleRequired": "请填写展示标题或服务商名称",
+    "updated": "广告已更新"
+  },
+  "parameters": {
+    "add": "添加参数",
+    "booleanFalse": "否 / false",
+    "booleanTrue": "是 / true",
+    "description": "逐项填写接口广告需要返回的业务参数，系统会自动生成 JSON，无需手写代码。",
+    "empty": "还没有响应参数",
+    "emptyHelp": "点击这里添加参数，并分别填写参数名、类型和参数值。",
+    "name": "参数名",
+    "namePlaceholder": "例如 campaignId",
+    "preservedHelp": "这些旧参数是对象或数组，当前简易编辑器不会修改它们，保存时仍会原样保留。",
+    "preservedTitle": "已保留复杂参数",
+    "remove": "删除第 {0} 个参数",
+    "title": "接口响应参数",
+    "type": "参数类型",
+    "types": {
+      "boolean": "开关",
+      "number": "数字",
+      "string": "文本"
+    },
+    "value": "参数值",
+    "valuePlaceholder": "填写要返回的内容"
+  },
+  "payloadHelp": "仅接口响应广告会把该对象放入 payload 字段；网页广告不会渲染 HTML。",
+  "placementHelp": "首页、控制台和公告广告以结构化卡片展示；服务提供方广告显示为“本站由 XXX 提供服务”；接口响应广告只注入顶层 JSON 对象。",
+  "placementDescriptions": {
+    "apiResponse": "注入单接口的 JSON 返回结果",
+    "console": "登录后的控制台推广卡片",
+    "home": "网站首页顶部广告卡片",
+    "notice": "用户公告列表中的推广内容",
+    "serviceProvider": "网站底部的服务商署名"
+  },
+  "placementDetails": {
+    "apiResponse": {
+      "help": "配置接口返回中的广告标题、链接和业务参数。参数使用输入框设置，保存时自动生成结构化 JSON。",
+      "title": "接口响应广告"
+    },
+    "console": {
+      "help": "显示在用户登录后的控制台区域，适合产品能力、套餐或运营活动推广。",
+      "title": "控制台广告卡片"
+    },
+    "dynamicHelp": "当前表单已按所选投放位置显示相关设置；切换位置不会要求输入代码。",
+    "home": {
+      "help": "显示在网站首页顶部，建议使用清晰的横向图片、简短标题和明确的跳转地址。",
+      "title": "首页广告卡片"
+    },
+    "notice": {
+      "help": "插入用户公告列表，建议内容简洁，避免与正式系统公告混淆。",
+      "title": "公告页推广内容"
+    },
+    "serviceProvider": {
+      "help": "网站底部将显示“本站由服务商提供服务”，这里只需填写服务商名称和官网。",
+      "title": "本站服务提供方"
+    }
+  },
+  "placements": {
+    "apiResponse": "接口 JSON 响应",
+    "console": "控制台",
+    "home": "首页",
+    "notice": "用户公告",
+    "serviceProvider": "本站服务提供方"
+  },
+  "scheduleAlways": "长期有效",
+  "searchPlaceholder": "搜索后台名称、标题或说明",
+  "status": {
+    "disabled": "停用",
+    "enabled": "启用"
+  },
+  "targets": {
+    "blank": "新窗口打开",
+    "self": "当前窗口打开"
+  },
+  "title": "广告投放"
+}

@@ -1,0 +1,181 @@
+{
+  "actions": {
+    "revert": "撤销修改",
+    "save": "保存配置",
+    "upload": "上传图片"
+  },
+  "analytics": {
+    "fields": {
+      "code": "统计代码"
+    },
+    "help": "保存后刷新页面生效，并在所有公开页面加载。仅粘贴可信统计平台提供的代码，支持完整 <script>、<noscript>、统计像素和纯 JavaScript 片段。",
+    "placeholder": "粘贴百度统计、Google Analytics、Matomo 等平台提供的完整统计代码",
+    "title": "访问统计",
+    "tooLarge": "统计代码不能超过 256 KiB"
+  },
+  "branding": {
+    "fields": {
+      "authorName": "作者或组织",
+      "authorUrl": "作者主页",
+      "githubUrl": "源码仓库",
+      "licenseType": "开源许可证",
+      "licenseUrl": "许可证链接"
+    },
+    "title": "开源品牌信息"
+  },
+  "description": "控制全局网站名称、Logo、启动动画、统计代码、首页与页脚联系方式和版权信息。",
+  "fields": {
+    "address": "联系地址",
+    "copyright": "版权信息",
+    "description": "网站描述",
+    "email": "联系邮箱",
+    "icp": "备案信息",
+    "logo": "网站 Logo",
+    "name": "网站名称",
+    "phone": "联系电话",
+    "qq": "联系 QQ",
+    "slogan": "网站标语",
+    "uploadLogo": "上传 Logo",
+    "wechat": "联系微信"
+  },
+  "groups": {
+    "analytics": {
+      "hint": "会注入所有公开页面，只粘贴可信来源的代码。",
+      "title": "访问统计"
+    },
+    "branding": {
+      "hint": "开源仓库、作者与许可证信息。",
+      "title": "开源品牌信息"
+    },
+    "contact": {
+      "hint": "备案号与版权行，展示在前台页脚。",
+      "title": "备案与版权"
+    },
+    "globalLoading": {
+      "hint": "路由切换与接口请求挂起时展示的样式。",
+      "title": "全局加载动画"
+    },
+    "identity": {
+      "hint": "页头、浏览器标签与社交分享共用的名称、Logo 和简介。",
+      "title": "站点标识"
+    },
+    "seo": {
+      "hint": "搜索收录与浏览器标签页标题。",
+      "title": "SEO 设置"
+    },
+    "show": {
+      "hint": "联系方式、开源仓库与分享图，前台页脚和分享卡片直接引用。",
+      "title": "公开站点信息"
+    },
+    "startup": {
+      "hint": "首屏启动时的内置动画与自定义素材。",
+      "title": "启动动画"
+    },
+    "switches": {
+      "hint": "关掉用不到的分组，页面只保留你在改的部分。",
+      "title": "分组开关"
+    }
+  },
+  "lastUpdated": "最近更新：{0}",
+  "loading": {
+    "presets": {
+      "forge": "徽标成型",
+      "gateway": "网关直通",
+      "orbit": "节点公转",
+      "scan": "安全扫描",
+      "rail": "进度轨道",
+      "dots": "极简三点"
+    },
+    "presetHelp": "默认使用所选内置动画，自定义素材加载失败时也会回退到该动画。",
+    "customBadge": "自定义素材",
+    "defaultBadge": "内置轻量动画",
+    "defaultStatus": "正在建立安全 API 通道",
+    "fields": {
+      "preset": "内置动画",
+      "enabled": "启动动画样式",
+      "upload": "上传动画素材",
+      "url": "动画素材链接",
+      "globalPreset": "加载动画样式"
+    },
+    "help": "支持上传 GIF、动态 WebP、PNG 或 JPG，单文件不超过 2MB；也可填写 http/https 图片链接。加载失败会自动回退到内置动画。",
+    "placeholders": {
+      "url": "https://example.com/loading.gif，留空使用内置动画"
+    },
+    "previewAlt": "启动动画预览",
+    "previewDescription": "预览仅用于确认素材与默认回退效果，实际启动页会自适应屏幕并快速淡出。",
+    "previewTitle": "启动动画预览",
+    "switch": {
+      "custom": "自定义",
+      "default": "默认"
+    },
+    "title": "启动动画",
+    "urlRequired": "启用自定义启动动画后，请上传素材或填写动画链接",
+    "globalPresets": {
+      "bar": "顶部进度条",
+      "ring": "渐变环",
+      "skeleton": "骨架屏",
+      "packet": "报文流",
+      "logo": "徽标脉冲",
+      "dots": "三点波动"
+    },
+    "globalTitle": "全局加载动画",
+    "globalHelp": "路由切换与接口请求挂起时展示。顶部进度条与骨架屏不遮挡内容，感知等待更短。",
+    "globalPreviewTitle": "全局加载动画预览",
+    "routeLoadingAria": "页面切换中"
+  },
+  "messages": {
+    "invalidTab": "「{0}」里有未通过校验的设置，已跳转到该页",
+    "reverted": "已撤销未保存的修改",
+    "saved": "站点配置保存成功"
+  },
+  "never": "暂无",
+  "placeholders": {
+    "logo": "可填写图片地址，也可以上传 Logo",
+    "phone": "客服电话或手机号",
+    "slogan": "例如：稳定、清晰、可运营的 API 服务平台"
+  },
+  "public": {
+    "preview": {
+      "emptyDescription": "（留空时前台使用默认口号）",
+      "emptyImage": "未设置分享图",
+      "emptyUrl": "未设置站点基础地址",
+      "footerHint": "页脚会展示的联系方式与法务信息。",
+      "footerTitle": "页脚预览",
+      "heroHint": "站名、Logo 与简介在页头的呈现效果。",
+      "heroTitle": "页头预览",
+      "shareHint": "链接被分享到社交平台时生成的卡片。",
+      "shareTitle": "分享卡片预览"
+    }
+  },
+  "seo": {
+    "fields": {
+      "keywords": "SEO 关键词",
+      "noindex": "收录开关",
+      "ogImage": "OG 分享图 URL",
+      "siteUrl": "站点基础地址",
+      "title": "SEO 标题"
+    },
+    "placeholders": {
+      "keywords": "多个关键词用英文逗号分隔，如 BugPk-Api,API平台",
+      "ogImage": "社交分享卡片图（og:image/twitter:image），可填写图片地址",
+      "siteUrl": "https:// 开头，结尾不带 /；用于 sitemap/canonical",
+      "title": "页面 title 默认标题；留空则使用网站名称"
+    },
+    "switch": {
+      "off": "关闭",
+      "on": "开启"
+    },
+    "title": "SEO 设置"
+  },
+  "tabs": {
+    "basic": "基础信息",
+    "display": "展示与收录",
+    "public": "公开站点"
+  },
+  "title": "站点配置",
+  "unsaved": "有未保存的修改",
+  "upToDate": "已与线上一致",
+  "validation": {
+    "nameRequired": "网站名称不能为空"
+  }
+}

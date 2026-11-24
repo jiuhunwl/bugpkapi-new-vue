@@ -1,0 +1,15 @@
+{
+  "title": "Session Settings",
+  "description": "Controls the lifetime of the access token and refresh token issued at login. Changes apply to newly issued tokens only; existing sessions expire naturally.",
+  "accessTokenMinutes": "Access token lifetime (minutes)",
+  "accessTokenMinutesHint": "5 to 1440 minutes (up to 24 hours). Shorter is safer; longer reduces refresh traffic.",
+  "refreshTokenDays": "Refresh token lifetime (days)",
+  "refreshTokenDaysHint": "1 to 365 days. The refresh token renews the access token silently; after expiry users must sign in again.",
+  "effectiveHint": "The refresh token lifetime must be longer than the access token lifetime.",
+  "save": "Save",
+  "saveSuccess": "Session settings saved. Newly issued tokens take effect immediately.",
+  "loadFailed": "Failed to load session settings",
+  "current": "Current settings",
+  "accessUnit": "minutes",
+  "refreshUnit": "days"
+}

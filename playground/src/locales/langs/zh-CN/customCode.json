@@ -1,0 +1,23 @@
+{
+  "cssTagHelp": "\u8bf7\u586b\u5199\u5b8c\u6574\u7684 <style>...</style> \u6807\u7b7e\uff0c\u652f\u6301\u591a\u4e2a style \u6807\u7b7e\u3002",
+  "jsTagHelp": "\u8bf7\u586b\u5199\u5b8c\u6574\u7684 <script>...</script> \u6807\u7b7e\uff0csrc\u3001type\u3001async \u7b49\u5c5e\u6027\u4f1a\u88ab\u4fdd\u7559\u3002",
+  "cssHelp": "填写纯 CSS 内容，不要包含 <style> 标签。",
+  "cssTitle": "自定义 CSS",
+  "description": "为整个站点加载自定义样式与统计脚本。代码仅由具备专属权限的管理员维护。",
+  "disabledHint": "当前配置已保存但未启用，访客页面不会加载这些代码。",
+  "enabled": "在访客页面启用",
+  "jsHelp": "填写纯 JavaScript 内容，不要包含 <script> 标签。脚本会在应用挂载后执行。",
+  "jsTitle": "自定义 JavaScript",
+  "messages": {
+    "cssTagsRequired": "CSS \u5fc5\u987b\u5305\u542b\u5b8c\u6574\u7684 <style>...</style> \u6807\u7b7e",
+    "jsTagsRequired": "JavaScript \u5fc5\u987b\u5305\u542b\u5b8c\u6574\u7684 <script>...</script> \u6807\u7b7e",
+    "saved": "自定义代码已保存",
+    "tooLarge": "CSS 或 JavaScript 单项不能超过 256 KiB"
+  },
+  "refresh": "重新加载",
+  "save": "保存配置",
+  "size": "当前大小：{0}",
+  "title": "自定义代码",
+  "updatedAt": "最近更新：{0}",
+  "warning": "启用后的 JavaScript 会在所有访客浏览器中运行，拥有与站点前端相同的权限。只粘贴已审查且可信的代码，并避免记录密钥、令牌或用户隐私数据。"
+}

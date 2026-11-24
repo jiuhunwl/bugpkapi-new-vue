@@ -1,0 +1,438 @@
+/* Shared responsive baseline for the public site and authenticated console. */
+:root {
+  --app-content-max-width: 1920px;
+  --app-mobile-gutter: 12px;
+  --app-tablet-gutter: 16px;
+  --app-desktop-gutter: 20px;
+  --app-touch-target: 44px;
+}
+
+html {
+  min-width: 320px;
+  text-size-adjust: 100%;
+}
+
+body,
+#app,
+.ant-app {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+#app,
+.ant-app,
+.vben-page,
+.vben-page-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.vben-page > *,
+.vben-page-content > *,
+.ant-layout,
+.ant-layout-content,
+.ant-space,
+.ant-space-item {
+  min-width: 0;
+}
+
+.ant-app {
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}
+
+pre,
+code,
+.ant-typography {
+  overflow-wrap: anywhere;
+}
+
+pre {
+  max-width: 100%;
+  overflow: auto;
+}
+
+.ant-table-wrapper,
+.ant-table-container,
+.ant-descriptions,
+.ant-tabs,
+.vxe-grid,
+.vxe-table,
+.vxe-table--render-wrapper,
+.vxe-table--viewport-wrapper {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ant-table-content,
+.ant-descriptions-view,
+.vxe-table--body-wrapper,
+.vxe-table--header-wrapper {
+  overscroll-behavior-inline: contain;
+}
+
+.ant-descriptions-view {
+  overflow-x: auto;
+}
+
+.vben-page-header-extra > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ant-drawer-body,
+.ant-drawer-footer,
+.ant-card-body,
+.ant-form-item-control,
+.ant-form-item-control-input-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.vxe-grid--toolbar-wrapper,
+.vxe-toolbar,
+.vxe-grid--pager-wrapper,
+.vxe-pager {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .vben-page-header,
+  .vben-page-header-main,
+  .vben-page-header-extra,
+  .vxe-grid--toolbar-wrapper,
+  .vxe-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .vxe-toolbar .vxe-buttons--wrapper,
+  .vxe-toolbar .vxe-tools--wrapper {
+    min-width: 0;
+  }
+
+  .ant-space-wrap {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .ant-modal {
+    max-width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 767px) {
+  .vben-page-header-extra,
+  .vben-page-header-extra > .ant-space,
+  .vben-page-header-extra > div {
+    width: 100%;
+  }
+
+  .vben-page-header-extra .ant-space {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+
+  .vben-page-header-extra .ant-space-item,
+  .vben-page-header-extra .ant-space-item > * {
+    max-width: 100%;
+  }
+
+  .vben-page-footer > .ant-space,
+  .vben-page-footer > div {
+    max-width: 100%;
+  }
+
+  .ant-modal-root .ant-modal-wrap {
+    padding: max(8px, env(safe-area-inset-top))
+      max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom))
+      max(8px, env(safe-area-inset-left));
+  }
+
+  .ant-modal,
+  .ant-modal-centered .ant-modal {
+    top: 0;
+    width: 100% !important;
+    max-width: 100%;
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
+
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(
+      100dvh - max(16px, env(safe-area-inset-top)) -
+        max(16px, env(safe-area-inset-bottom))
+    );
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .ant-modal-header {
+    padding: 16px 16px 12px;
+  }
+
+  .ant-modal-body {
+    min-width: 0;
+    padding: 16px;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  .ant-modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px 16px;
+  }
+
+  .ant-modal-footer .ant-btn {
+    flex: 1 1 120px;
+    margin-inline-start: 0 !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    width: 100% !important;
+    max-width: 100vw;
+  }
+
+  .ant-drawer-header,
+  .ant-drawer-body,
+  .ant-drawer-footer {
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-left: max(16px, env(safe-area-inset-left));
+  }
+
+  .ant-drawer-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .ant-drawer-footer .ant-btn {
+    flex: 1 1 120px;
+    margin-inline-start: 0 !important;
+  }
+
+  .ant-form,
+  .ant-form-item,
+  .ant-form-item-control,
+  .ant-form-item-control-input,
+  .ant-form-item-control-input-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .ant-form-item-row {
+    min-width: 0;
+  }
+
+  .ant-form-item-label {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .ant-form-item-label > label {
+    max-width: 100%;
+    height: auto;
+    white-space: normal;
+  }
+
+  .ant-picker-dropdown,
+  .ant-select-dropdown,
+  .ant-cascader-dropdown {
+    max-width: calc(100vw - 16px);
+  }
+
+  .ant-picker-panels {
+    max-width: calc(100vw - 16px);
+    overflow-x: auto;
+  }
+
+  .ant-tabs-nav-wrap {
+    max-width: 100%;
+  }
+
+  .ant-tabs-nav-list {
+    min-width: max-content;
+  }
+
+  .table-operations {
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: flex-start !important;
+  }
+
+  .vxe-grid--toolbar-wrapper,
+  .vxe-toolbar,
+  .vxe-toolbar .vxe-buttons--wrapper,
+  .vxe-toolbar .vxe-tools--wrapper {
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .vxe-toolbar .vxe-buttons--wrapper,
+  .vxe-toolbar .vxe-tools--wrapper {
+    width: 100%;
+  }
+
+  .vxe-toolbar .vxe-tools--wrapper {
+    justify-content: flex-end;
+  }
+
+  .vxe-grid--pager-wrapper,
+  .vxe-pager {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .ant-pagination,
+  .vxe-pager {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .ant-input-group-wrapper,
+  .ant-input-number,
+  .ant-picker,
+  .ant-select,
+  .ant-upload-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ant-input-group-wrapper,
+  .ant-picker,
+  .ant-select {
+    min-width: 0 !important;
+  }
+
+  .ant-btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .ant-table-cell,
+  .vxe-body--column,
+  .vxe-header--column {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (pointer: coarse) {
+  button:not(.ant-switch),
+  [role='button'],
+  .ant-btn,
+  .ant-checkbox-wrapper,
+  .ant-radio-wrapper,
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    min-height: var(--app-touch-target);
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    min-width: var(--app-touch-target);
+  }
+
+  input,
+  select,
+  textarea,
+  .ant-input,
+  .ant-input-number-input,
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/*
+ * 深色模式的兜底样式
+ * 1) 原生滚动条默认跟随系统配色，Firefox / 旧版 Chrome 不遵循 color-scheme，
+ *    会在深色页面上画出浅色导轨。这里显式按主题染色。
+ */
+html.dark {
+  scrollbar-color: hsl(var(--foreground) / 25%) hsl(var(--background-deep));
+}
+
+/*
+ * 顶栏 / 侧栏 / 页签栏配色与主题色彻底解耦
+ * 这三处的背景只应由明暗模式决定，不能跟随内置主题、品牌色、自定义主色或
+ * 任何运行时覆盖（否则就会出现深色模式下顶栏 / 菜单栏发浅绿、浅色模式下
+ * 菜单栏发灰绿的情况）。
+ * 说明：
+ * - html 与 html.dark 上加了 !important，可挡住内联样式或主题预设改写令牌。
+ * - header / aside 元素自身的 .light、.dark 类会重新声明同名变量，
+ *   因此还需要在元素上再锁一次背景色。
+ * - 深色页面里即使元素误带 .light 类，也强制按深色渲染；
+ *   浅色页面里开启“深色顶栏 / 深色侧边栏”时，仍按元素的 .dark 类渲染深色。
+ */
+html {
+  --header: 0 0% 100% !important;
+  --menu: var(--sidebar) !important;
+  --sidebar: 0 0% 100% !important;
+  --sidebar-deep: 0 0% 100% !important;
+}
+
+html.dark {
+  --header: 222.34deg 10.43% 12.27% !important;
+  --menu: var(--sidebar) !important;
+  --sidebar: 222.34deg 10.43% 12.27% !important;
+  --sidebar-deep: 220deg 13.06% 9% !important;
+}
+
+/* 浅色页面且未开启深色栏：纯白 */
+html:not(.dark) header.bg-header:not(.dark),
+html:not(.dark) aside:not(.dark) .bg-sidebar,
+html:not(.dark) aside:not(.dark) .bg-sidebar-deep,
+html:not(.dark) .layout-tabbar {
+  --header: 0 0% 100% !important;
+  --sidebar: 0 0% 100% !important;
+  --sidebar-deep: 0 0% 100% !important;
+  background-color: #fff !important;
+  color-scheme: light;
+}
+
+/* 深色页面，或浅色页面开启深色栏：纯正中性深色 */
+html.dark header.bg-header,
+html.dark header.bg-header.light,
+header.bg-header.dark,
+html.dark aside .bg-sidebar,
+html.dark aside .bg-sidebar-deep,
+aside.dark .bg-sidebar,
+aside.dark .bg-sidebar-deep,
+html.dark .layout-tabbar {
+  --header: 222.34deg 10.43% 12.27% !important;
+  --foreground: 0 0% 95% !important;
+  --muted-foreground: 240 5% 64.9% !important;
+  --sidebar: 222.34deg 10.43% 12.27% !important;
+  --sidebar-deep: 220deg 13.06% 9% !important;
+  background-color: hsl(222.34deg 10.43% 12.27%) !important;
+  color-scheme: dark;
+}

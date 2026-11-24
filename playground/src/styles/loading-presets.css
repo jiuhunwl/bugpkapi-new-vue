@@ -1,0 +1,775 @@
+/**
+ * 启动动画 / 全局加载动画 —— 内置预设样式（唯一来源）
+ *
+ * 同一份样式同时服务三处，避免预览与线上效果对不上：
+ *   1. 首屏 splash（index.html 内联副本，构建时无法引用本文件，改动需同步）
+ *   2. 后台「站点配置 → 加载动画」实时预览（LoadingAnimationPreview.vue）
+ *   3. 全局加载遮罩（GlobalLoadingIndicator.vue）
+ *
+ * 约定：
+ *   - 启动动画类名 .bp-sp / .bp-sp--<preset>
+ *   - 全局加载类名 .bp-ld / .bp-ld--<preset>
+ *   - 只用 transform/opacity 做动画，避免触发重排
+ *   - 统一响应 prefers-reduced-motion
+ */
+
+/* ============ 启动动画（splash） ============ */
+.bp-sp {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  color: #eaf2ff;
+}
+
+.bp-sp__mesh {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(56 189 248 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(56 189 248 / 7%) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(circle at 50% 42%, #000, transparent 72%);
+}
+
+.bp-sp__brand {
+  position: absolute;
+  bottom: 15%;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.bp-sp__brand b {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.bp-sp__brand small {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 9.5px;
+  color: #7dd3fc;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* 1 · forge 徽标成型 */
+.bp-sp__mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  font-size: 38px;
+  color: #fff;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  border-radius: 24px;
+  animation: bp-forge-in 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.bp-sp__mark svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1.9;
+}
+
+.bp-sp__mark::after {
+  position: absolute;
+  inset: -9px;
+  content: '';
+  border: 1.5px solid rgb(91 140 255 / 50%);
+  border-radius: 31px;
+  animation: bp-forge-ring 1.7s ease-out infinite;
+}
+
+.bp-sp__mark::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgb(255 255 255 / 50%) 50%,
+    transparent 62%
+  );
+  background-size: 250% 100%;
+  border-radius: 24px;
+  animation: bp-sheen 2.1s linear 0.7s infinite;
+}
+
+/* 2 · gateway 网关直通 */
+.bp-sp__gw {
+  position: relative;
+  width: min(72%, 240px);
+  height: 64px;
+}
+
+.bp-sp__gw::before,
+.bp-sp__gw::after {
+  position: absolute;
+  top: 31px;
+  height: 2px;
+  content: '';
+  background: rgb(56 189 248 / 24%);
+}
+
+.bp-sp__gw::before {
+  right: 58%;
+  left: 0;
+}
+
+.bp-sp__gw::after {
+  right: 0;
+  left: 58%;
+}
+
+.bp-sp__core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: #0b1b2f;
+  border: 1px solid rgb(56 189 248 / 60%);
+  border-radius: 17px;
+  box-shadow:
+    0 0 0 7px rgb(56 189 248 / 7%),
+    0 16px 34px rgb(2 132 199 / 22%);
+  translate: -50% -50%;
+}
+
+.bp-sp__core i {
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgb(45 212 191 / 36%);
+  border-radius: 11px;
+  animation: bp-breathe 1.4s ease-in-out infinite;
+}
+
+.bp-sp__pk {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 3px;
+  box-shadow: 0 0 14px rgb(56 189 248 / 85%);
+  animation: bp-route 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.bp-sp__pk:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.bp-sp__pk:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+/* 3 · orbit 节点公转 */
+.bp-sp__orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+}
+
+.bp-sp__orbit > span {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11.5px;
+  font-weight: 800;
+  background: #0b1b2f;
+  border: 1px solid rgb(45 212 191 / 60%);
+  border-radius: 50%;
+  box-shadow: 0 0 26px rgb(45 212 191 / 24%);
+}
+
+.bp-sp__orbit::after {
+  position: absolute;
+  inset: 8px;
+  content: '';
+  border: 1px dashed rgb(56 189 248 / 20%);
+  border-radius: 50%;
+}
+
+.bp-sp__orbit i {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgb(56 189 248 / 80%);
+  animation: bp-orbit 1.7s linear infinite;
+}
+
+.bp-sp__orbit i:nth-of-type(2) {
+  animation-delay: -0.566s;
+}
+
+.bp-sp__orbit i:nth-of-type(3) {
+  animation-delay: -1.133s;
+}
+
+/* 4 · scan 安全扫描 */
+.bp-sp__scan {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 96px;
+  overflow: hidden;
+  background: #0b1b2f;
+  border: 1px solid rgb(56 189 248 / 42%);
+  border-radius: 22px;
+}
+
+.bp-sp__scan b {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 23px;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  background-clip: text;
+}
+
+.bp-sp__scan svg {
+  width: 42px;
+  height: 42px;
+  color: #7dd3fc;
+  stroke-width: 1.6;
+  animation: bp-bob 1.5s ease-in-out infinite;
+}
+
+.bp-sp__scan::before {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 34%;
+  content: '';
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgb(56 189 248 / 30%),
+    transparent
+  );
+  animation: bp-scan 1.6s ease-in-out infinite;
+}
+
+.bp-sp__scan::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: repeating-linear-gradient(
+    0deg,
+    rgb(56 189 248 / 8%) 0 1px,
+    transparent 1px 4px
+  );
+}
+
+/* 5 · rail 进度轨 */
+.bp-sp__rail {
+  display: grid;
+  justify-items: center;
+  gap: 13px;
+  width: min(66%, 220px);
+}
+
+.bp-sp__rail .bp-sp__mini {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  font-size: 22px;
+  color: #fff;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  border-radius: 14px;
+}
+
+.bp-sp__rail .bp-sp__mini svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1.9;
+}
+
+.bp-sp__track {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  background: rgb(148 163 184 / 18%);
+  border-radius: 99px;
+}
+
+.bp-sp__track i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  border-radius: 99px;
+  animation: bp-rail 2.1s cubic-bezier(0.5, 0.05, 0.2, 1) infinite;
+}
+
+.bp-sp__pct {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 10.5px;
+  color: #7dd3fc;
+  letter-spacing: 0.14em;
+}
+
+/* 6 · dots 极简三点 */
+.bp-sp__dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bp-sp__dots i {
+  width: 11px;
+  height: 11px;
+  background: #38bdf8;
+  border-radius: 50%;
+  animation: bp-dots 1.1s ease-in-out infinite;
+}
+
+.bp-sp__dots i:nth-of-type(2) {
+  animation-delay: 0.16s;
+}
+
+.bp-sp__dots i:nth-of-type(3) {
+  animation-delay: 0.32s;
+}
+
+/* ============ 全局加载动画 ============ */
+.bp-ld {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #eaf2ff;
+}
+
+.bp-ld__cap {
+  position: absolute;
+  bottom: 13%;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 9.5px;
+  color: #7dd3fc;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* 1 · bar 顶部进度条 */
+.bp-ld__bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  overflow: hidden;
+  background: rgb(148 163 184 / 14%);
+}
+
+.bp-ld__bar i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 38%;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  border-radius: 99px;
+  animation: bp-ld-bar 1.15s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+.bp-ld__pv {
+  display: grid;
+  gap: 9px;
+  width: min(74%, 250px);
+}
+
+.bp-ld__pv span {
+  height: 10px;
+  background: rgb(148 163 184 / 16%);
+  border-radius: 6px;
+}
+
+.bp-ld__pv span:nth-child(2) {
+  width: 72%;
+}
+
+.bp-ld__pv span:nth-child(3) {
+  width: 52%;
+}
+
+/* 2 · ring 渐变环 */
+.bp-ld__ring {
+  width: 56px;
+  height: 56px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 18%,
+    #4f8cff 42%,
+    #8b5cf6 70%,
+    #22d3ee 92%,
+    transparent
+  );
+  border-radius: 50%;
+  mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 0);
+  animation: bp-spin 0.85s linear infinite;
+}
+
+/* 3 · skeleton 骨架屏 */
+.bp-ld__sk {
+  display: grid;
+  gap: 10px;
+  width: min(80%, 268px);
+}
+
+.bp-ld__sk .bp-ld__row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bp-ld__av,
+.bp-ld__ln {
+  background: linear-gradient(
+    100deg,
+    rgb(148 163 184 / 13%) 30%,
+    rgb(148 163 184 / 28%) 50%,
+    rgb(148 163 184 / 13%) 70%
+  );
+  background-size: 220% 100%;
+  animation: bp-shimmer 1.4s linear infinite;
+}
+
+.bp-ld__av {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+}
+
+.bp-ld__ln {
+  flex: 1;
+  height: 9px;
+  border-radius: 6px;
+}
+
+.bp-ld__ln--short {
+  flex: 0 0 42%;
+}
+
+/* 4 · packet 报文流 */
+.bp-ld__pf {
+  position: relative;
+  width: min(76%, 230px);
+  height: 34px;
+}
+
+.bp-ld__pf::before {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  content: '';
+  background: repeating-linear-gradient(
+    90deg,
+    rgb(56 189 248 / 30%) 0 7px,
+    transparent 7px 14px
+  );
+}
+
+.bp-ld__pf i {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #38bdf8;
+  border-radius: 3px;
+  box-shadow: 0 0 13px rgb(56 189 248 / 80%);
+  animation: bp-flow 1.4s linear infinite;
+}
+
+.bp-ld__pf i:nth-of-type(2) {
+  animation-delay: 0.46s;
+}
+
+.bp-ld__pf i:nth-of-type(3) {
+  animation-delay: 0.93s;
+}
+
+/* 5 · logo 徽标脉冲 */
+.bp-ld__logo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  font-size: 26px;
+  color: #fff;
+  background: linear-gradient(120deg, #4f8cff, #8b5cf6 52%, #22d3ee);
+  border-radius: 17px;
+  animation: bp-bob 1.5s ease-in-out infinite;
+}
+
+.bp-ld__logo svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 1.9;
+}
+
+.bp-ld__logo::after {
+  position: absolute;
+  inset: -8px;
+  content: '';
+  border: 1.5px solid rgb(91 140 255 / 45%);
+  border-radius: 25px;
+  animation: bp-halo 1.5s ease-out infinite;
+}
+
+/* 6 · dots 三点波动 */
+.bp-ld__dots {
+  display: flex;
+  gap: 9px;
+}
+
+.bp-ld__dots i {
+  width: 10px;
+  height: 10px;
+  background: #22d3ee;
+  border-radius: 50%;
+  animation: bp-wave 1.05s ease-in-out infinite;
+}
+
+.bp-ld__dots i:nth-of-type(2) {
+  animation-delay: 0.14s;
+}
+
+.bp-ld__dots i:nth-of-type(3) {
+  animation-delay: 0.28s;
+}
+
+/* ============ 关键帧 ============ */
+@keyframes bp-forge-in {
+  from {
+    opacity: 0;
+    filter: blur(7px);
+    transform: scale(0.62) rotate(-9deg);
+  }
+
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+
+@keyframes bp-forge-ring {
+  from {
+    opacity: 0.7;
+    transform: scale(0.86);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.38);
+  }
+}
+
+@keyframes bp-sheen {
+  from {
+    background-position: 180% 0;
+  }
+
+  to {
+    background-position: -80% 0;
+  }
+}
+
+@keyframes bp-breathe {
+  50% {
+    opacity: 0.42;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes bp-route {
+  0% {
+    opacity: 0;
+    transform: translateX(0) scale(0.65);
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  68% {
+    opacity: 1;
+    transform: translateX(190px) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(215px) scale(0.4);
+  }
+}
+
+@keyframes bp-orbit {
+  from {
+    transform: rotate(0) translateX(54px) rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(54px) rotate(-360deg);
+  }
+}
+
+@keyframes bp-scan {
+  0% {
+    top: -34%;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes bp-rail {
+  0% {
+    width: 4%;
+  }
+
+  30% {
+    width: 42%;
+  }
+
+  55% {
+    width: 58%;
+  }
+
+  82% {
+    width: 88%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bp-dots {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: translateY(0) scale(0.82);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-7px) scale(1);
+  }
+}
+
+@keyframes bp-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes bp-ld-bar {
+  0% {
+    left: -38%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes bp-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+
+  to {
+    background-position: -50% 0;
+  }
+}
+
+@keyframes bp-flow {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    left: calc(100% - 10px);
+    opacity: 0;
+  }
+}
+
+@keyframes bp-bob {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes bp-halo {
+  from {
+    opacity: 0.65;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes bp-wave {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* 尊重系统「减弱动效」：保留可读的静态帧 */
+@media (prefers-reduced-motion: reduce) {
+  .bp-sp *,
+  .bp-ld * {
+    animation: none !important;
+  }
+
+  .bp-sp__track i {
+    width: 64%;
+  }
+
+  .bp-ld__bar i {
+    left: 31%;
+  }
+}

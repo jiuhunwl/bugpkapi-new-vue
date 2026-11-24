@@ -1,0 +1,142 @@
+{
+  "actions": {
+    "delete": "Delete",
+    "edit": "Edit"
+  },
+  "create": "New advertisement",
+  "delete": {
+    "action": "Delete advertisement",
+    "description": "Delete advertisement “{0}”? Interfaces bound to it will automatically fall back to no selected advertisement.",
+    "title": "Delete advertisement"
+  },
+  "editor": {
+    "basicDescription": "Set the internal name, sort order, and availability.",
+    "basicStep": "Basics",
+    "basicTitle": "Advertisement details",
+    "contentStep": "Delivery content",
+    "create": "New advertisement",
+    "edit": "Edit advertisement",
+    "placementDescription": "Choose where the advertisement appears. The form below will switch to the settings required for that placement.",
+    "placementStep": "Placement",
+    "placementTitle": "Where should this advertisement appear?",
+    "scheduleDescription": "Leave both fields empty for an always-active advertisement, or set an exact delivery window.",
+    "scheduleStep": "Schedule",
+    "scheduleTitle": "Set the delivery window"
+  },
+  "editorFields": {
+    "descriptionPlaceholder": "Briefly explain the offer and what the user can expect",
+    "namePlaceholder": "Only visible to administrators, for example: Home summer campaign",
+    "providerName": "Provider name",
+    "providerNamePlaceholder": "For example: Example Cloud",
+    "providerUrl": "Provider website",
+    "responseTitle": "Advertisement name",
+    "statusHelp": "Disabled advertisements are not delivered to pages or API responses.",
+    "titlePlaceholder": "Enter the title users will see"
+  },
+  "entityName": "Advertisement",
+  "fields": {
+    "actions": "Actions",
+    "description": "Description",
+    "endTime": "End time",
+    "imageUrl": "Image URL",
+    "keyword": "Keyword",
+    "linkTarget": "Open target",
+    "linkUrl": "Link URL",
+    "name": "Internal name",
+    "payload": "Extra JSON",
+    "placement": "Placement",
+    "schedule": "Schedule",
+    "sortNo": "Sort order",
+    "startTime": "Start time",
+    "status": "Status",
+    "title": "Display title",
+    "updateTime": "Updated at"
+  },
+  "messages": {
+    "created": "Advertisement created",
+    "deleted": "Advertisement “{0}” deleted",
+    "invalidPayload": "Extra JSON must be a valid JSON object",
+    "nameRequired": "Enter an internal name",
+    "parameterDuplicate": "Parameter name “{0}” is duplicated",
+    "parameterNameRequired": "Enter a name for parameter {0}",
+    "parameterNameTooLong": "Parameter {0} cannot exceed 128 characters",
+    "parameterNumberInvalid": "Parameter {0} must contain a valid number",
+    "payloadTooLarge": "Extra JSON cannot exceed 16 KiB",
+    "scheduleInvalid": "The end time must be later than the start time",
+    "sortInvalid": "Sort order must be an integer from -100000 to 100000",
+    "titleRequired": "Enter a display title or provider name",
+    "updated": "Advertisement updated"
+  },
+  "parameters": {
+    "add": "Add parameter",
+    "booleanFalse": "No / false",
+    "booleanTrue": "Yes / true",
+    "description": "Enter each business parameter separately. The system generates the JSON automatically, so no code is required.",
+    "empty": "No response parameters yet",
+    "emptyHelp": "Add a parameter, then enter its name, type, and value.",
+    "name": "Parameter name",
+    "namePlaceholder": "For example, campaignId",
+    "preservedHelp": "These existing object or array values are not changed by the simple editor and will be preserved when saved.",
+    "preservedTitle": "Complex parameters preserved",
+    "remove": "Remove parameter {0}",
+    "title": "API response parameters",
+    "type": "Parameter type",
+    "types": {
+      "boolean": "Boolean",
+      "number": "Number",
+      "string": "Text"
+    },
+    "value": "Parameter value",
+    "valuePlaceholder": "Enter the value to return"
+  },
+  "payloadHelp": "Only API response advertisements expose this object under payload. Web advertisements never render HTML.",
+  "placementHelp": "Home, console, and notice placements render structured cards. Service-provider advertisements render as a compact ‘Powered by’ credit. API response advertisements are injected only into top-level JSON objects.",
+  "placementDescriptions": {
+    "apiResponse": "Inject into an API's JSON response",
+    "console": "Promotional cards in the signed-in console",
+    "home": "Advertisement cards at the top of the home page",
+    "notice": "Promotional content in the user notice list",
+    "serviceProvider": "Provider credit in the site footer"
+  },
+  "placementDetails": {
+    "apiResponse": {
+      "help": "Configure the title, link, and business parameters injected into API responses. Parameters are entered as fields and converted to structured JSON automatically.",
+      "title": "API response advertisement"
+    },
+    "console": {
+      "help": "Shown in the signed-in console for product capabilities, plans, or operational campaigns.",
+      "title": "Console advertisement card"
+    },
+    "dynamicHelp": "The form now shows only settings relevant to the selected placement. Switching placements never requires entering code.",
+    "home": {
+      "help": "Shown at the top of the home page. Use a clear landscape image, concise title, and direct destination.",
+      "title": "Home advertisement card"
+    },
+    "notice": {
+      "help": "Inserted into the user notice list. Keep the wording concise and distinct from official system notices.",
+      "title": "Notice page promotion"
+    },
+    "serviceProvider": {
+      "help": "The footer displays a provider credit. Only the provider name and website are required here.",
+      "title": "Site service provider"
+    }
+  },
+  "placements": {
+    "apiResponse": "API JSON response",
+    "console": "Console",
+    "home": "Home",
+    "notice": "User notices",
+    "serviceProvider": "Site service provider"
+  },
+  "scheduleAlways": "Always active",
+  "searchPlaceholder": "Search name, title, or description",
+  "status": {
+    "disabled": "Disabled",
+    "enabled": "Enabled"
+  },
+  "targets": {
+    "blank": "Open in new window",
+    "self": "Open in current window"
+  },
+  "title": "Advertisement delivery"
+}

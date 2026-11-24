@@ -1,0 +1,19 @@
+{
+  "title": "Payment and Sponsorship Service Agreement",
+  "dialogTitle": "Payment and Sponsorship Service Agreement",
+  "dialogSubtitle": "Please read all clauses in full before deciding whether to sponsor",
+  "noticeTitle": "Important notice",
+  "ackTitle": "Sponsorship confirmation",
+  "metaVersion": "Version {0}",
+  "metaEffective": "Effective {0}",
+  "consentPrefix": "I have read and agree to the",
+  "consentLink": "Payment and Sponsorship Service Agreement",
+  "consentSuffix": ", and I understand that payment is voluntary sponsorship support, not a transaction",
+  "consentRequired": "Please tick the agreement before the payment QR code becomes available",
+  "qrcodeLocked": "Tick the agreement to reveal the QR code",
+  "qrcodeLockedHint": "Read the agreement",
+  "scrollHint": "Scroll to read all clauses",
+  "actionsClose": "Close",
+  "actionsAgree": "I have read and agree",
+  "sponsorNatureHint": "This payment is voluntary sponsorship support for this site, not a transaction; any service credits are a courtesy in return."
+}

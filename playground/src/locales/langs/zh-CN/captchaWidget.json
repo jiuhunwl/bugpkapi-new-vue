@@ -1,0 +1,14 @@
+{
+  "expired": "验证已过期，请重新验证",
+  "geeTestButton": "点击完成安全验证",
+  "geeTestFailed": "极验验证失败，请重试",
+  "geeTestIncomplete": "极验返回数据不完整，请重试",
+  "geeTestInitFailed": "极验初始化失败，请重试",
+  "loadFailed": "验证组件加载失败，请重试",
+  "loading": "正在加载验证组件…",
+  "notCompleted": "验证未完成，请再次点击验证",
+  "preparing": "正在准备安全验证…",
+  "retry": "重试",
+  "timeout": "验证等待超时，请重新验证",
+  "turnstileFailed": "Turnstile 验证失败，请重试"
+}

@@ -1,0 +1,181 @@
+{
+  "actions": {
+    "revert": "Revert changes",
+    "save": "Save settings",
+    "upload": "Upload image"
+  },
+  "analytics": {
+    "fields": {
+      "code": "Analytics code"
+    },
+    "help": "Loaded on every public page after refresh. Paste code only from a trusted analytics provider; complete <script>, <noscript>, pixel, and plain JavaScript snippets are supported.",
+    "placeholder": "Paste the complete tracking snippet from Google Analytics, Baidu Analytics, Matomo, or another provider",
+    "title": "Analytics & Tracking",
+    "tooLarge": "Analytics code cannot exceed 256 KiB"
+  },
+  "branding": {
+    "fields": {
+      "authorName": "Author or organization",
+      "authorUrl": "Author website",
+      "githubUrl": "Source repository",
+      "licenseType": "License",
+      "licenseUrl": "License URL"
+    },
+    "title": "Open-source Branding"
+  },
+  "description": "Configure the global site name, logo, startup animation, analytics code, homepage and footer contact details, and copyright information.",
+  "fields": {
+    "address": "Address",
+    "copyright": "Copyright",
+    "description": "Site description",
+    "email": "Contact email",
+    "icp": "Registration information",
+    "logo": "Site logo",
+    "name": "Site name",
+    "phone": "Contact phone",
+    "qq": "Contact QQ",
+    "slogan": "Slogan",
+    "uploadLogo": "Upload logo",
+    "wechat": "Contact WeChat"
+  },
+  "groups": {
+    "analytics": {
+      "hint": "Injected into every public page. Paste code from trusted providers only.",
+      "title": "Analytics & Tracking"
+    },
+    "branding": {
+      "hint": "Repository, author and license details.",
+      "title": "Open-source Branding"
+    },
+    "contact": {
+      "hint": "Registration number and copyright line shown in the public footer.",
+      "title": "Registration & Copyright"
+    },
+    "globalLoading": {
+      "hint": "Shown while routes switch or requests are pending.",
+      "title": "Global Loading Animation"
+    },
+    "identity": {
+      "hint": "Name, logo and description shared by the header, browser tab and social cards.",
+      "title": "Site Identity"
+    },
+    "seo": {
+      "hint": "Search indexing and the browser tab title.",
+      "title": "SEO Settings"
+    },
+    "show": {
+      "hint": "Contact channels, repository and share image used by the footer and social cards.",
+      "title": "Public Site Info"
+    },
+    "startup": {
+      "hint": "Built-in animation and custom media for the first screen.",
+      "title": "Startup Animation"
+    },
+    "switches": {
+      "hint": "Hide the groups you are not editing to keep this page short.",
+      "title": "Visible groups"
+    }
+  },
+  "lastUpdated": "Last updated: {0}",
+  "loading": {
+    "presets": {
+      "forge": "Logo forge",
+      "gateway": "Gateway relay",
+      "orbit": "Orbit nodes",
+      "scan": "Security scan",
+      "rail": "Progress rail",
+      "dots": "Minimal dots"
+    },
+    "presetHelp": "The selected built-in animation is used by default and as the fallback when custom media cannot load.",
+    "customBadge": "Custom media",
+    "defaultBadge": "Built-in lightweight animation",
+    "defaultStatus": "Establishing secure API channel",
+    "fields": {
+      "preset": "Built-in animation",
+      "enabled": "Startup animation style",
+      "upload": "Upload animation",
+      "url": "Animation URL",
+      "globalPreset": "Loading animation style"
+    },
+    "help": "Upload GIF, animated WebP, PNG, or JPG up to 2 MB, or enter an http/https image URL. Failed media automatically falls back to the built-in animation.",
+    "placeholders": {
+      "url": "https://example.com/loading.gif; leave empty for the built-in animation"
+    },
+    "previewAlt": "Startup animation preview",
+    "previewDescription": "This preview confirms the custom media and fallback. The real startup screen adapts to the viewport and exits quickly.",
+    "previewTitle": "Startup animation preview",
+    "switch": {
+      "custom": "Custom",
+      "default": "Default"
+    },
+    "title": "Startup Animation",
+    "urlRequired": "Upload media or enter an animation URL before enabling the custom startup animation",
+    "globalPresets": {
+      "bar": "Top progress bar",
+      "ring": "Gradient ring",
+      "skeleton": "Skeleton screen",
+      "packet": "Packet flow",
+      "logo": "Logo pulse",
+      "dots": "Dot wave"
+    },
+    "globalTitle": "Global loading animation",
+    "globalHelp": "Shown while routes switch or requests are pending. The top bar and skeleton keep content visible, which shortens perceived waiting.",
+    "globalPreviewTitle": "Global loading preview",
+    "routeLoadingAria": "Navigating"
+  },
+  "messages": {
+    "invalidTab": "The “{0}” tab has settings that failed validation; jumped to it",
+    "reverted": "Unsaved changes reverted",
+    "saved": "Site settings saved"
+  },
+  "never": "Never",
+  "placeholders": {
+    "logo": "Enter an image URL or upload a logo",
+    "phone": "Support phone or mobile number",
+    "slogan": "For example: A stable and operational API platform"
+  },
+  "public": {
+    "preview": {
+      "emptyDescription": "(the public site falls back to the default slogan)",
+      "emptyImage": "No share image set",
+      "emptyUrl": "Site base URL is not set",
+      "footerHint": "Contact and legal lines the footer will show.",
+      "footerTitle": "Footer preview",
+      "heroHint": "How the name, logo and slogan look in the header.",
+      "heroTitle": "Header preview",
+      "shareHint": "The card generated when the link is shared on social platforms.",
+      "shareTitle": "Social card preview"
+    }
+  },
+  "seo": {
+    "fields": {
+      "keywords": "SEO keywords",
+      "noindex": "Indexing switch",
+      "ogImage": "OG image URL",
+      "siteUrl": "Site base URL",
+      "title": "SEO title"
+    },
+    "placeholders": {
+      "keywords": "Separate keywords with commas, e.g. BugPk-Api,API platform",
+      "ogImage": "Social share card image (og:image/twitter:image); enter an image URL",
+      "siteUrl": "Starts with https://, no trailing slash; used for sitemap/canonical",
+      "title": "Default page title; leave empty to use site name"
+    },
+    "switch": {
+      "off": "Off",
+      "on": "On"
+    },
+    "title": "SEO Settings"
+  },
+  "tabs": {
+    "basic": "Basics",
+    "display": "Display & Indexing",
+    "public": "Public Site"
+  },
+  "title": "Site Settings",
+  "unsaved": "You have unsaved changes",
+  "upToDate": "Everything is saved",
+  "validation": {
+    "nameRequired": "Site name is required"
+  }
+}

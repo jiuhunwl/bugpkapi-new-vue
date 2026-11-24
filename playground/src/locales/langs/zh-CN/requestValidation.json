@@ -1,0 +1,98 @@
+{
+  "action": "参数检测",
+  "conditions": {
+    "add": "添加条件",
+    "domainPlaceholder": "多个域名用逗号分隔，例如 douyin.com, iesdouyin.com",
+    "expectedPlaceholder": "请输入比较值",
+    "fieldPlaceholder": "参数名或 Body 字段路径，例如 url、payload.url",
+    "regexPlaceholder": "请输入 Go RE2 兼容正则表达式",
+    "remove": "删除条件 {0}"
+  },
+  "description": "检测在开放网关鉴权、接口匹配之后执行，并早于计费、缓存和上游请求。不合规请求不会扣费，也不会发送到上游。规则按顺序判断，首个命中结果立即生效。",
+  "logic": {
+    "all": "全部满足（AND）",
+    "any": "任一满足（OR）"
+  },
+  "messages": {
+    "invalidRule": "请完整配置第 {0} 条参数检测规则",
+    "parameterRequired": "请先填写分享链接参数名",
+    "presetApplied": "参数检测预设已载入，可继续按需调整",
+    "saved": "请求参数检测策略已保存",
+    "tooManyRules": "参数检测规则不能超过 20 条"
+  },
+  "operators": {
+    "contains": "包含",
+    "domainIn": "域名属于平台",
+    "domainNotIn": "域名不属于平台",
+    "empty": "为空",
+    "endsWith": "以指定内容结尾",
+    "eq": "等于",
+    "exists": "参数存在",
+    "hasDomain": "包含有效域名",
+    "isUrl": "是完整 HTTP/HTTPS URL",
+    "ne": "不等于",
+    "notContains": "不包含",
+    "notEmpty": "不为空",
+    "notExists": "参数不存在",
+    "notHasDomain": "不包含有效域名",
+    "notRegex": "不匹配正则",
+    "notUrl": "不是完整 HTTP/HTTPS URL",
+    "regex": "匹配正则",
+    "startsWith": "以指定内容开头"
+  },
+  "preset": {
+    "apply": "应用预设",
+    "badge": "一键配置",
+    "description": "预设会自动生成缺参、空值、域名检测和平台匹配规则；应用后仍可逐项编辑。",
+    "domains": "平台域名",
+    "invalidRule": "分享链接参数不合规",
+    "options": {
+      "bilibili": "哔哩哔哩分享链接",
+      "custom": "自定义平台域名",
+      "douyin": "抖音分享链接",
+      "generic": "通用分享链接（仅检测域名）",
+      "kuaishou": "快手分享链接",
+      "tiktok": "TikTok 分享链接",
+      "xiaohongshu": "小红书分享链接",
+      "youtube": "YouTube 分享链接"
+    },
+    "parameter": "分享链接参数名",
+    "parameterPlaceholder": "例如 url、link、shareUrl",
+    "passRule": "分享链接平台匹配，正常解析",
+    "platform": "检测预设",
+    "replaceAction": "替换现有规则",
+    "replaceDescription": "应用预设会替换当前全部规则和默认结果，是否继续？",
+    "replaceTitle": "确认应用参数检测预设",
+    "title": "分享链接快速预设"
+  },
+  "results": {
+    "invalidParams": "参数不合规",
+    "pass": "正常解析",
+    "platformMismatch": "平台不匹配"
+  },
+  "rules": {
+    "add": "添加规则",
+    "conditionCount": "{0}/{1} 个条件",
+    "description": "每条规则可使用 AND/OR 组合多个条件；拖动排序暂未开放，当前按列表从上到下执行。",
+    "empty": "暂无规则。可载入分享链接预设，或手动添加第一条规则。",
+    "namePlaceholder": "规则名称，例如分享链接缺少域名",
+    "remove": "删除规则 {0}",
+    "title": "条件与结果规则"
+  },
+  "settings": {
+    "defaultResult": "未命中规则时",
+    "defaultResultHelp": "规则从上到下匹配；如果全部未命中，则使用这里选择的固定结果。关闭总开关时始终正常解析。",
+    "description": "可先编辑并保存规则，确认无误后再开启。",
+    "enabled": "启用请求参数检测",
+    "title": "检测策略"
+  },
+  "sources": {
+    "auto": "自动（Query 优先）"
+  },
+  "status": {
+    "disabled": "未启用",
+    "enabled": "已启用"
+  },
+  "title": "请求参数检测",
+  "titleWithName": "{0} · 请求参数检测"
+}

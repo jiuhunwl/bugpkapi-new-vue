@@ -1,0 +1,76 @@
+{
+  "actions": {
+    "approve": "Approve",
+    "delete": "Delete",
+    "edit": "Edit",
+    "reject": "Reject",
+    "toggleStatus": "Toggle status"
+  },
+  "applicationName": "Friend-link application",
+  "applicationSearchPlaceholder": "Search site, contact, email, or applicant",
+  "create": "Add Friend Link",
+  "delete": {
+    "action": "Delete link",
+    "description": "The link will be removed from the public list. Enter a reason so the operation is retained in the audit history.",
+    "reasonLabel": "Deletion reason",
+    "reasonPlaceholder": "Enter the reason for deleting this friend link",
+    "reasonRequired": "Enter a deletion reason",
+    "reasonTemplate": "Common reason template",
+    "reasonTemplatePlaceholder": "Choose a template or enter custom text",
+    "sendEmail": "Email the original applicant (selected by default)",
+    "sendEmailDescription": "Only links created from applications with a contact email receive a notification. The email follows the saved application language.",
+    "templates": {
+      "backlinkRemoved": {
+        "label": "Our backlink was removed",
+        "reason": "Our link is no longer present on your site, so the corresponding friend link has been removed."
+      },
+      "contentChanged": {
+        "label": "Site content or focus changed",
+        "reason": "The site content or focus has changed substantially and no longer meets our friend-link exchange requirements."
+      },
+      "custom": {
+        "label": "Custom text"
+      },
+      "inactive": {
+        "label": "Site is no longer maintained",
+        "reason": "The site has been unstable or unmaintained for an extended period, so the friend link has been removed."
+      },
+      "siteUnreachable": {
+        "label": "Site is unreachable",
+        "reason": "The target site is currently unreachable, so the corresponding friend link has been removed."
+      }
+    },
+    "title": "Delete Friend Link"
+  },
+  "editor": {
+    "create": "Add Friend Link",
+    "edit": "Edit Friend Link"
+  },
+  "entityName": "Friend link",
+  "fields": {
+    "actions": "Actions",
+    "applicant": "Applicant",
+    "applyTime": "Applied at",
+    "backlink": "Backlink page",
+    "contact": "Contact",
+    "description": "Description",
+    "email": "Contact email",
+    "keyword": "Keyword",
+    "logo": "Site logo",
+    "reviewTime": "Reviewed at",
+    "siteName": "Site name",
+    "siteUrl": "Site URL",
+    "sort": "Sort",
+    "status": "Status",
+    "updateTime": "Updated at"
+  },
+  "hidden": "Hidden",
+  "messages": {
+    "deleted": "Friend link “{0}” deleted",
+    "hidden": "Friend link hidden",
+    "visible": "Friend link visible"
+  },
+  "searchPlaceholder": "Search site name, URL, or description",
+  "title": "Friend Links",
+  "visible": "Visible"
+}

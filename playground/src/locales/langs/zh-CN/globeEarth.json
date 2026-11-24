@@ -1,0 +1,16 @@
+{
+  "scanning": "IP 扫描中",
+  "standby": "定位待命",
+  "precisionCoordinates": "坐标级定位",
+  "precisionCity": "城市级定位",
+  "precisionProvince": "省域级定位",
+  "precisionCountry": "国家级定位",
+  "accessibleWithLocation": "可交互 3D 地球，当前 IP 位置 {0}，{1}",
+  "accessibleNoLocation": "可交互 3D 地球，定位不可用时仍可拖拽旋转和缩放",
+  "webglFallback": "WebGL 不可用，已切换兼容视图",
+  "hint": "拖拽旋转 · 滚轮缩放",
+  "visitLocation": "访问位置",
+  "coordinates": "经纬度 {0}",
+  "callsCount": "{0} 次调用",
+  "riskHitsCount": "{0} 风险命中"
+}

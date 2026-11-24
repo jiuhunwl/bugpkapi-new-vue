@@ -1,0 +1,23 @@
+[
+  {
+    "version": "1.2.113",
+    "date": "2026-11-21",
+    "title": "首个开源版本",
+    "changes": [
+      {
+        "type": "feature",
+        "text": "管理端与用户端完整功能：站点配置、接口与分组、套餐与计费、订单与支付、工单与公告、调用日志与审计。"
+      },
+      {
+        "type": "feature",
+        "text": "内置简体中文与英文文案、暗色主题、响应式布局，以及可在后台配置的品牌信息。"
+      },
+      {
+        "type": "improvement",
+        "text": "发布构建前置校验多语言 key 完整性（scripts/check-locales.mjs），缺少任一语言的文案会直接构建失败。"
+      }
+    ],
+    "database": "全新安装请导入后端仓库 sql/full 目录中的最新初始化 SQL，该文件会把 schema_migrations 标记为当前版本。",
+    "history": []
+  }
+]

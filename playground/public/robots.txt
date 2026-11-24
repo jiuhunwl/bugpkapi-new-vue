@@ -1,0 +1,11 @@
+# BugPk-Api robots.txt
+# 允许所有搜索引擎抓取公开页面；后台管理路径不收录
+
+User-agent: *
+Allow: /
+Disallow: /console/
+Disallow: /auth/
+
+# 站点地图（静态：构建生成；动态：后端接口，含数据库接口详情页 /docs/<id>）
+Sitemap: https://api.example.com/sitemap.xml
+Sitemap: https://api.example.com/system-api/seo/sitemap.xml

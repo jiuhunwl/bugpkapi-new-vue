@@ -1,0 +1,15 @@
+{
+  "title": "登录态配置",
+  "description": "控制登录后访问令牌（access token）与刷新令牌（refresh token）的有效期。保存后仅对新签发的令牌生效，已登录用户的现有令牌按原有效期自然过渡。",
+  "accessTokenMinutes": "访问令牌有效期（分钟）",
+  "accessTokenMinutesHint": "5～1440 分钟（最长 24 小时）。调短更安全，调少登录态请求刷新频率。",
+  "refreshTokenDays": "刷新令牌有效期（天）",
+  "refreshTokenDaysHint": "1～365 天。刷新令牌用于无感续期访问令牌；过期后需要重新登录。",
+  "effectiveHint": "刷新令牌有效期必须长于访问令牌有效期。",
+  "save": "保存配置",
+  "saveSuccess": "登录态配置已保存，新签发的令牌即时生效",
+  "loadFailed": "登录态配置加载失败",
+  "current": "当前配置",
+  "accessUnit": "分钟",
+  "refreshUnit": "天"
+}

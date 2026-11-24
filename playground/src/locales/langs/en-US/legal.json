@@ -1,0 +1,272 @@
+{
+  "auth": {
+    "loginNoticePrefix": "Before signing in, please read and understand the",
+    "separator": "and"
+  },
+  "common": {
+    "author": "Software author / open-source maintainer",
+    "authorValue": "BugPk-Api maintainers; see actual license notices for rights holders",
+    "contact": "Operator contact",
+    "contactFallback": "No public contact is configured here. Check the footer, registration information or site notices for the actual operator and a working contact channel. Do not pay or submit sensitive information if these cannot be established.",
+    "copyright": "Copyright notice",
+    "currentInstance": "Current deployment information",
+    "effectiveDate": "Application and effect",
+    "effectiveDateValue": "Subject to this instance’s legally published effective-date notice and required confirmation",
+    "legalCenter": "Legal & Compliance",
+    "license": "Open-source license",
+    "licenseValue": "Refer to the delivered LICENSE and third-party notices",
+    "operator": "Site operator / we",
+    "operatorValue": "“{0}” is a service identifier, not necessarily a legal entity name. The service is provided by the party actually deploying, controlling and operating this instance. Its real name, address and effective contact details should be clearly published here, in registration information or in a site notice.",
+    "privacyPolicy": "Privacy Policy",
+    "projectRepository": "Project repository",
+    "repositoryNotConfigured": "Not configured; refer to the site settings",
+    "readNotice": "Important notice",
+    "serviceName": "Service name / operating identity",
+    "siteUrl": "Site URL",
+    "tableOfContents": "Contents",
+    "termsOfService": "Terms & Disclaimer",
+    "updatedDate": "Last updated",
+    "version": "Text version V2.1",
+    "versionLabel": "Document version",
+    "updatedDateValue": "2026-11-04",
+    "versionValue": "V2.1",
+    "paymentAgreement": "Payment and Sponsorship Agreement"
+  },
+  "privacy": {
+    "eyebrow": "PRIVACY / DATA",
+    "notice": "This policy explains possible processing involving accounts, API parameters, logs, caches, payments and third parties. Pay attention to lawful grounds, retention versus log hiding, onward disclosure and rights. A privacy notice is not blanket authorization: unnecessary processing, sensitive information and other matters requiring separate consent need their own lawful procedures.",
+    "sections": {
+      "changes": {
+        "item1": "Revisions should identify version, changed scope and effective arrangements. Changes to purposes, methods, categories, recipients or other material matters require renewed lawful notice and, where required, renewed consent. Continued login or use is not deemed consent to new processing.",
+        "item2": "The actual operator named here or in site notices handles rights and complaints through effective published channels. Do not publicly report exploit details, real user information or complete credentials. Identity checks must be proportionate and allow feasible alternative evidence.",
+        "item3": "This is general information corresponding to program capabilities, not a substitute for instance-specific disclosure. Before launch, complete the actual identity, working contacts, vendor list, locations, category-specific retention and rights procedures. Pause processing that cannot be explained or meet legal conditions rather than relying on general terms.",
+        "title": "14. Updates and Contact"
+      },
+      "collection": {
+        "intro": "Depending on the features you use, we may process the information below. Information for disabled features is generally not collected:",
+        "item1": "Account and registration data: username, display name, avatar, email address or mobile number and verification status, password hash, account state, roles, and permissions. We do not store a directly recoverable plaintext password.",
+        "item2": "Sign-in and security data: sign-in time, IP address, browser or device data, session and token status, captcha result, abnormal behavior, and risk-control records.",
+        "item3": "API and key information: verification hashes, encrypted key ciphertext, prefixes, suffixes, status, permissions and IP allowlists. The current program supports permission-controlled key decryption and viewing; it does not store only irreversible hashes. Calls may also record APIs, methods, necessary parameters or redacted summaries, status, latency, traffic, upstream identifiers, billing results and call identifiers.",
+        "item4": "Order and asset data: purchased package or points, order number, amount, payment channel and state, channel transaction identifier, refund, and reconciliation records. Payment credentials are generally processed directly by the payment provider.",
+        "item5": "Submitted and displayed information: friend-link applications, contacts, feedback, tickets, attachments, supporter names and messages. Contact details needed for review and replies should not all become public merely upon application. Explain the scope and lawful grounds before submission or display.",
+        "item6": "Device and local-storage data: cookies and local data used for sign-in assistance, language, theme, remembered username, and other interface preferences.",
+        "warning": "Submit only necessary information you are entitled to process. Do not put passwords, complete keys, payment credentials or unrelated sensitive details in URLs, parameters, attachments or messages. Redaction cannot identify and remove every possible input. Check legal conditions before sensitive, minor-related or cross-border processing.",
+        "title": "3. Information We Process",
+        "item7": "Content, caching and risk information: links, bodies or files needed by the API, potentially cached responses, request fingerprints and redacted risk samples according to configuration. URLs, filenames and responses may themselves contain personal information. Explain actual fields, cache duration and recipients rather than promising that every request and response is never persisted."
+      },
+      "cookies": {
+        "item1": "The platform may use HttpOnly refresh-session cookies and browser local or session storage for necessary access state, language, theme and remembered usernames. HttpOnly limits direct script reading of that cookie; it does not mean there are no other stored tokens or session-exposure risks.",
+        "item2": "You can clear or restrict cookies and local storage in the browser, but persistent sign-in, personalization, or security functions may stop working correctly.",
+        "item3": "Verification, payment, advertising and content providers may load scripts that access network, device or interaction information. Unnecessary analytics or advertising tracking must not be enabled by default without appropriate lawful grounds. Disclose actual providers and purposes instead of labeling everything essential to login.",
+        "title": "5. Cookies, Tokens, and Local Storage"
+      },
+      "minors": {
+        "item1": "Services primarily target developers and organizations with suitable legal capacity. Use and payments by minors must fit their age, understanding and legal capacity and involve guardian guidance. This policy cannot replace valid guardian consent.",
+        "item2": "Processing personal information of children under fourteen requires guardian consent, dedicated rules and other applicable protections. An instance without the necessary arrangements should not actively offer processing directed at that group. Investigate inappropriate collection promptly, restrict processing and delete or take other lawful necessary measures.",
+        "title": "12. Protection of Minors"
+      },
+      "purpose": {
+        "intro": "Each activity requires a specific lawful basis and must be necessary and relevant to the stated purpose. Improving service, security or accepting terms is not unlimited permission:",
+        "item1": "create and manage accounts and provide sign-in, identity checks, password recovery, notices, and support;",
+        "item2": "create and manage API keys, forward API requests, return results, and display call records;",
+        "item3": "calculate calls, points, or fees and process orders, payments, refunds, reconciliation, and asset changes;",
+        "item4": "prevent account theft, abuse, scraping, attacks, fraud, duplicate billing, and other security risks;",
+        "item5": "Necessary troubleshooting and service-quality analysis, using aggregated or effectively anonymized data where possible. Re-identification, profiling, marketing, training or additional uses require a separate lawful-basis assessment and the corresponding notice and other obligations.",
+        "item6": "comply with law and regulation, resolve complaints and disputes, and protect users, the operator, and third parties.",
+        "title": "4. Why We Use Information"
+      },
+      "retention": {
+        "item1": "Use the shortest period necessary for a defined purpose. Accounts, orders, security audits, caches, tickets and backups need separate periods or determination criteria. Legally required or unresolved-dispute retention is limited to necessary records, scope and duration, not indefinite preservation.",
+        "item2": "Delete or effectively anonymize when purposes are fulfilled or periods expire. Where deletion is not yet legally due or technically feasible, restrict processing as required to necessary storage and protection. Backups need controlled access and rotation; restores must respect completed deletion requests rather than revive unrestricted use.",
+        "item3": "Locations depend on deployment, hosting, upstream and third-party settings; this policy does not presume all information stays domestically. Before overseas provision, satisfy applicable notice, separate-consent, assessment, certification, standard-contract or other requirements, or establish an applicable exemption. An API call alone does not establish compliance.",
+        "title": "8. Storage and Retention",
+        "item4": "“Hide”, “clear” or age-based automatic hiding of call logs changes user-side visibility only. It does not mean database records or backups have been deleted. Submit a personal-information deletion request through the rights channel; the operator must distinguish UI actions from actual retention and explain lawful grounds and periods or criteria."
+      },
+      "rights": {
+        "intro": "Subject to applicable law, you may request to:",
+        "item1": "access, copy, correct, or supplement account and personal information;",
+        "item2": "delete information that is no longer necessary, was processed unlawfully, or must be deleted by law;",
+        "item3": "close the account, withdraw consent-based authorization, or restrict or object to certain processing;",
+        "item4": "receive explanations about automated decisions or third-party sharing and exercise other statutory rights.",
+        "outro": "Use available profile controls for supported changes; contact the operator for manual access, copying, deletion, account closure, withdrawal or other requests not supported in the interface. Verify only necessary identity information, preferably through verified accounts or email, without routinely requesting unrelated documents. Respond within statutory deadlines and explain progress, refusal grounds and appeal channels. Internal feedback is not a prerequisite to statutory complaints or court action.",
+        "title": "11. Your Information Rights",
+        "item5": "Request explanations of processing rules, refuse significant decisions made solely through automated decision-making, and request human review where legally applicable. A risk-control hit does not itself establish illegality.",
+        "item6": "Withdrawal does not invalidate prior processing lawfully based on consent. Account closure does not automatically extinguish unsettled transactions or mandatory retention. Withdrawal from unnecessary processing must not block unrelated basic service."
+      },
+      "scope": {
+        "item1": "This Policy applies to account registration and sign-in, the API market, key management, API calls, packages and points, payments, logs, notices, friend links, and related administration offered by the current {0} deployment.",
+        "item2": "“We,” “us,” and “operator” mean the person or entity that actually deploys and provides this instance. BugPk-Api is the software and default brand name and is not automatically the legal operator of every independent deployment.",
+        "item3": "Independent third-party websites and services have their own policies. Transfers from this instance still require an appropriate lawful basis, notices, security and other safeguards. Independent third-party operation does not remove this instance’s own responsibilities.",
+        "title": "1. Scope and Operator"
+      },
+      "security": {
+        "item1": "The current program offers password hashing, encrypted keys with permission controls, encrypted settings, some log redaction and risk controls. The operator must correctly configure HTTPS, access, key custody, patches, backups and audit. Available capabilities do not establish certification, absolute security or encryption of every field in this instance.",
+        "item2": "For actual or possible disclosure, alteration or loss, promptly contain, remediate and assess risks, and report to authorities and notify affected individuals or use legally permitted alternatives as required. Notices should explain known impact, measures and contacts. Do not conceal confirmed material risks or treat a cyberattack as automatic immunity.",
+        "item3": "Protect your account, password, and API keys. Never place a key in a public repository, frontend source, or untrusted client. Disable or rotate leaked credentials immediately and contact the operator.",
+        "title": "10. Security and Incident Response"
+      },
+      "sharing": {
+        "item1": "We do not sell personal information. Entrusting a provider, providing data to an independent party, public disclosure and submissions to authorities each require applicable lawful grounds and limited scope. Complete required notice, separate consent, assessment, agreements or legal-request verification as appropriate; “partnership needs” is not blanket permission.",
+        "item2": "For transfers due to merger, division, acquisition, asset transfer or operator changes, disclose the receiving party’s identity and contact as required and require continued protection. Changes in purposes or methods require renewed notice, consent or other applicable procedures.",
+        "item3": "Public statistics should use aggregation, de-identification and necessary anti-identification measures, avoiding IPs, complete keys, parameters, internal upstream addresses or identifying narrow segments. De-identification is not irreversible anonymization; linkable or identifiable information remains protected.",
+        "title": "7. Sharing, Transfer, and Disclosure"
+      },
+      "thirdParty": {
+        "intro": "These are functional categories, not a complete list of this instance’s active vendors. When enabling them, the operator must provide legally required accessible recipient or vendor information, purposes, methods, fields and policies / contacts:",
+        "item1": "Upstream APIs receive necessary links, parameters, request bodies and network context and return results. Distinguish entrusted processing from onward provision to independent parties, omit irrelevant fields and establish required use, protection and retention terms.",
+        "item2": "captcha providers: the built-in proof-of-work option requires no third-party account, while enabled Geetest or Cloudflare Turnstile may process IP, device, interaction, and risk signals;",
+        "item3": "When Alipay, WeChat Pay or other channels are actually enabled, their providers process payments and risk checks. The platform may receive order states, transaction identifiers and necessary callbacks. Site support must not request your payment password.",
+        "item4": "email, SMS, or quick-login services for verification codes, notices, or third-party account sign-in;",
+        "item5": "Hosting, CDN, object storage, logging, advertising and IP-region services may receive IP addresses, access logs and resource requests. IP-based regional inference is not precise geolocation but may still process personal information. External avatars and QR images can also disclose IP addresses and request headers to their host.",
+        "outro": "Category descriptions do not replace a required recipient list or separate consent. Overseas infrastructure, scripts and upstreams require cross-border assessment. Linking a third-party privacy policy does not itself make integration compliant.",
+        "title": "6. Third-Party Services"
+      },
+      "legalBasis": {
+        "title": "2. Lawful grounds and separate choices",
+        "item1": "Identify the applicable lawful grounds for each activity: necessity for a contract to which you are a party, statutory duties, valid consent or another statutory basis. “Operational needs”, “better experience” or acceptance of service terms is not a basis for unrestricted processing.",
+        "item2": "Consent-based processing requires informed, voluntary, explicit consent and a withdrawal channel. Meet separate-consent requirements for sensitive information, independent recipients, public disclosure and cross-border transfers where applicable. Do not bundle unnecessary processing into basic service access.",
+        "item3": "Sensitive information needs a specific purpose, sufficient necessity and strict protection, explanations of necessity and impact and legally required assessments. Do not accept such inputs without the conditions being met. User submission does not automatically excuse the operator."
+      },
+      "logs": {
+        "title": "9. Call logs, caches and troubleshooting",
+        "item1": "Necessary billing review, troubleshooting and security may record times, IPs, API and call identifiers, status, latency, charges and request summaries. Call content and risk samples may contain personal information. Limit fields and staff access; a “technical log” label does not remove privacy protection.",
+        "item2": "Remove credentials and unnecessary content before logging where possible, covering query strings, callbacks, stack traces, ticket attachments, CDN and proxy logs. Automated masking cannot guarantee recognition of all custom fields, encodings or files. Do not copy complete production data into public support channels.",
+        "item3": "Configured response caches, Redis, files and databases may each retain copies. Clearing one list, cache or account does not prove deletion everywhere. Check associated copies, entrusted providers and recovery workflows, and explain scope and lawful exceptions to requesters."
+      },
+      "publication": {
+        "title": "13. Public display and unnecessary uses",
+        "item1": "Approved friend links may display the previously disclosed site name, URL, logo and description, but not automatically contact email, QQ, phone or tickets. Supporter listings, advertising assets and public messages need purpose-specific disclosure of fields, audience and lawful grounds.",
+        "item2": "Public names, avatars, amounts and messages may identify you and require the applicable public-disclosure procedures. Review requests for anonymity, correction or removal on controlled pages and copies, distinguishing lawfully retained transaction records. Independently stored third-party copies cannot be guaranteed to disappear simultaneously.",
+        "item3": "This general policy does not authorize selling API parameters, responses, tickets or account records, unrelated advertising profiling or model training. Such new uses require prior legality and necessity checks and applicable notices, consent and assessments."
+      }
+    },
+    "summary": "Instance-specific categories, purposes, lawful grounds, recipients, retention and channels for access, correction, deletion, closure and appeals.",
+    "title": "Privacy Policy"
+  },
+  "terms": {
+    "eyebrow": "TERMS / RESPONSIBILITY",
+    "notice": "Pay particular attention to fees and refunds, third-party content, the exclusive permitted use of parsing APIs, suspension and termination, disclaimers, liability and disputes. The operator must prominently identify materially relevant terms and explain them on request. Displaying this page does not replace required notice, consent or confirmation, and cannot exclude mandatory responsibilities.",
+    "sections": {
+      "account": {
+        "item1": "Provide accurate, lawful, and current registration data. Do not impersonate others, create accounts maliciously at scale, transfer accounts, or bypass account limits.",
+        "item2": "Safeguard passwords, verification codes, sessions and API keys and use least-privilege access. Credential-use records are review evidence, not irrebuttable proof that you personally acted or bear all losses. Authorization, the cause of a compromise, fault and the actual evidence must be considered.",
+        "item3": "On suspicious access, key exposure or unauthorized calls, change credentials, disable or rotate keys and contact the operator as soon as reasonably possible. Both parties should reasonably mitigate loss. Responsibility follows fault, causation and law; late reporting does not automatically excuse the operator.",
+        "title": "2. Accounts and Security"
+      },
+      "changes": {
+        "item1": "Publish the version, changes and intended effective arrangements. Material changes require prominent notice and legally required explanation or renewed confirmation. “Last updated” identifies a text revision, not proof of delivery or consent by existing users, and does not retrospectively remove accrued rights.",
+        "item2": "These terms are drafted principally for services directed at users in mainland China and generally use mainland PRC law. Actual cross-border operations and conflicts of law remain subject to applicable mandatory rules; this clause does not evade legally applicable protections elsewhere.",
+        "item3": "You may first contact the operator to negotiate, but internal negotiation is not a prerequisite to complaints, court action or other statutory remedies. In the absence of another valid dispute-resolution agreement, disputes go to a court with jurisdiction under law. An unclear operator address or unilateral page statement must not remove statutory consumer or other rights.",
+        "item4": "Invalidity of a clause does not necessarily affect independently enforceable lawful clauses. There is no operator “final interpretation right” overriding legal interpretation rules. Delay in enforcement is not necessarily a waiver. Language discrepancies are interpreted in context and under law, not used to diminish statutory rights.",
+        "title": "16. Updates, Law, and Disputes"
+      },
+      "contact": {
+        "item1": "For accounts, billing, content complaints, privacy requests and these terms, use effective published channels to contact the actual operator. An open-source issue tracker is not the default customer-service, legal-notice or sensitive-data channel. Do not publicly post payment receipts, complete keys or identity documents.",
+        "item2": "State the request type, relevant URL, API code or call identifier, time, facts, requested outcome and reply channel. Submit only necessary, appropriately redacted evidence. Incomplete materials do not automatically justify rejecting an urgent risk report.",
+        "title": "17. Contact"
+      },
+      "disclaimer": {
+        "intro": "The following limits apply only where lawful, valid and properly brought to your attention and explained, and do not override explicit service commitments:",
+        "item1": "Unless otherwise validly promised, services are provided as available and as is, without promises of permanent free access, uninterrupted operation, absolute security or universal accuracy. Explicit quality, delivery, remedy and refund duties in orders, service-level agreements or other valid commitments remain enforceable.",
+        "item2": "Responsibility for natural disasters, major network failures and third-party events depends on their nature, foreseeability, avoidability, reasonable precautions and causal effect. Statutory force majeure or other defenses apply only to the legally relevant extent. Required timely notice, supporting evidence, reasonable mitigation and settlement of undelivered service remain necessary.",
+        "item3": "Loss caused by unlawful use, incorrect configuration or inadequate credential protection is allocated according to fault and causation. Shared fault is apportioned as required by law. Inadequate platform security, incorrect billing, breach or other operator-caused loss cannot be shifted wholesale to users or third parties.",
+        "item4": "Outputs, documentation, examples, statistics and status pages generally provide technical information, not case-specific legal, medical, financial or security advice. Production integration requires validation, timeouts, rate controls, circuit breakers, backups and human review; applicable provider quality and safety duties still apply.",
+        "item5": "Recoverable losses follow valid agreements and law, considering breach or tort, causation, foreseeability, fault and mitigation, and do not automatically include unrelated amplified losses. These general terms impose neither zero compensation nor a universal fixed cap. Any commercial-service cap must be separately explicit and legally valid.",
+        "item6": "No clause excludes liability for personal injury, property loss caused intentionally or by gross negligence, or duties and liabilities that personal-information, consumer-protection or other mandatory law forbids excluding or limiting. Invalid terms are handled under law, not construed automatically in the operator’s favor.",
+        "title": "11. Disclaimer and Limitation of Liability"
+      },
+      "fees": {
+        "item1": "Free quotas, credits, packages and call prices follow rules disclosed before the transaction and validly agreed. Future changes require lawful notice and do not retroactively alter completed transactions. Purchased services follow the valid order; inability to perform requires lawful settlement, not unilateral repricing.",
+        "item2": "Before paying, verify the recipient, scope, quota, expiry, billing triggers, refund terms and invoicing arrangements. Payment providers process payments and the platform reconciles orders. Redirects, screenshots or client messages alone are not final settlement evidence, but you may submit provider receipts for manual review.",
+        "item3": "Correctly billed, properly delivered consumption is settled under valid terms. No-reason withdrawal rights and exceptions depend on the nature of the transaction, legal conditions and required confirmation, not merely the labels “digital” or “activated”. Duplicate or incorrect charges, non-performance and non-conforming service must be reviewed, corrected and refunded as legally required.",
+        "item4": "For billing disputes, provide order and call identifiers, times and redacted payment receipts. Prompt reporting assists investigation, but arbitrary short complaint windows do not extinguish statutory rights. The operator should explain the review result and remedy.",
+        "title": "6. Fees, Packages, Points, and Payment",
+        "item5": "HTTP 200, a cache hit or a client timeout alone does not determine billing or achievement of your business objective. Consider the disclosed rules at the time, valid order, actual records and necessary verification. Retrying after a timeout may create another call; check records or contact support instead of retrying indefinitely.",
+        "item6": "Disclose the use, expiry and return conditions of balances, credits, promotional quotas and packages before acquisition. They are not deposits, investments or promised returns. Shutdown, prolonged non-performance or lawful cancellation requires lawful settlement of undelivered service; account suspension, shutdown or a “final interpretation” clause does not justify blanket forfeiture of prepaid unused rights."
+      },
+      "indemnity": {
+        "item1": "Where your culpable breach of law, valid terms or third-party rights causes loss, liability and necessary reasonable enforcement expenses must be causally related and reasonably substantiated. The operator’s, author’s or partners’ own duties, fault or administrative responsibilities cannot automatically be transferred to you.",
+        "item2": "When handling a third-party claim, the operator should provide notice, reasonable explanations and an opportunity to review where feasible and consistent with investigations. An unverified complaint, unilateral calculation or settlement you did not accept is not automatically your final debt. Liability and amount may be negotiated or determined by a competent authority.",
+        "title": "12. Breach and Responsibility",
+        "item3": "Necessary evidence directly related to suspected unlawful or security-threatening activity may be lawfully preserved and reported to competent authorities. Access, purposes and duration must be limited; this is not authorization for indefinite monitoring or public disclosure."
+      },
+      "opensource": {
+        "item1": "Software use and redistribution rights depend on the delivered LICENSE, copyright notices and each component or asset license. MIT licensing of some frontend or third-party components does not mean all code, trademarks, domains, data, APIs or upstream content in an instance share that license or may be freely commercialized.",
+        "item2": "Maintainers and rights holders are identified by actual copyright, license and contribution records. This instance configures its repository reference: {0}. A repository link or author label does not prove involvement in operating this instance. Preserve notices and comply with each applicable redistribution license.",
+        "item3": "Independent deployers are responsible for the servers, settings, upstream sources, publication, charges and data processing they actually control. Supplying code alone does not make its author the instance operator. Actual participation in operations, joint processing or other legally responsible conduct must be assessed on the facts, regardless of an “open source” label.",
+        "title": "9. IP, Open Source, and Authorship"
+      },
+      "privacy": {
+        "item1": "The operator processes personal information under this instance’s Privacy Policy and applicable law. When using APIs to process others’ data, establish lawful grounds and meet notice, authorization, security and rights-response obligations. Independent, entrusted and joint processing roles depend on actual conduct; a separate data-processing agreement may be necessary.",
+        "item2": "Do not collect, sell, disclose, credential-stuff or analyze others’ information without authority. Do not submit unrelated identity, financial, health, biometric, minor-related data or credentials. Check legal and API suitability conditions before sensitive-data, important-data or cross-border processing; these terms are not blanket authorization.",
+        "title": "10. Privacy and Data Compliance"
+      },
+      "prohibited": {
+        "intro": "You must not use or assist use of the Service to:",
+        "item1": "violate law, regulation, public order, or another person's intellectual property, privacy, reputation, or other lawful rights;",
+        "item2": "Unauthorized attacks, scanning, intrusion, bypassing verification, login, payment, permission or risk controls, manipulating billing, stealing credentials or disrupting others. Written authorization for security testing applies only within its agreed scope.",
+        "item3": "Malware or unlawful content, fraud, money laundering, gambling, traffic manipulation, credential stuffing, harassment, unlawful scraping, impersonation or unauthorized automation.",
+        "item4": "resell, lease, or share quota in violation of page terms, upstream licenses, or third-party platform rules;",
+        "item5": "Concealing purposes, submitting data without authority, infringing redistribution, unlawful model training, illegal profiling or high-risk decisions without lawful grounds and necessary review.",
+        "title": "4. Prohibited and Compliant Use",
+        "item6": "Using parsing, downloading, conversion, aggregation or caching to evade access controls, paywalls, digital rights protection or platform restrictions; removing or altering watermarks, attribution, copyright or rights-management information without permission; or bulk copying, republishing or selling others’ works. “Research”, “publicly visible” and “the API works” do not replace specific authorization. The permitted use of parsing APIs is defined by Clause 5.4 (backup of your own uploaded works only); calling them on others' works exceeds the permitted scope, and “non-commercial” is no exception."
+      },
+      "scope": {
+        "item1": "These Terms are between you and the actual operator of the current {0} instance for registration, sign-in, API calls, keys, packages, points, payments, logs, and related services.",
+        "item2": "These terms apply to registration, purchases and other contractual steps after readable terms have been made available and legally required confirmation has been completed. Browsing, logging in or continuing use does not by itself authorize material changes, unnecessary personal-data processing or matters requiring separate consent. You may stop the relevant operation and settle existing transactions according to law.",
+        "item3": "Organizational users must have appropriate authority. Minors should use services suited to their age, understanding and legal capacity with guardian consent and guidance, and must not independently purchase services beyond that capacity.",
+        "title": "1. Scope and Acceptance",
+        "item4": "Valid special terms for an API or order prevail within their scope. Hidden configuration, unpublished rules and general disclaimers must not diminish explicit commitments or statutory rights. Mandatory rules govern the validity and interpretation of standard terms."
+      },
+      "service": {
+        "item1": "The platform provides API listings, authorization, key management, forwarding, billing, packages, logs and risk controls. Applicable APIs, quotas, prices, expiry, billing triggers and promised service levels should be accessible before use or purchase. Demonstrations, statistics, historical availability and latency are not themselves future service-level guarantees.",
+        "item2": "An API key authorizes only the permitted use of this instance. It is not upstream authorization, a copyright license or permission to process personal information. Respect quota, time, rate and source restrictions; do not expose, steal or resell credentials beyond authorization. Keep keys on trusted servers, not in public repositories, browser code or shared URLs.",
+        "item3": "Based on business importance, implement timeout, retry, circuit-breaker, cache, validation, and backup plans. Do not treat a single API as unconditionally continuous infrastructure.",
+        "title": "3. Service and API-Key Use",
+        "item4": "Unless separately and validly agreed and relevant legal and safety conditions are met, do not use this service for life support, emergency response, critical infrastructure control or other fault-intolerant functions. Legal, medical and financial uses require appropriately qualified independent judgment. A “reference only” label cannot replace regulatory or safety duties."
+      },
+      "suspension": {
+        "item1": "Maintenance, upgrades and service changes require reasonable notice, impact information and necessary transition arrangements under applicable law and agreements. Upstream changes or increased cost are not automatically force majeure and do not automatically cancel existing performance or settlement duties.",
+        "item2": "Reasonable indications of illegality, attacks, fraud, infringement, non-payment or exposed credentials may justify proportionate throttling, isolation, key suspension or termination with necessary records. Urgent measures may precede notice. Where consistent with investigation and safety, provide reasons and a channel for appeal, correction or review.",
+        "item3": "Stop using credentials after termination. Lawfully exportable data, undelivered service and balances must be handled under valid agreements and law. Necessary transaction, security and dispute records may be retained for lawful periods; deletion, restriction and retention must remain proportionate.",
+        "title": "8. Changes, Interruption, and Termination",
+        "item4": "A temporary risk restriction, complaint takedown or billing alert is not a final finding of wrongdoing. Review additional evidence and correct mistakes or restore access when appropriate. An appeal does not guarantee automatic restoration or prevent lawful external remedies."
+      },
+      "thirdParty": {
+        "item1": "The platform may aggregate or forward third-party APIs, subject to upstream rights, licenses and updates. The operator must perform lawful-source checks, necessary management and notice handling appropriate to its actual role. “Technical neutrality”, “user submitted” and “upstream returned” do not remove statutory obligations.",
+        "item2": "Third-party services may require separate authorization and impose location, account, purpose or redistribution restrictions. Independent third-party obligations may be pursued against that provider. Where this instance collects payment, makes commitments or bears statutory responsibility, the operator must still handle the matter rather than merely refer you upstream.",
+        "item3": "Results, links, logos, examples and publicly accessible pages do not establish a right to copy or commercialize content, upstream permission, official partnership or endorsement. Copyright, database rights, personal information and platform rules require separate checks.",
+        "title": "7. Third-Party APIs and Content"
+      },
+      "complaints": {
+        "title": "13. Rights notices, counter-notices and handling",
+        "item1": "Rights holders or authorized agents may use published channels to identify themselves and a reply channel, the specific right and evidence, the exact URL / API / time and locating details, reasons and requested measures, and a statement of truth, accuracy and authority. Agents should supply necessary authorization. Do not send complete passwords, keys or unrelated identity documents.",
+        "item2": "The operator assesses credibility, urgency, service type and applicable law, takes proportionate removal, disabling, link disconnection or other necessary measures, notifies relevant parties as legally required and preserves necessary evidence. Additional materials may be requested, but urgent personal-safety, privacy or clearly unlawful risks must not automatically wait for a complete filing.",
+        "item3": "An affected party may submit preliminary non-infringement evidence, lawful sources or permission, identity and contact details and a truthful statement for review or a lawful counter-notice. Counter-notices do not automatically restore access, and complaints do not finally determine infringement. Forwarding, timing and restoration depend on applicable law and the particular service, not a universal countdown.",
+        "item4": "When notices or counter-notices must be forwarded, disclose only necessary materials and protect unrelated information; explain any conflict between confidentiality and legal procedure. False, malicious or forged claims causing loss carry responsibility under law. Either party may seek competent administrative or judicial remedies."
+      },
+      "donation": {
+        "title": "14. Voluntary support, supporter listings and external links",
+        "item1": "Voluntary support without consideration differs from buying APIs, packages, credits or advertising. It does not automatically buy quotas, priority, permanent availability, returns or features. Where goods or services are actually promised, calling payment a “donation” does not remove transaction, tax, refund or consumer duties. Do not claim unestablished charitable fundraising status or tax benefits.",
+        "item2": "Check the actual recipient, amount and purpose before paying and avoid untrusted QR codes. Mistakes, duplicate payments, stolen payment accounts and payments by minors require fact-specific legal review, not an absolute no-refund rule.",
+        "item3": "Public supporter names, avatars, amounts and messages need lawful grounds and required notice and confirmation. Payment or a payment note does not itself authorize publication of real names or transaction details. Contact the operator for anonymity, corrections or removal; lawful internal records and public display are separate.",
+        "item4": "Friend links, ads and partner listings indicate only their actual display relationship, not official certification, credit guarantees or promises for another party. Verify external providers before leaving the site. The operator retains its lawful advertising, content-management and known-risk response duties."
+      },
+      "evidence": {
+        "title": "15. Notices, records and verification",
+        "item1": "Site notices, messages and verified contact channels may carry necessary service notices. Material changes require suitable lawful delivery methods and reasonable evidence. A general page update, successful send or elapsed silence period is not automatically actual knowledge or consent.",
+        "item2": "Call and order identifiers, receipts, version snapshots and security logs are evidence to assess for authenticity, completeness, relevance and contrary proof. Platform records are not the exclusive final authority. Users may request review with redacted supporting evidence.",
+        "item3": "Records need lawful purposes and necessary retention periods. Do not claim complete consent records where no such mechanism exists. These terms do not substitute for actual authorization management, evidence preservation or dispute procedures."
+      },
+      "content": {
+        "title": "5. Parsing, caching and content permissions",
+        "item1": "You need the rights or other lawful basis necessary for processing submitted links, files, parameters or content, and must respect applicable source-platform rules. A technically successful API result is not proof of unrestricted rights, lawful origin or a redistribution license from the operator.",
+        "item2": "Lawfully requested processing may require proportionate transmission, conversion, temporary caching and returning content. Publish caching and cleanup terms according to actual API configuration. This does not transfer ownership or broadly authorize resale, permanent retention or model training.",
+        "item3": "Before redistribution, commercial use, training, watermark removal, modification or onward data provision, separately verify permissions, attribution, privacy and source restrictions. These service terms do not replace rights-holder permission. Stop affected processing and notify the operator when source or authorization problems arise.",
+        "item4": "The permitted use of short-video parsing, download and watermark-removal APIs is exclusive: retrieving a copy of your own work that you created and uploaded or published to the corresponding platform, when your local source file was lost, deleted, or for backup. Parsing other people's content, content you hold no rights in, or content restricted by the source platform is outside the permitted scope, whether or not for commercial purposes. “No profit”, “publicly visible” and “the API works” are no exceptions. Verify authorship and retain proof of creation before calling; the operator may refuse, throttle, disable keys for, or terminate calls clearly beyond this use, and cooperate with rights holders' notices and handling as required by law."
+      }
+    },
+    "summary": "Rules for authorized API and content use, billing and refunds, service risks, complaints and appeals, voluntary support and evidence review.",
+    "title": "Terms of Service & Disclaimer"
+  }
+}

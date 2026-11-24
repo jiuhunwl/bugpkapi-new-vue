@@ -1,0 +1,152 @@
+{
+  "actions": {
+    "addMethod": "Add channel",
+    "moveDown": "Move down",
+    "moveUp": "Move up",
+    "reload": "Reload",
+    "remove": "Remove channel",
+    "save": "Save settings",
+    "uploadQrCode": "Upload QR code"
+  },
+  "copy": {
+    "description": "Configure the heading, description, scan section, and thank-you copy shown on the public page.",
+    "title": "Page Copy and Publishing"
+  },
+  "description": "Manage the public donation page, payment channels, QR-code media, and display order.",
+  "fields": {
+    "color": "Channel color",
+    "description": "Page description",
+    "enabled": "Public status",
+    "eyebrow": "Eyebrow",
+    "icon": "Channel icon",
+    "methodKey": "Channel key",
+    "methodName": "Channel name",
+    "qrCodeUrl": "QR-code URL",
+    "scanDescription": "Scan description",
+    "scanTitle": "Scan title",
+    "thanks": "Thank-you copy",
+    "tip": "Scan tip",
+    "title": "Page title"
+  },
+  "iconPicker": {
+    "title": "Popular donation icons",
+    "description": "Selecting a preset applies its brand icon and recommended color. A custom Iconify name can still be entered below.",
+    "presets": {
+      "wechat": "WeChat",
+      "alipay": "Alipay",
+      "qq": "QQ",
+      "paypal": "PayPal",
+      "coffee": "Buy a coffee",
+      "heart": "Heart"
+    }
+  },
+  "lastUpdated": "Last updated: {0}",
+  "loadError": {
+    "description": "Check the service status or your permissions, then reload.",
+    "title": "Failed to load donation settings"
+  },
+  "messages": {
+    "imageTooLarge": "The image must not exceed 2 MB",
+    "invalidImage": "Only PNG, JPG, WebP, or GIF images are supported",
+    "saved": "Donation settings saved",
+    "uploaded": "QR code uploaded"
+  },
+  "methods": {
+    "channel": "Channel {0}",
+    "description": "Configure up to eight channels. The public page only shows enabled channels with a QR code.",
+    "emptyDescription": "Add a channel, then enter its name, icon, color, and QR code.",
+    "emptyTitle": "No donation channels configured",
+    "title": "Donation Channels"
+  },
+  "never": "Never",
+  "placeholders": {
+    "customIcon": "Custom icon, for example lucide:heart",
+    "qrCodeUrl": "Upload an image or enter an http/https image URL"
+  },
+  "preview": {
+    "description": "The preview updates as the settings change.",
+    "descriptionFallback": "The page description will appear here.",
+    "empty": "Enabled channels will appear here",
+    "eyebrowFallback": "Donate",
+    "qrAlt": "{0} QR-code preview",
+    "scanFallback": "Scan to Donate",
+    "title": "Public Page Preview",
+    "titleFallback": "Support Us"
+  },
+  "readOnly": {
+    "description": "This account can view the settings but cannot save changes.",
+    "title": "Read-only mode"
+  },
+  "status": {
+    "published": "Published",
+    "unpublished": "Unpublished"
+  },
+  "supporters": {
+    "actions": {
+      "add": "Add supporter",
+      "cancel": "Cancel",
+      "reload": "Reload list",
+      "submit": "Add supporter"
+    },
+    "description": "Review public donation records and manually add supporters as an administrator.",
+    "fields": {
+      "amount": "Donation amount",
+      "avatarUrl": "Avatar URL",
+      "donatedAt": "Donation time",
+      "message": "Message",
+      "nickname": "Nickname"
+    },
+    "formTitle": "Add Supporter",
+    "loadErrorDescription": "Check the service status or your permissions, then reload.",
+    "loadErrorTitle": "Failed to load supporters",
+    "messages": {
+      "created": "Supporter added"
+    },
+    "placeholders": {
+      "amount": "For example 12.50",
+      "avatarUrl": "Optional http/https image URL",
+      "message": "Optional public thank-you message",
+      "nickname": "Public nickname"
+    },
+    "previewName": "Supporter nickname",
+    "readOnly": "This account can view supporters but cannot add new records.",
+    "table": {
+      "amount": "Amount",
+      "creator": "Added by",
+      "donatedAt": "Donation time",
+      "empty": "No supporters yet",
+      "message": "Message",
+      "supporter": "Supporter",
+      "total": "{0} records"
+    },
+    "title": "Supporter Management",
+    "validation": {
+      "supporterAmountInvalid": "The amount must be greater than zero with no more than two decimal places",
+      "supporterAvatarInvalid": "The avatar must be a safe http/https image URL",
+      "supporterDonatedAtInvalid": "The donation time is invalid",
+      "supporterMessageTooLong": "The message must not exceed 255 characters",
+      "supporterNicknameRequired": "The nickname is required",
+      "supporterNicknameTooLong": "The nickname must not exceed 64 characters"
+    }
+  },
+  "title": "Donation Settings",
+  "validation": {
+    "descriptionTooLong": "The page description must not exceed 500 characters",
+    "duplicateKey": "Channel {0} uses a duplicate key",
+    "enabledMethodRequiresQrCode": "Channel {0} is enabled and requires a QR code",
+    "eyebrowRequired": "The eyebrow is required",
+    "eyebrowTooLong": "The eyebrow must not exceed 64 characters",
+    "invalidColor": "Channel {0} must use a six-digit hexadecimal color",
+    "invalidIcon": "Channel {0} has an invalid icon name",
+    "invalidKey": "Channel {0} may only use lowercase letters, numbers, underscores, and hyphens",
+    "methodNameRequired": "Channel {0} requires a name",
+    "publishedMethodRequired": "Enable at least one channel with a QR code before publishing",
+    "scanDescriptionTooLong": "The scan description must not exceed 255 characters",
+    "scanTitleRequired": "The scan title is required",
+    "scanTitleTooLong": "The scan title must not exceed 120 characters",
+    "thanksTooLong": "The thank-you copy must not exceed 255 characters",
+    "titleRequired": "The page title is required",
+    "titleTooLong": "The page title must not exceed 120 characters",
+    "tooManyMethods": "No more than eight donation channels are allowed"
+  }
+}

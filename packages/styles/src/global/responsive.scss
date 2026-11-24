@@ -1,0 +1,62 @@
+/* ============================================================================
+ * responsive.scss
+ * ---------------------------------------------------------------
+ * 三端自适应全局工具类（对应 docs/frontend/03-技术实现指南.md §2/§4）
+ *  - clamp 流式字号工具类（.text-fluid-sm/md/lg）
+ *  - safe-area 变量（--safe-bottom）
+ *  - 断点 CSS 变量（--bp-*，与 01 文档三端断点一致）
+ *  - 等宽数字工具类 .tabular-nums
+ *  - prefers-reduced-motion 降级（02 文档 §8.2）
+ *
+ * 说明：本文件通过 packages/styles/src/global/index.scss 引入；
+ * 移动端取 clamp 最小值 → 桌面取最大值，中间平滑过渡。
+ * ==========================================================================*/
+
+:root {
+  /* 流式字号（clamp 公式：基准值 + 视口增量，增量控制在 2px 内） */
+  --text-fluid-sm: clamp(14px, 0.9rem + 0.2vw, 15px);
+  --text-fluid-md: clamp(16px, 1rem + 0.4vw, 18px);
+  --text-fluid-lg: clamp(20px, 1.1rem + 0.9vw, 24px);
+
+  /* safe-area：iPhone 底部 Home 条安全区（03 文档陷阱 #11） */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* 断点 CSS 变量（与 01 文档三端断点一致：移动 <768 / 平板 768–1024 / 桌面 >1024） */
+  --bp-mobile-max: 767.98px;
+  --bp-tablet-min: 768px;
+  --bp-tablet-max: 1023.98px;
+  --bp-desktop-min: 1024px;
+}
+
+/* 流式字号工具类 */
+.text-fluid-sm {
+  font-size: var(--text-fluid-sm);
+  line-height: 1.5;
+}
+
+.text-fluid-md {
+  font-size: var(--text-fluid-md);
+  line-height: 1.35;
+}
+
+.text-fluid-lg {
+  font-size: var(--text-fluid-lg);
+  line-height: 1.3;
+}
+
+/* 等宽数字：金额/涨跌幅/表格数字（02 文档 §3.2） */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 低对比度 / 减弱动效兜底（02 文档 §8.2） */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

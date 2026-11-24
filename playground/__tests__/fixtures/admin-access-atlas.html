@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdminAccessAtlas browser fixture</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      #app {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+      }
+
+      body {
+        padding: 16px;
+        background: #020817;
+      }
+
+      /* The standalone fixture does not run the application bootstrap that
+         normally removes Vben's startup veil. Keep the fixture interactive
+         while still exercising the real atlas component. */
+      #__app-loading__ {
+        display: none !important;
+        pointer-events: none !important;
+      }
+
+      @media (max-width: 560px) {
+        body {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      const locations = [
+        {
+          averageElapsedMs: 42,
+          callCount: 900,
+          city: '北京市',
+          country: '中国',
+          failedCalls: 18,
+          firstSeen: '2026-07-18 08:00:00',
+          isp: '中国联通',
+          lastSeen: '2026-08-16 12:00:00',
+          latitude: 39.9042,
+          longitude: 116.4074,
+          province: '北京市',
+          region: '中国 北京市',
+          riskHits: 6,
+          successCalls: 882,
+          uniqueIps: 150,
+        },
+        {
+          averageElapsedMs: 58,
+          callCount: 720,
+          city: '台北市',
+          country: '中国',
+          failedCalls: 45,
+          firstSeen: '2026-07-19 09:30:00',
+          isp: '中华电信',
+          lastSeen: '2026-08-16 11:45:00',
+          latitude: 25.033,
+          longitude: 121.5654,
+          province: '台湾省',
+          region: '中国 台湾省 台北市',
+          riskHits: 9,
+          successCalls: 675,
+          uniqueIps: 105,
+        },
+        {
+          averageElapsedMs: 64,
+          callCount: 680,
+          city: '香港',
+          country: '中国',
+          failedCalls: 72,
+          firstSeen: '2026-07-20 10:15:00',
+          isp: '香港宽频',
+          lastSeen: '2026-08-16 11:30:00',
+          latitude: 22.3193,
+          longitude: 114.1694,
+          province: '香港特别行政区',
+          region: '中国 香港特别行政区 香港',
+          riskHits: 12,
+          successCalls: 608,
+          uniqueIps: 98,
+        },
+        {
+          averageElapsedMs: 51,
+          callCount: 420,
+          city: '澳门',
+          country: '中国',
+          failedCalls: 24,
+          firstSeen: '2026-07-21 11:00:00',
+          isp: '澳门电讯',
+          lastSeen: '2026-08-16 11:15:00',
+          latitude: 22.1987,
+          longitude: 113.5439,
+          province: '澳门特别行政区',
+          region: '中国 澳门特别行政区 澳门',
+          riskHits: 5,
+          successCalls: 396,
+          uniqueIps: 52,
+        },
+        {
+          averageElapsedMs: 118,
+          callCount: 640,
+          city: '纽约市',
+          country: '美国',
+          failedCalls: 96,
+          firstSeen: '2026-07-22 12:00:00',
+          isp: 'Example Transit',
+          lastSeen: '2026-08-16 11:00:00',
+          latitude: 40.7128,
+          longitude: -74.006,
+          province: '纽约州',
+          region: '美国 纽约州 纽约市',
+          riskHits: 18,
+          successCalls: 544,
+          uniqueIps: 120,
+        },
+      ];
+
+      const summary = {
+        activeCountries: 2,
+        activeLocations: 5,
+        failedCalls: 255,
+        successCalls: 3105,
+        totalCalls: 3360,
+        uniqueIps: 525,
+        windowDays: 30,
+      };
+
+      const fixtureState = {
+        error: '',
+        ready: false,
+      };
+      window.__adminAccessAtlasFixture = fixtureState;
+
+      try {
+        await Promise.all([
+          import('@vben/styles/antd'),
+          import('/src/styles/responsive.css'),
+        ]);
+        const [{ createApp, nextTick }, { default: AdminAccessAtlas }] =
+          await Promise.all([
+            import('vue'),
+            import('/src/components/admin-access/AdminAccessAtlas.vue'),
+          ]);
+
+        const app = createApp(AdminAccessAtlas, { locations, summary });
+        app.config.errorHandler = (error) => {
+          fixtureState.error = String(
+            error?.stack || error?.message || error,
+          );
+          console.error(error);
+        };
+        app.mount('#app');
+        await nextTick();
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+        fixtureState.app = app;
+      } catch (error) {
+        fixtureState.error = String(error?.stack || error?.message || error);
+      } finally {
+        fixtureState.ready = true;
+      }
+    </script>
+  </body>
+</html>
