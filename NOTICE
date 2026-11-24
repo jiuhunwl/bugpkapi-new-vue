@@ -1,0 +1,11 @@
+Third-party notices
+===================
+
+This project is a derivative work built on top of the vue-vben-admin workspace
+framework, which is licensed under the MIT License:
+
+    Copyright (c) 2024-present, Vben
+    https://github.com/vbenjs/vue-vben-admin
+
+The MIT License text applicable to this project is provided in the LICENSE
+file. The upstream copyright notice above is retained as required.
