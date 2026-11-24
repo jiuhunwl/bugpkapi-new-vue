@@ -1,5 +1,7 @@
 # BugPk-Api Web
 
+[![CI](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml/badge.svg)](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml)
+
 开源的 API 开放平台前端，覆盖用户端与管理端，配套后端与文档见下表。
 
 | 仓库 | 说明 |
@@ -94,6 +96,10 @@ pnpm test:e2e    # Playwright 端到端测试
 E2E_ADMIN_USERNAME=admin E2E_ADMIN_PASSWORD='<测试账号口令>' pnpm test:e2e
 ```
 
+## 贡献
+
+开发环境、i18n 规则与提交约定见 [CONTRIBUTING.md](./CONTRIBUTING.md)。安全问题请按 [SECURITY.md](./SECURITY.md) 私下报告。
+
 ## 许可证
 
-本项目基于 [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin)（MIT）二次开发，采用 MIT 许可证，并保留上游版权声明，详见 [LICENSE](./LICENSE)。
+本项目基于 [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin)（MIT）二次开发，采用 MIT 许可证，并保留上游版权声明，详见 [LICENSE](./LICENSE) 与 [NOTICE](./NOTICE)。

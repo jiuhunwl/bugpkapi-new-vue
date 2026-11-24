@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 部署与配置文档
+    url: https://github.com/jiuhunwl/bugpkapi-new-docs
+    about: 构建、代理、环境变量等问题请先查阅文档。
+  - name: 报告安全漏洞
+    url: https://github.com/jiuhunwl/bugpkapi-new-vue/security/advisories/new
+    about: 请勿在公开 Issue 中披露未修复的安全问题。

@@ -1,0 +1,50 @@
+name: Bug 报告
+description: 报告可复现的前端问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先搜索已有 Issue。**不要**粘贴账号口令、真实接口地址、用户数据或未修复漏洞的细节；安全问题请按 `SECURITY.md` 私下报告。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      description: Release 版本、tag 或 commit
+      placeholder: v1.2.113 / 8718d4d
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器与环境
+      placeholder: Chrome 149 / Windows 11 / 生产构建
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 控制台报错、截图或录屏（请脱敏）
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: 控制台 / 网络面板信息
+      render: shell
+    validations:
+      required: false

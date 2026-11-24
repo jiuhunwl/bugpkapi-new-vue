@@ -1,5 +1,7 @@
 # BugPk-Api Web
 
+[![CI](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml/badge.svg)](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml)
+
 Open-source frontend for the BugPk-Api open API platform, covering both the customer-facing site and the admin console.
 
 | Repository | Description |
@@ -88,6 +90,16 @@ pnpm test        # unit tests + node script tests
 pnpm test:e2e    # Playwright end-to-end tests
 ```
 
+End-to-end tests need a running backend and a test account. Provide the password through an environment variable instead of hardcoding it:
+
+```bash
+E2E_ADMIN_USERNAME=admin E2E_ADMIN_PASSWORD='<test account password>' pnpm test:e2e
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for the development environment, i18n rules, and commit conventions. Report security issues privately as described in [SECURITY.md](./SECURITY.md).
+
 ## License
 
-Built on top of [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin) (MIT) and distributed under the MIT license with upstream copyright notices preserved. See [LICENSE](./LICENSE).
+Built on top of [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin) (MIT) and distributed under the MIT license with upstream copyright notices preserved. See [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
