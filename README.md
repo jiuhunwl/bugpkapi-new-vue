@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml/badge.svg)](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml)
 
+[![LINUX DO](https://img.shields.io/badge/LINUX%20DO-%E7%A4%BE%E5%8C%BA-1f6feb?logo=discourse&logoColor=white)](https://linux.do) 本项目在 [LINUX DO](https://linux.do) 社区分享。
+
 开源的 API 开放平台前端，覆盖用户端与管理端，配套后端与文档见下表。
 
 | 仓库 | 说明 |

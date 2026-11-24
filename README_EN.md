@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml/badge.svg)](https://github.com/jiuhunwl/bugpkapi-new-vue/actions/workflows/ci.yml)
 
+[![LINUX DO](https://img.shields.io/badge/LINUX%20DO-community-1f6feb?logo=discourse&logoColor=white)](https://linux.do) This project is shared with the [LINUX DO](https://linux.do) community.
+
 Open-source frontend for the BugPk-Api open API platform, covering both the customer-facing site and the admin console.
 
 | Repository | Description |
