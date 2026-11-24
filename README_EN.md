@@ -10,7 +10,7 @@ Open-source frontend for the BugPk-Api open API platform, covering both the cust
 | --- | --- |
 | [bugpkapi-new-go](https://github.com/jiuhunwl/bugpkapi-new-go) | Backend service (Go + MySQL), AGPL-3.0 |
 | **bugpkapi-new-vue** (this repo) | Frontend (Vue 3 + Vben Admin), MIT |
-| [bugpkapi-new-docs](https://github.com/jiuhunwl/bugpkapi-new-docs) | Documentation, architecture and deployment guides |
+| [bugpkapi-new-docs](https://github.com/jiuhunwl/bugpkapi-new-docs/blob/main/README_EN.md) | Documentation, architecture and deployment guides |
 
 ## Features
 
